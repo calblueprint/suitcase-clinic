@@ -2,15 +2,13 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def search(request):     
-	return HttpResponse("Search page")
+	return render(request, 'search.html')
 
 def survey(request):     
-	return HttpResponse("Survey page")
+	return render(request, 'survey.html')
 
 def home(request):
-	# Test rendering of .html pages
-	return render(request, '/Users/vincenttian/Desktop/workspace/Blueprint/bpsc/templates/home.html')
-	# return HttpResponse("Home page")
+	return render(request, 'home.html')
 
 def contact(request):
-	return HttpResponse("Contact page")
+	return render(request, 'contact.html')
