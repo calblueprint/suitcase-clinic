@@ -7,7 +7,7 @@ from django.utils.decorators import method_decorator
 from django.views import FormView, View
 from django.views.decorators.debug import sensitive_post_parameters
 
-from bpsc.common import SCUserCreationForm
+from bpsc.users import SCUserCreationForm
 
 
 class UserRegistrationView(FormView):
@@ -17,6 +17,7 @@ class UserRegistrationView(FormView):
 
 
 class LoginView(FormView):
+    template_name = 'login.html'
     form_class = AuthenticationForm
 
     # TODO: Add proper redirection when urls/templates are better defined
