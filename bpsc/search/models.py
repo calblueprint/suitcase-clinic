@@ -12,14 +12,33 @@ class Tag(models.Model):
 
 
 class HousingTag(Tag):
-    pass
+    #Category
+    category = models.CharField(blank=True, max_length=50)
+    housing_type = models.CharField(blank=True)
+    county = models.CharField(blank=True)
+
+    #Price
+    price = models.IntegerField(blank=True)
+    thirty_percent_ami = models.BooleanField(blank=True)
+    
+    
+    #Occupancy
+    sro = models.BooleanField(blank=True)
+    studio = models.BooleanField(blank=True)
+    one_br = models.BooleanField(blank=True)
+    one_br_plus = models.BooleanField(blank=True)
+
 
 
 class CommunityTag(Tag):
-    pass
+    #Types
+    tabs = models.CharField(blank=True)
 
 
 class EmploymentTag(Tag):
+    pass
+
+class LegalTag(Tag):
     pass
 
 
@@ -27,6 +46,12 @@ class Resource(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     url = models.URLField(blank=True)
+    address = models.CharField(blank=True)
+    city = models.CharField(blank=True)
+    zipcode = models.IntegerField(blank=True)
+    latitude = models.DecimalField(blank=True)
+    longitude = models.DecimalField(balnk=True)
+    phone = models.CharField(blank=True)
 
     def __uniocde__(self):
         return self.name
@@ -54,3 +79,7 @@ class EmploymentResource(Resource):
 
     class Meta:
         ordering = ['-posted']
+
+
+class LegalResource(Resource):
+    tags = models.ManyToManyField(LegalTag, null=True, blank=True)
