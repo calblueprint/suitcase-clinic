@@ -4,17 +4,20 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import redirect
 from django.utils.decorators import method_decorator
-from django.views import FormView, View
 from django.views.decorators.debug import sensitive_post_parameters
+from django.views.generic import FormView, View
 
-from bpsc.users import SCUserCreationForm
+from bpsc.users.forms import SCUserCreationForm
 
 
 class UserRegistrationView(FormView):
-    template_name = 'user_registration.html'
+    template_name = 'register.html'
     form_class = SCUserCreationForm
     success_url = reverse_lazy('home')
 
+    def form_valid(self, form):
+        form.save()
+        return redirect(self.get_success_url())
 
 class LoginView(FormView):
     template_name = 'login.html'
