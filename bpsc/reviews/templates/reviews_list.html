@@ -1,0 +1,22 @@
+
+{% block content %}
+	<table>
+		<tr>
+			<th>Service</th>
+			<th>Date</th>
+			<th>Rating</th>
+			<th>Comments</th>
+			<th>Reviewer</th>
+		</tr>		
+
+		{% for review in object_list %}
+		<tr>
+			<td>{{review.service}}</td>
+			<td>{{review.date}}</td>
+			<td>{{review.rating}}</td>
+			<td>{{review.comments}}</td>
+			<td>{{review.reviewer}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+{% endblock %}

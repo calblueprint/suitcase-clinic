@@ -1,5 +1,6 @@
 from django.views.generic import ListView
-from bpsc.reviews import Review
+from bpsc.reviews.models import Review
 
-class ReviewList(ListView):
+class ReviewListView(ListView):
+	template_name = 'reviews_list.html'
 	model = Review
