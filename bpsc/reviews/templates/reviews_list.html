@@ -1,3 +1,4 @@
+<h1>Some sick reviews...</h1>
 
 {% block content %}
 	<table>
@@ -9,13 +10,13 @@
 			<th>Reviewer</th>
 		</tr>		
 
-		{% for review in object_list %}
+		{% for review in review_list %}
 		<tr>
-			<td>{{review.service}}</td>
-			<td>{{review.date}}</td>
-			<td>{{review.rating}}</td>
-			<td>{{review.comments}}</td>
-			<td>{{review.reviewer}}</td>
+			<td>{{ review.service }}</td>
+			<td>{{ review.date }}</td>
+			<td>{{ review.rating }}</td>
+			<td>{{ review.comments }}</td>
+			<td>{{ review.reviewer }}</td>
 		</tr>
 		{% endfor %}
 	</table>
