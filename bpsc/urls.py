@@ -19,7 +19,7 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
 
     url(r'^$', home, name='home'),
-    url(r'^survey/$', survey),
     url(r'^search/$', search),
     url(r'^users/', include('bpsc.users.urls', app_name='users', namespace='users')),
+    url(r'^reviews/', include('bpsc.reviews.urls', app_name='reviews', namespace='reviews')),
 )
