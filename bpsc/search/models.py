@@ -20,15 +20,12 @@ class HousingTag(Tag):
     #Price
     price = models.IntegerField(blank=True)
     thirty_percent_ami = models.BooleanField(blank=True)
-    
-    
+        
     #Occupancy
     sro = models.BooleanField(blank=True)
     studio = models.BooleanField(blank=True)
     one_br = models.BooleanField(blank=True)
     one_br_plus = models.BooleanField(blank=True)
-
-
 
 class CommunityTag(Tag):
     #Types
