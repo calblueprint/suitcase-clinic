@@ -2,38 +2,27 @@ from django.db import models
 
 
 class Tag(models.Model):
-    name = models.CharField(max_length=255, unique=True)
+    tag_type = models.CharField(max_length=255)
+    value = models.CharField(max_length=255, unique=True)
 
     def __unicode__(self):
-        return self.name
+        return self.tag_type + ': ' + self.value
 
     class Meta:
         abstract = True
+        unique_together = ('tag_type', 'value')
 
 
 class HousingTag(Tag):
-    #Category
-    category = models.CharField(blank=True, max_length=50)
-    housing_type = models.CharField(blank=True)
-    county = models.CharField(blank=True)
-
-    #Price
-    price = models.IntegerField(blank=True)
-    thirty_percent_ami = models.BooleanField(blank=True)
-        
-    #Occupancy
-    sro = models.BooleanField(blank=True)
-    studio = models.BooleanField(blank=True)
-    one_br = models.BooleanField(blank=True)
-    one_br_plus = models.BooleanField(blank=True)
+    pass
 
 class CommunityTag(Tag):
-    #Types
-    tabs = models.CharField(blank=True)
+    pass
 
 
 class EmploymentTag(Tag):
     pass
+
 
 class LegalTag(Tag):
     pass
@@ -43,14 +32,14 @@ class Resource(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     url = models.URLField(blank=True)
-    address = models.CharField(blank=True)
+    street_address = models.CharField(blank=True)
     city = models.CharField(blank=True)
     zipcode = models.IntegerField(blank=True)
-    latitude = models.DecimalField(blank=True)
-    longitude = models.DecimalField(balnk=True)
+    latitude = models.DecimalField(null=True, blank=True)
+    longitude = models.DecimalField(null=True, blank=True)
     phone = models.CharField(blank=True)
 
-    def __uniocde__(self):
+    def __unicode__(self):
         return self.name
 
     class Meta:
