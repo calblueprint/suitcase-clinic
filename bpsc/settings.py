@@ -130,10 +130,10 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bpsc.users',
     'bpsc.reviews',
+    'bpsc.search',
+    'bpsc.users',
     'south',
-    'bpsc.search'
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
