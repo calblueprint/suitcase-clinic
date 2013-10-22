@@ -5,7 +5,9 @@ from bpsc.users.views import (
     HousingResourceListView, CommunityResourceListView,
     EmploymentResourceListView, LegalResourceListView,
     HousingResourceDetailView, CommunityResourceDetailView,
-    EmploymentResourceDetailView, LegalResourceDetailView
+    EmploymentResourceDetailView, LegalResourceDetailView,
+    HousingResourcePrintView, CommunityResourcePrintView,
+    EmploymentResourcePrintView, LegalResourcePrintView
 )
 
 urlpatterns = patterns(
@@ -14,6 +16,10 @@ urlpatterns = patterns(
     url(r'^community/(?P<pk>\d+)/(?P<slug>[-\w\d]+/$', CommunityResourceDetailView.as_view(), name='community_detail'),
     url(r'^employment/(?P<pk>\d+)/(?P<slug>[-\w\d]+/$', EmploymentResourceDetailView.as_view(), name='employment_detail'),
     url(r'^legal/(?P<pk>\d+)/(?P<slug>[-\w\d]+/$', LegalResourceDetailView.as_view(), name='legal_detail'),
+    url(r'^housing/print/$', HousingResourcePrintView.as_view(), name='housing_list'),
+    url(r'^community/print/$', CommunityResourcePrintView.as_view(), name='community_list'),
+    url(r'^employment/print/$', EmploymentResourcePrintView.as_view(), name='employment_list'),
+    url(r'^legal/print/$', LegalResourcePrintView.as_view(), name='legal_list'),
     url(r'^housing/$', HousingResourceListView.as_view(), name='housing_list'),
     url(r'^community/$', CommunityResourceListView.as_view(), name='community_list'),
     url(r'^employment/$', EmploymentResourceListView.as_view(), name='employment_list'),

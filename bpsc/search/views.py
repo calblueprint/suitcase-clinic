@@ -94,3 +94,16 @@ class LegalResourceListView(BaseResourceListView):
     tag = LegalTag
 
 
+class BaseResourcePrintView(ListView):
+    model = Resource
+    tag = Tag
+
+    def get_queryset(self):
+        resource_ids = self.request.GET.getlist('resourceid')
+        queryset = self.model.objects.filter(pk__in=resource_ids)
+        return queryset
+
+    # TODO: Implement POST (printing)
+    def post(self, request, *args, **kwargs):
+        self.object_list = self.get_queryset()
+        return
