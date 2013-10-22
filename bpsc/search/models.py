@@ -16,6 +16,7 @@ class Tag(models.Model):
 class HousingTag(Tag):
     pass
 
+
 class CommunityTag(Tag):
     pass
 
@@ -32,13 +33,12 @@ class Resource(models.Model):
     name = models.TextField(max_length=255)
     description = models.TextField(blank=True)
     url = models.URLField(blank=True)
-    street_address = models.TextField(blank=True)
-    city = models.TextField(blank=True)
-    zipcode = models.IntegerField(blank=True)
-    latitude = models.FloatField(null=True, blank=True)
-    longitude = models.FloatField(null=True, blank=True)
-    phone = models.TextField(blank=True)
-    help = models.TextField(blank=True)
+    street_address = models.CharField(max_length=255, blank=True)
+    city = models.CharField(max_length=255, blank=True)
+    zipcode = models.IntegerField(null=True, blank=True)
+    latitude = models.DecimalField(max_digits=8, decimal_places=5, null=True, blank=True)
+    longitude = models.DecimalField(max_digits=8, decimal_places=5, null=True, blank=True)
+    phone = models.CharField(max_length=11, blank=True)
 
     def __unicode__(self):
         return self.name
