@@ -42,6 +42,7 @@ class LegalResourceDetailView(BaseResourceDetailView):
     template_name = 'legal_resource_detail.html'
 
 class BaseResourceListView(ListView):
+    # Sorting will happen with Javascript on the frontend
     model = Resource
     tag = Tag
 
@@ -60,7 +61,36 @@ class BaseResourceListView(ListView):
             context = self.get_context_data(object_list=self.object_list)
             return self.render_to_response(context)
         else:
+            # TODO: Confirmation Page? Or on this page?
             confirm_url = request.build_absolute_uri() + 'print/'
             resource_params = '&'.join(['?resourceid=%s' % resource_id for resource_id in selected_resources])
             return redirect(confirm_url + resource_params)
+
+class HousingResourceListView(BaseResourceListView):
+    model = HousingResource
+    context_object_name = 'housing_resource_list'
+    template_name = 'housing_resource_list.html'
+    tag = HousingTag
+
+
+class CommunityResourceListView(BaseResourceListView):
+    model = CommunityResource
+    context_object_name = 'community_resource_list'
+    template_name = 'community_resource_list.html'
+    tag = CommunityTag
+
+
+class EmploymentResourceListView(BaseResourceListView):
+    model = EmploymentResource
+    context_object_name = 'employment_resource_list'
+    template_name = 'employment_resource_list.html'
+    tag = EmploymentTag
+
+
+class LegalResourceListView(BaseResourceListView):
+    model = LegalResource
+    context_object_name = 'legal_resource_list'
+    template_name = 'legal_resource_list.html'
+    tag = LegalTag
+
 
