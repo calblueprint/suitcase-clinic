@@ -2,10 +2,8 @@
 from django.contrib import messages
 from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404, redirect
-from django.views.generic import DetailView, FormView ListView
-from django.views.generic import ListView
+from django.views.generic import DetailView, FormView, ListView
 
-from bspc.search.forms import ResourceListForm
 from bpsc.search.models import (
     Tag, HousingTag, CommunityTag, EmploymentTag, LegalTag, Resource,
     HousingResource, CommunityResource, EmploymentResource, LegalResource
@@ -18,27 +16,28 @@ class BaseResourceDetailView(DetailView):
         pk = self.kwargs.get(self.pk_url_kwarg, None)
         return get_object_or_404(self.model, pk=pk)
 
+
 class HousingResourceDetailView(BaseResourceDetailView):
     model = HousingResource
-    context_object_name = 'housing_resource'
+    context_object_name = 'resource'
     template_name = 'housing_resource_detail.html'
 
 
 class CommunityResourceDetailView(BaseResourceDetailView):
     model = CommunityResource
-    context_object_name = 'community_resource'
+    context_object_name = 'resource'
     template_name = 'community_resource_detail.html'
 
 
 class EmploymentResourceDetailView(BaseResourceDetailView):
     model = EmploymentResource
-    context_object_name = 'employment_resource'
+    context_object_name = 'resource'
     template_name = 'employment_resource_detail.html'
 
 
 class LegalResourceDetailView(BaseResourceDetailView):
     model = LegalResource
-    context_object_name = 'legal_resource'
+    context_object_name = 'resource'
     template_name = 'legal_resource_detail.html'
 
 class BaseResourceListView(ListView):
@@ -50,6 +49,7 @@ class BaseResourceListView(ListView):
         context = super(BaseResourceListView, self).get_context_data(**kwargs)
         # Retrieve all the related tags for this Resource
         context['tags'] = self.tag.objects.all()
+        return context
 
     def post(self, request, *args, **kwargs):
         self.object_list = self.get_queryset()
@@ -68,28 +68,28 @@ class BaseResourceListView(ListView):
 
 class HousingResourceListView(BaseResourceListView):
     model = HousingResource
-    context_object_name = 'housing_resource_list'
+    context_object_name = 'resource_list'
     template_name = 'housing_resource_list.html'
     tag = HousingTag
 
 
 class CommunityResourceListView(BaseResourceListView):
     model = CommunityResource
-    context_object_name = 'community_resource_list'
+    context_object_name = 'resource_list'
     template_name = 'community_resource_list.html'
     tag = CommunityTag
 
 
 class EmploymentResourceListView(BaseResourceListView):
     model = EmploymentResource
-    context_object_name = 'employment_resource_list'
+    context_object_name = 'resource_list'
     template_name = 'employment_resource_list.html'
     tag = EmploymentTag
 
 
 class LegalResourceListView(BaseResourceListView):
     model = LegalResource
-    context_object_name = 'legal_resource_list'
+    context_object_name = 'resource_list'
     template_name = 'legal_resource_list.html'
     tag = LegalTag
 
@@ -107,3 +107,22 @@ class BaseResourcePrintView(ListView):
     def post(self, request, *args, **kwargs):
         self.object_list = self.get_queryset()
         return
+
+class HousingResourcePrintView(ListView):
+    model = HousingResource
+    tag = HousingTag
+
+
+class CommunityResourcePrintView(ListView):
+    model = CommunityResource
+    tag = CommunityTag
+
+
+class EmploymentResourcePrintView(ListView):
+    model = EmploymentResource
+    tag = EmploymentTag
+
+
+class LegalResourcePrintView(ListView):
+    model = LegalResource
+    tag = LegalTag
