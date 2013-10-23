@@ -57,7 +57,7 @@
   fields:
     name: "Bay Area Psychotherapy Services"
     description: "wow so therapy"
-    url: "www.therapy.com"
+    url: "http://www.therapy.com"
     street_address: "2901 Shattuck Ave"
     city: "Berkeley"
     zipcode: 94705
@@ -72,7 +72,7 @@
   fields:
     name: "Super Medical Service"
     description: "medicine medicine"
-    url: "www.medicine.com"
+    url: "http://www.medicine.com"
     street_address: "1234 Medicine Ave"
     city: "Berkeley"
     zipcode: 94709
@@ -87,7 +87,7 @@
   fields:
     name: "Berkeley Houses"
     description: "Lots of houses here"
-    url: "www.houses.com"
+    url: "http://www.houses.com"
     street_address: "1234 House Ave"
     city: "Berkeley"
     zipcode: 94709
@@ -105,7 +105,7 @@
   fields:
     name: "Cool Houses"
     description: "wow so cool"
-    url: "www.coolhouses.com"
+    url: "http://www.coolhouses.com"
     street_address: "1234 Cool Ave"
     city: "Berkeley"
     zipcode: 94709
