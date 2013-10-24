@@ -11,3 +11,12 @@ class Review(models.Model):
 	def __unicode__(self):
 		return "%(rating)d star review for %(service)s by %(reviewer)s, who says:  %(comments)s" %\
 		 {"rating": self.rating, "service": self.service, "reviewer": self.reviewer, "comments":self.comments}
+
+
+	# aggregate to get average review
+
+
+
+
+
+

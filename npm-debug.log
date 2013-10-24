@@ -1,0 +1,53 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'south' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.16
+4 verbose cache add [ 'south', null ]
+5 verbose cache add name=undefined spec="south" args=["south",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'south',
+6 verbose parsed url   path: 'south',
+6 verbose parsed url   href: 'south' }
+7 silly lockFile 7e3fb5d9-south south
+8 verbose lock south /Users/vincenttian/.npm/7e3fb5d9-south.lock
+9 silly lockFile 7e3fb5d9-south south
+10 silly lockFile 7e3fb5d9-south south
+11 verbose addNamed [ 'south', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 46e4700c-south south@
+14 verbose lock south@ /Users/vincenttian/.npm/46e4700c-south.lock
+15 silly addNameRange { name: 'south', range: '*', hasData: false }
+16 verbose url raw south
+17 verbose url resolving [ 'https://registry.npmjs.org/', './south' ]
+18 verbose url resolved https://registry.npmjs.org/south
+19 info trying registry request attempt 1 at 19:55:57
+20 http GET https://registry.npmjs.org/south
+21 http 404 https://registry.npmjs.org/south
+22 silly registry.get cb [ 404,
+22 silly registry.get   { server: 'CouchDB/1.3.1 (Erlang OTP/R15B03)',
+22 silly registry.get     date: 'Sun, 20 Oct 2013 02:55:58 GMT',
+22 silly registry.get     'content-type': 'application/json',
+22 silly registry.get     'content-length': '52',
+22 silly registry.get     'cache-control': 'must-revalidate' } ]
+23 silly lockFile 46e4700c-south south@
+24 silly lockFile 46e4700c-south south@
+25 error 404 'south' is not in the npm registry.
+25 error 404 You should bug the author to publish it
+25 error 404
+25 error 404 Note that you can also install from a
+25 error 404 tarball, folder, or http url, or git url.
+26 error System Darwin 11.4.2
+27 error command "node" "/usr/local/bin/npm" "install" "south"
+28 error cwd /Users/vincenttian/Desktop/workspace/Blueprint
+29 error node -v v0.10.16
+30 error npm -v 1.3.8
+31 error code E404
+32 verbose exit [ 1, true ]
