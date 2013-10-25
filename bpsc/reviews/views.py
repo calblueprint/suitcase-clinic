@@ -2,7 +2,7 @@ from django.views.generic import ListView
 from bpsc.reviews.models import Review
 from django.views.generic.edit import FormView
 from django.db import models
-from bpsc.reviews import SubmitReviewForm
+from bpsc.reviews.forms import ReviewForm
 import datetime
 
 
@@ -12,10 +12,10 @@ class ReviewListView(ListView):
 
 class SubmitReviewListView(FormView):
 	template_name = 'submit_review.html'
-	form_class = SubmitReviewForm
-	success_url = '/reviews'
+	form_class = ReviewForm
+	success_url = '/reviews/reviews'
 
 	def form_valid(self, form):
 		form.submit_review()
-		return super(ContactView, self).form_valid(form)
-		
+		return super(FormView, self).form_valid(form)
+
