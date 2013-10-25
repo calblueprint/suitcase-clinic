@@ -15,8 +15,3 @@ class Review(models.Model):
 
 	# aggregate to get average review
 
-
-
-
-
-
