@@ -1,0 +1,75 @@
+CTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> BPSC </title>
+    <!-- Bootstrap core CSS -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	    <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar">Test1</span>
+            <span class="icon-bar">Test2</span>
+            <span class="icon-bar">Test3</span>
+          </button>
+	  <a class="navbar-brand">BPSC Home Page</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="{% url 'search' %}">Search</a></li>
+            <li><a href="{% url 'survey' %}">Survey</a></li>
+            <li><a href="{% url 'contact' %}">Contact</a></li>
+	  </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+    </nav>
+    
+
+    <div class="container">
+
+      <div class="row section">
+        <div class="col-lg-12">
+          <h1>Search Page</h1>
+          <p>We can have additional inforation about BPSC here</p>
+          <ul>
+          	<li>Blah</li>
+          	<li>Blah</li>
+          </ul>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            <p>Copyright &copy; Company 2013 &middot; Facebook &middot; Twitter &middot; Google+</p>
+          </div>
+        </div>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
+    <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+    <script src=""http://www.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css""></script>
+  </body>
+</html>
+
