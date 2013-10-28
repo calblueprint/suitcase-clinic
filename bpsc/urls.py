@@ -1,6 +1,5 @@
-from django.conf.urls import patterns, include, url
-from bpsc.views import search, survey, home
-
+from django.conf.urls import *
+from bpsc.views import search, survey, home, contact
 from django.views.generic import TemplateView # Test
 
 # Uncomment the next two lines to enable the admin:
@@ -19,6 +18,10 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
 
     url(r'^$', home, name='home'),
+    url(r'^survey/$', survey, name='survey'),
+    url(r'^search/$', search, name='search'),
+    url(r'^contact/$', contact, name='contact'),
+    
     url(r'^search/$', search),
     url(r'^users/', include('bpsc.users.urls', app_name='users', namespace='users')),
     url(r'^reviews/', include('bpsc.reviews.urls', app_name='reviews', namespace='reviews')),
