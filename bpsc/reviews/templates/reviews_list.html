@@ -6,6 +6,8 @@
 </head>
 <body>
 
+
+
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 ing 
@@ -17,20 +19,66 @@ ing
 			<div class="col-md-9">
 				<ul class="list-unstyled">
 					{% for review in review_list %}
-					<li>
+					<li class="{{ review.service }}">
 						<p>{{ review.service }}</p>
 						<p>{{ review.date }}</p>
 						<p>{{ review.rating }}</p>
-						{% load review_extras %}
-						{% for i in review.rating|get_range %}
-					    	<span class="glyphicon glyphicon-star"></span>
-					    {% endfor %}
-
-					    
 						<p>{{ review.comments }}</p>
 						<p>{{ review.reviewer }}</p>
 					</li>
 					{% endfor %}
+					<!-- HARDCODED TEMPORARILY UNTIL VINCENT GETS HIS SHIT TOGETHER -->
+					<li class="housing">
+						<h3>Housing</h3>
+						<p>hello what's uppppp</p>
+					</li>
+
+					<li class="employment">
+						<h3>THEY TOOK OUR JURRRRBBBBBS</h3>
+					</li>
+
+					<li class="dental">
+						<h3>teeeth stufff</h3>
+						<p>aww yusssssss</p>
+					</li>
+
+					<li class="community_resources">
+						<h3>resources for the communityyyyyy</h3>
+					</li>
+
+					<li class="housing">
+						<h3>Housing</h3>
+						<p>hello what's uppppp</p>
+					</li>
+
+					<li class="employment">
+						<h3>THEY TOOK OUR JURRRRBBBBBS</h3>
+					</li>
+
+					<li class="community_resources">
+						<h3>resources for the communityyyyyy</h3>
+					</li>
+
+					<li class="legal">
+						<h3>the lawwww la leyyyyyy follow it!</h3>
+					</li>
+
+					<li class="employment ">
+						<h3>jerbbbb jerbbbbb jerbbbbbb</h3>
+					</li>
+
+					<li class="optometry">
+						<h3>eyes eyes yes ice</h3>
+					</li>
+
+					<li class="dental">
+						<h3>teeeth stufff</h3>
+						<p>aww yusssssss</p>
+					</li>
+
+					<li class="optometry">
+						<h3>eyes eyes yes ice</h3>
+					</li>
 				</ul>
 			</div>
 
@@ -60,37 +108,37 @@ ing
 				<ul class="list-unstyled">
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"> Housing
+							<input type="checkbox" id="housing_check" checked> Housing
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"> Employment
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>Community 
-							<input type="checkbox"> Resources
+							<input type="checkbox" id="employment_check" checked> Employment
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"> Legal
+							<input type="checkbox" id="community_resources_check" checked> Community Resources
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"> Dental
+							<input type="checkbox" id="legal_check" checked> Legal
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"> Optometry
+							<input type="checkbox" id="dental_check" checked> Dental
 						</label>
 					</div>
 					<div class="checkbox">
 						<label>
-							<input type="checkbox"> Medical
+							<input type="checkbox" id="optometry_check" checked> Optometry
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" id="medical_check" checked> Medical
 						</label>
 					</div>
 				</ul>
@@ -99,6 +147,65 @@ ing
 		</div>
 		{% endblock %}
 	</div>
+
+	<script>
+		$('#housing_check').click(function() {
+			if ($(this).is(':checked')) {
+				$('.housing').slideDown();
+			} else {
+				$('.housing').slideUp();	}
+		});
+
+
+		$('#employment_check').click(function() {
+			if ($(this).is(':checked')) {
+				$('.employment').slideDown();
+			}else {
+				$('.employment').slideUp();
+			}	
+		});
+
+		$('#community_resources_check').click(function() {
+			if ($(this).is(':checked')) {
+				$('.community_resources').slideDown();
+			}else {
+				$('.community_resources').slideUp();
+			}	
+		});
+
+		$('#legal_check').click(function() {
+			if ($(this).is(':checked')) {
+				$('.legal').slideDown();
+			}else {
+				$('.legal').slideUp();
+			}	
+		});
+
+		$('#dental_check').click(function() {
+			if ($(this).is(':checked')) {
+				$('.dental').slideDown();
+			}else {
+				$('.dental').slideUp();
+			}	
+		});
+
+		$('#optometry_check').click(function() {
+			if ($(this).is(':checked')) {
+				$('.optometry').slideDown();
+			}else {
+				$('.optometry').slideUp();
+			}	
+		});
+
+		$('#medical_check').click(function() {
+			if ($(this).is(':checked')) {
+				$('.medical').slideDown();
+			}else {
+				$('.medical').slideUp();
+			}	
+		});
+
+	</script>
 </body>
 </html>
 
