@@ -5,25 +5,98 @@
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 </head>
 <body>
+
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
+ing 
     <div class="container">
-
 		<h1>Some sick reviews...</h1>
 
 		{% block content %}
-			<ul>
-				{% for review in review_list %}
-				<li>
-					<h2>{{ review.service }}</h2>
-					<h3>{{ review.date }}</h3>
-					<h3>{{ review.rating }}</h3>
-					<p>{{ review.comments }}</p>
-					<h3>{{ review.reviewer }}</h3>
-				</li>
-				{% endfor %}
-			</ul>
+		<div class="row">
+			<div class="col-md-9">
+				<ul class="list-unstyled">
+					{% for review in review_list %}
+					<li>
+						<p>{{ review.service }}</p>
+						<p>{{ review.date }}</p>
+						<p>{{ review.rating }}</p>
+						{% load review_extras %}
+						{% for i in review.rating|get_range %}
+					    	<span class="glyphicon glyphicon-star"></span>
+					    {% endfor %}
+
+					    
+						<p>{{ review.comments }}</p>
+						<p>{{ review.reviewer }}</p>
+					</li>
+					{% endfor %}
+				</ul>
+			</div>
+
+			<div class="col-md-3">
+				<h2>Sort By:</h2>
+					<div class="radio">
+						<label>
+							<input type="radio" name="sort_by" value="recent" checked>Most Recent
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="sort_by" value="oldest">Oldest
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="sort_by" value="highest">Highest Review
+						</label>
+					</div>
+					<div class="radio">
+						<label>
+							<input type="radio" name="sort_by" value="lowest">Lowest Review
+						</label>
+					</div>
+				<h2>Filter By:</h2>
+				<ul class="list-unstyled">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Housing
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Employment
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>Community 
+							<input type="checkbox"> Resources
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Legal
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Dental
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Optometry
+						</label>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox"> Medical
+						</label>
+					</div>
+				</ul>
+
+			</div>
+		</div>
 		{% endblock %}
 	</div>
 </body>
