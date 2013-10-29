@@ -1,16 +1,16 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<script src="//code.jquery.com/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'reviews.js' %}"></script>
+
 </head>
 <body>
-
-
-
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-ing 
     <div class="container">
 		<h1>Some sick reviews...</h1>
 
@@ -21,8 +21,10 @@ ing
 					{% for review in review_list %}
 					<li class="{{ review.service }}">
 						<p>{{ review.service }}</p>
-						<p>{{ review.date }}</p>
+						<p>{{ review.render_stars|safe }}</p>
 						<p>{{ review.rating }}</p>
+
+
 						<p>{{ review.comments }}</p>
 						<p>{{ review.reviewer }}</p>
 					</li>
