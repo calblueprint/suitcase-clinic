@@ -11,7 +11,7 @@ from django.shortcuts import render_to_response
 from django.forms.models import modelformset_factory
 from django.forms.models import BaseModelFormSet
 
-services = ['feet', 'hair']
+services = ['feet', 'hair', 'test', 'test2']
 
 class ReviewListView(ListView):
 	template_name = 'reviews_list.html'
@@ -37,14 +37,14 @@ class SubmitReviewListView(TemplateView):
 			return context
 		else: # POST requests
 			data = {
-				 'form-TOTAL_FORMS': u'1',
-				 'form-INITIAL_FORMS': u'0',
-				 'form-MAX_NUM_FORMS': u'',
+				 'form-TOTAL_FORMS': u'5',
+				 'form-INITIAL_FORMS': u'5',
+				 'form-MAX_NUM_FORMS': u'10',
 				 'form-0-title': u'',
 				 'form-0-pub_date': u'',
 			}
-			# context['reviewformset'] = Review_Formset(self.request.POST)
-			context['reviewformset'] = Review_Formset(data, self.request.POST)
+			context['reviewformset'] = Review_Formset(self.request.POST)
+			# context['reviewformset'] = Review_Formset(data, self.request.POST)
 			return context
 
 	# THIS FUNCION IS FOR POST VALIDATION
@@ -52,11 +52,15 @@ class SubmitReviewListView(TemplateView):
 		context = self.get_context_data(**kwargs)
 		reviewformset = context['reviewformset']
 		if reviewformset.is_valid():
-			for entry in reviewformset:
-				if entry.cleaned_data.get('rating') != None:
-					entry.save()
+			try:
+				for entry in reviewformset:
+					if entry.cleaned_data.get('rating') != "":
+						entry.save()
+				return redirect('/reviews/reviews')
+			except:
+				return redirect('/reviews/submit')
 			# SENDS USERS TO /REVIEWS/REVIEWS
-			return redirect('/reviews/reviews')
+			
 
 			# NEED TO FIGURE OUT HOW TO FILTER
 
