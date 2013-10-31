@@ -12,7 +12,7 @@ class Command(BaseCommand):
 		all_housing = HousingResource.objects.all()
 		for resource in all_housing:
 			age = (today - resource.posted).days
-			if age > 36 and age < 90:
+			if age > 42 and age < 90:
 				resource.outdated = True
 				resource.save()
 			elif age >= 90:
