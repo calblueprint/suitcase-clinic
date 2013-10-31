@@ -7,11 +7,15 @@ from django.views.generic import TemplateView
 from bpsc.reviews.forms import ReviewForm
 from bpsc.reviews.models import Review
 from django.shortcuts import render_to_response
+from django.shortcuts import render
 
 from django.forms.models import modelformset_factory
 from django.forms.models import BaseModelFormSet
 
-services = ['feet', 'hair', 'test', 'test2']
+services = ['Housing', 'Employment', 'Legal', 'Dental', 'Optometry', 'Medical']
+
+def reviews(request):
+	return render(request, 'reviews.html')
 
 class ReviewListView(ListView):
 	template_name = 'reviews_list.html'
@@ -39,8 +43,8 @@ class SubmitReviewListView(TemplateView):
 			data = {
 				 'form-TOTAL_FORMS': u'5',
 				 'form-INITIAL_FORMS': u'5',
-				 'form-MAX_NUM_FORMS': u'10',
-				 'form-0-title': u'',
+				 'form-MAX_NUM_FORMS': u'6',
+				 'form-0-title': u'TITLE1',
 				 'form-0-pub_date': u'',
 			}
 			context['reviewformset'] = Review_Formset(self.request.POST)
