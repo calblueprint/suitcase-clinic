@@ -5,18 +5,41 @@
 	<body>
     	<form action="" method="post">{% csrf_token %}
         {{Review_Formset.management_form}}
-    		Send Message: <input type="submit" value="message">
-    	</input>
-    </form>
+    		The Suitcase Clinic would love to hear feedback from you to further improve the services it offers. 
+                <p>
+                    Service
+                    <select name="service"> 
+                        <option value="None" selectee>None</option>
+                        <option value="Service1">Service1</option>
+                        <option value="Service2">Service2</option>
+                        <option value="Service3">Service3</option>
+                        <option value="Service4">Service4</option>
+                        <option value="Service5">Service5</option>
+                    </select>
+                </p>
+                </p>
+                     Rating
+                     <select name="rating">
+                        <option value="0" selectee>None</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </p>
+                </p>
+                     Comments
+                     <input type="text" size="100" value="Enter your name here!">
+                </p>
+                </p>
+                     Reviewer
+                     <input type="text" size="20" value="Enter your name here!">
+                </p>
+            <p>
+                <input type="submit" value="submit"></input>
+            </p>
+        </form>
     
-    <form method="POST" action="">
-  		{{Review_Formset.management_form}}
-        <table>
-        {% for form in Review_Formset.forms %}
-            {{ form }}
-        {% endfor %}
-
-        </table>
-		</form>
-	</body>
+    </body>
 </html>

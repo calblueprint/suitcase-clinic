@@ -19,7 +19,7 @@ class ReviewListView(ListView):
 class SubmitReviewListView(TemplateView):
 	template_name = 'submit_review.html'
 	# form_class = ReviewForm
-	success_url = '/reviews/reviews'
+	success_url = '/'
    
 	def form_valid(self, form):
 		form.submit_review()
@@ -53,10 +53,10 @@ class SubmitReviewListView(TemplateView):
 		reviewformset = context['reviewformset']
 		if reviewformset.is_valid():
 			for entry in reviewformset:
-				if entry.cleaned_data.get('rating') != False:
+				if entry.cleaned_data.get('rating') != None:
 					entry.save()
 			# SENDS USERS TO /REVIEWS/REVIEWS
-			return redirect('reviews/reviews')
+			return redirect('/reviews/reviews')
 		else:
 			return self.render_to_response(context)
 
