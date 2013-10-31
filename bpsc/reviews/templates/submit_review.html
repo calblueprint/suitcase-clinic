@@ -4,10 +4,19 @@
 	</head>
 	<body>
     	<form action="" method="post">{% csrf_token %}
-    		{{ form.as_p }}
+        {{Review_Formset.management_form}}
     		Send Message: <input type="submit" value="message">
     	</input>
+    </form>
+    
+    <form method="POST" action="">
   		{{Review_Formset.management_form}}
+        <table>
+        {% for form in Review_Formset.forms %}
+            {{ form }}
+        {% endfor %}
+
+        </table>
 		</form>
 	</body>
 </html>

@@ -36,7 +36,15 @@ class SubmitReviewListView(TemplateView):
 				form.fields['service'].initial = service
 			return context
 		else: # POST requests
-			context['reviewformset'] = Review_Formset(self.request.POST)
+			data = {
+			     'form-TOTAL_FORMS': u'1',
+			     'form-INITIAL_FORMS': u'0',
+			     'form-MAX_NUM_FORMS': u'',
+			     'form-0-title': u'',
+			     'form-0-pub_date': u'',
+			}
+			# context['reviewformset'] = Review_Formset(self.request.POST)
+			context['reviewformset'] = Review_Formset(data, self.request.POST)
 			return context
 
 	# THIS FUNCION IS FOR POST VALIDATION
@@ -45,7 +53,7 @@ class SubmitReviewListView(TemplateView):
 		reviewformset = context['reviewformset']
 		if reviewformset.is_valid():
 			for entry in reviewformset:
-				if entry.clean_data.get('rating') != null:
+				if entry.cleaned_data.get('rating') != False:
 					entry.save()
 			# SENDS USERS TO /REVIEWS/REVIEWS
 			return redirect('reviews/reviews')
