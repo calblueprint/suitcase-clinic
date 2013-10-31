@@ -62,6 +62,7 @@ class SubmitReviewListView(TemplateView):
 						entry.save()
 				return redirect('/reviews/reviews')
 			except:
+				print "Bad form: missing rating or service"
 				return redirect('/reviews/submit')
 			# SENDS USERS TO /REVIEWS/REVIEWS
 			
