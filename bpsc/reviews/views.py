@@ -6,6 +6,7 @@ from django.shortcuts import redirect
 from django.views.generic import TemplateView
 from bpsc.reviews.forms import ReviewForm
 from bpsc.reviews.models import Review
+from django.shortcuts import render_to_response
 
 from django.forms.models import modelformset_factory
 from django.forms.models import BaseModelFormSet
@@ -19,7 +20,6 @@ class ReviewListView(ListView):
 class SubmitReviewListView(TemplateView):
 	template_name = 'submit_review.html'
 	# form_class = ReviewForm
-	success_url = '/'
    
 	def form_valid(self, form):
 		form.submit_review()
@@ -53,10 +53,16 @@ class SubmitReviewListView(TemplateView):
 		reviewformset = context['reviewformset']
 		if reviewformset.is_valid():
 			for entry in reviewformset:
-				if entry.cleaned_data.get('rating') != None:
-					entry.save()
+				try:
+					if entry.cleaned_data.get('rating') == None or entry.cleaned_data.get('service') == None:
+						entry.save()
+				except:
+					# Return 
+					return redirect('/reviews/submit')
+
+
 			# SENDS USERS TO /REVIEWS/REVIEWS
-			return redirect('/reviews/reviews')
+			return redirect('/reviews/submit')
 		else:
 			return self.render_to_response(context)
 
