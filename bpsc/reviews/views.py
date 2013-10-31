@@ -7,11 +7,15 @@ from django.views.generic import TemplateView
 from bpsc.reviews.forms import ReviewForm
 from bpsc.reviews.models import Review
 from django.shortcuts import render_to_response
+from django.shortcuts import render
 
 from django.forms.models import modelformset_factory
 from django.forms.models import BaseModelFormSet
 
-services = ['feet', 'hair']
+services = ['Housing', 'Employment', 'Legal', 'Dental', 'Optometry', 'Medical']
+
+def reviews(request):
+	return render(request, 'reviews.html')
 
 class ReviewListView(ListView):
 	template_name = 'reviews_list.html'
@@ -37,14 +41,14 @@ class SubmitReviewListView(TemplateView):
 			return context
 		else: # POST requests
 			data = {
-			     'form-TOTAL_FORMS': u'1',
-			     'form-INITIAL_FORMS': u'0',
-			     'form-MAX_NUM_FORMS': u'',
-			     'form-0-title': u'',
-			     'form-0-pub_date': u'',
+				 'form-TOTAL_FORMS': u'5',
+				 'form-INITIAL_FORMS': u'5',
+				 'form-MAX_NUM_FORMS': u'6',
+				 'form-0-title': u'TITLE1',
+				 'form-0-pub_date': u'',
 			}
-			# context['reviewformset'] = Review_Formset(self.request.POST)
-			context['reviewformset'] = Review_Formset(data, self.request.POST)
+			context['reviewformset'] = Review_Formset(self.request.POST)
+			# context['reviewformset'] = Review_Formset(data, self.request.POST)
 			return context
 
 	# THIS FUNCION IS FOR POST VALIDATION
@@ -52,17 +56,29 @@ class SubmitReviewListView(TemplateView):
 		context = self.get_context_data(**kwargs)
 		reviewformset = context['reviewformset']
 		if reviewformset.is_valid():
-			for entry in reviewformset:
-				try:
-					if entry.cleaned_data.get('rating') == None or entry.cleaned_data.get('service') == None:
+			try:
+				for entry in reviewformset:
+					if entry.cleaned_data.get('rating') != "":
 						entry.save()
-				except:
-					# Return 
-					return redirect('/reviews/submit')
-
-
+				return redirect('/reviews/reviews')
+			except:
+				print "Bad form: missing rating or service"
+				return redirect('/reviews/submit')
 			# SENDS USERS TO /REVIEWS/REVIEWS
-			return redirect('/reviews/submit')
+			
+
+			# NEED TO FIGURE OUT HOW TO FILTER
+
+			# 	try:
+			# 		if entry.cleaned_data.get('rating') != 'None': # and entry.cleaned_data.get('service') != 'None':
+			# 			entry.save()
+			# 			print "Successful"
+			# 	except:
+			# 		# Return 
+			# 		print "Need to fill out rating and service!!"
+			# 		return redirect('/reviews/submit')
+			# # SENDS USERS TO /REVIEWS/REVIEWS
+			# return redirect('/reviews/submit')
 		else:
 			return self.render_to_response(context)
 

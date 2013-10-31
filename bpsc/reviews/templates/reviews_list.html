@@ -22,7 +22,7 @@
 		</form>
 
 		
-		{% for review in review_formset %}
+		{% for review in reviewformset %}
 		<tr>
 			<td>{{ review.service }}</td>
 			<td>{{ review.date }}</td>
@@ -168,6 +168,7 @@
 
 	<p> <a href="/">Go back to home!</a> </p>
 	<p> <a href="/reviews/submit">Submit another review!</a> </p>
+	<p> <a href="/reviews/">Go back to reviews app!</a> </p>
 	
 	<script>
 		$('#housing_check').click(function() {
