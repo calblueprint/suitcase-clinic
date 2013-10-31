@@ -6,8 +6,8 @@
     	<form action="" method="post">{% csrf_token %}
     		{{ form.as_p }}
     		Send Message: <input type="submit" value="message">
-
     	</input>
+  		{{Review_Formset.management_form}}
 		</form>
 	</body>
 </html>

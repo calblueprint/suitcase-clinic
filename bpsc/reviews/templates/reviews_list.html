@@ -10,6 +10,12 @@
 			<th>Reviewer</th>
 		</tr>		
 
+
+		<form method="post" action="">
+		    {{ formset }}
+		</form>
+
+		
 		{% for review in review_list %}
 		<tr>
 			<td>{{ review.service }}</td>
