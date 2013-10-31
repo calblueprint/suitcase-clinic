@@ -50,6 +50,7 @@ class HousingResource(Resource):
     tags = models.ManyToManyField(HousingTag, null=True, blank=True)
     posted = models.DateField()
     valid_until = models.DateField(null=True, blank=True)
+    outdated = models.BooleanField(null=True, blank=True)
 
     class Meta:
         ordering = ['-valid_until']
@@ -62,6 +63,8 @@ class CommunityResource(Resource):
 class EmploymentResource(Resource):
     tags = models.ManyToManyField(EmploymentTag, null=True, blank=True)
     posted = models.DateField()
+    valid_until = models.DateField(null=True, blank=True)
+    outdated = models.BooleanField(null=True, blank=True)
 
     class Meta:
         ordering = ['-posted']
