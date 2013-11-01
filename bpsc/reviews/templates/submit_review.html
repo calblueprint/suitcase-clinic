@@ -3,11 +3,120 @@
    		<title>Submit Reviews</title>
 	</head>
 	<body>
-    	<form action="" method="post">{% csrf_token %}
-    		{{ form.as_p }}
-    		Send Message: <input type="submit" value="message">
+        The Suitcase Clinic would love to hear feedback from you to further improve the services it offers. 
 
-    	</input>
-		</form>
-	</body>
+
+        <!--  html now works by review_formset, creates 1 form / service in views.py -->
+        <form method="post" action="">
+            {% csrf_token %}
+            <table>
+                {{ reviewformset }}
+            </table>
+            <p>
+                <input type="submit" value="submit"></input>
+            </p>
+        </form>
+
+        <p> <a href="/">Go back to home!</a> </p>
+        <p> <a href="/reviews">Go back to reviews app!</a> </p>
+        <p> <a href="/reviews/reviews">Read some reviews!</a> </p>
+
+
+
+       <!--  <form method="post" action="">
+            {{ Review_Formset.management_form }}
+            {% for form in Review_Formset %}
+                {{ form.service }}
+                <ul>
+                    <li>{{ form.rating }}</li>
+                    {% if formset.can_delete %}
+                        <li>{{ form.DELETE }}</li>
+                    {% endif %}
+                </ul>
+            {% endfor %}
+        </form> -->
+
+
+
+    	<!-- <form action="" method="post">{% csrf_token %}
+        {{Review_Formset.management_form}}
+                <p>
+                    Service
+                    <select name="service"> 
+                        <option value="None" selectee>None</option>
+                        <option value="Service1">Service1</option>
+                        <option value="Service2">Service2</option>
+                        <option value="Service3">Service3</option>
+                        <option value="Service4">Service4</option>
+                        <option value="Service5">Service5</option>
+                    </select>
+                </p>
+                </p>
+                     Rating
+                     <select name="rating">
+                        <option value="0" selectee>None</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </p>
+                </p>
+                     Comments
+                     <input type="text" size="100" value="Enter your comments here!">
+                </p>
+                </p>
+                     Reviewer
+                     <input type="text" size="20" value="Enter your name here!">
+                </p>
+
+                Give another review!
+
+                <p>
+                    Service
+                    <select name="service"> 
+                        <option value="None" selectee>None</option>
+                        <option value="Service1">Service1</option>
+                        <option value="Service2">Service2</option>
+                        <option value="Service3">Service3</option>
+                        <option value="Service4">Service4</option>
+                        <option value="Service5">Service5</option>
+                    </select>
+                </p>
+                </p>
+                     Rating
+                     <select name="rating">
+                        <option value="0" selectee>None</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </p>
+                </p>
+                     Comments
+                     <input type="text" size="100" value="Enter your comments here!">
+                </p>
+                </p>
+                     Reviewer
+                     <input type="text" size="20" value="Enter your name here!">
+                </p>
+        </form>
+
+        <!-- SUBMIT BUTTON -->
+        <!-- <p>
+            <input type="submit" value="submit"></input>
+        </p>
+
+        <p>
+            <a href="/">Go back to home!</a>
+        </p>
+        <p>
+            <a href="/reviews/reviews">See a list of reviews!</a>
+        </p> -->
+
+    
+    </body>
 </html>

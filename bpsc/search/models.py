@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Tag(models.Model):
-    tag_type = models.CharField(max_length=255)
-    value = models.CharField(max_length=255, unique=True)
+    tag_type = models.TextField(max_length=255)
+    value = models.TextField(max_length=255, unique=True)
 
     def __unicode__(self):
         return self.tag_type + ': ' + self.value
@@ -29,15 +29,16 @@ class LegalTag(Tag):
 
 
 class Resource(models.Model):
-    name = models.CharField(max_length=255)
+    name = models.TextField(max_length=255)
     description = models.TextField(blank=True)
     url = models.URLField(blank=True)
-    street_address = models.CharField(blank=True)
-    city = models.CharField(blank=True)
+    street_address = models.TextField(blank=True)
+    city = models.TextField(blank=True)
     zipcode = models.IntegerField(blank=True)
-    latitude = models.DecimalField(null=True, blank=True)
-    longitude = models.DecimalField(null=True, blank=True)
-    phone = models.CharField(blank=True)
+    latitude = models.FloatField(null=True, blank=True)
+    longitude = models.FloatField(null=True, blank=True)
+    phone = models.TextField(blank=True)
+    help = models.TextField(blank=True)
 
     def __unicode__(self):
         return self.name
@@ -49,19 +50,25 @@ class Resource(models.Model):
 class HousingResource(Resource):
     tags = models.ManyToManyField(HousingTag, null=True, blank=True)
     posted = models.DateField()
-    valid_until = models.DateField(null=True, blank=True)
+    expires = models.BooleanField(blank=True)
+    outdated = models.BooleanField(blank=True)
+    rent = models.IntegerField(blank=True)
 
     class Meta:
-        ordering = ['-valid_until']
+        ordering = ['-posted']
 
 
 class CommunityResource(Resource):
     tags = models.ManyToManyField(CommunityTag, null=True, blank=True)
+    cost = models.IntegerField(blank=True)
+    insurance = models.BooleanField(blank=True)
 
 
 class EmploymentResource(Resource):
     tags = models.ManyToManyField(EmploymentTag, null=True, blank=True)
     posted = models.DateField()
+    expires = models.BooleanField(blank=True)
+    outdated = models.BooleanField(blank=True)
 
     class Meta:
         ordering = ['-posted']
