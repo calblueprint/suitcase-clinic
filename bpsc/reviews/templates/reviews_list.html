@@ -1,12 +1,16 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<script src="//code.jquery.com/jquery.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'reviews.js' %}"></script>
+
 </head>
 <body>
-
-
 
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> 
@@ -35,66 +39,80 @@
 		<!-- Eugene's Stuff -->
 		<div class="row">
 			<div class="col-md-9">
-				<ul class="list-unstyled">
+				<ul id = "reviews" class="list-unstyled">
 					{% for review in review_list %}
 					<li class="{{ review.service }}">
 						<p>{{ review.service }}</p>
-						<p>{{ review.date }}</p>
+						<p>{{ review.render_stars|safe }}</p>
 						<p>{{ review.rating }}</p>
+
 						<p>{{ review.comments }}</p>
+						<p>{{ review.date }}</p>
 						<p>{{ review.reviewer }}</p>
 					</li>
 					{% endfor %}
 					<!-- HARDCODED TEMPORARILY UNTIL VINCENT GETS HIS SHIT TOGETHER -->
 					<li class="housing">
+						<h3 class="review_date">01.31.2013</h3>
 						<h3>Housing</h3>
 						<p>hello what's uppppp</p>
 					</li>
 
 					<li class="employment">
+						<h3 class="review_date">10.31.2013</h3>
 						<h3>THEY TOOK OUR JURRRRBBBBBS</h3>
 					</li>
 
 					<li class="dental">
+						<h3 class="review_date">3.31.2013</h3>
 						<h3>teeeth stufff</h3>
 						<p>aww yusssssss</p>
 					</li>
 
 					<li class="community_resources">
+						<h3 class="review_date">3.31.2013</h3>
 						<h3>resources for the communityyyyyy</h3>
 					</li>
 
 					<li class="housing">
+						<h3 class="review_date">2.31.2013</h3>
 						<h3>Housing</h3>
 						<p>hello what's uppppp</p>
 					</li>
 
 					<li class="employment">
+						<h3 class="review_date">01.31.2013</h3>
 						<h3>THEY TOOK OUR JURRRRBBBBBS</h3>
 					</li>
 
 					<li class="community_resources">
+						<h3 class="review_date">3.31.2013</h3>
 						<h3>resources for the communityyyyyy</h3>
 					</li>
 
 					<li class="legal">
+						<h3 class="review_date">5.31.2013</h3>
 						<h3>the lawwww la leyyyyyy follow it!</h3>
 					</li>
 
 					<li class="employment ">
+						<h3 class="review_date">01.31.2013</h3>
 						<h3>jerbbbb jerbbbbb jerbbbbbb</h3>
 					</li>
 
 					<li class="optometry">
+						<h3 class="review_date">10.31.2013</h3>
 						<h3>eyes eyes yes ice</h3>
 					</li>
 
 					<li class="dental">
+						<h3 class="review_date">10.31.2013</h3>
 						<h3>teeeth stufff</h3>
 						<p>aww yusssssss</p>
 					</li>
 
 					<li class="optometry">
+						<h3 class="review_date">3.31.2013</h3>
 						<h3>eyes eyes yes ice</h3>
 					</li>
 				</ul>
@@ -102,26 +120,11 @@
 
 			<div class="col-md-3">
 				<h2>Sort By:</h2>
-					<div class="radio">
-						<label>
-							<input type="radio" name="sort_by" value="recent" checked>Most Recent
-						</label>
-					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="sort_by" value="oldest">Oldest
-						</label>
-					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="sort_by" value="highest">Highest Review
-						</label>
-					</div>
-					<div class="radio">
-						<label>
-							<input type="radio" name="sort_by" value="lowest">Lowest Review
-						</label>
-					</div>
+					<select id="sort_dropdown">
+						<option selected="selected" value="newest">Newest</option>
+						<option value="oldest">Oldest</option>
+					</select>
+
 				<h2>Filter By:</h2>
 				<ul class="list-unstyled">
 					<div class="checkbox">

@@ -12,6 +12,13 @@ class Review(models.Model):
 		return "%(rating)d star review for %(service)s by %(reviewer)s, who says:  %(comments)s" %\
 		 {"rating": self.rating, "service": self.service, "reviewer": self.reviewer, "comments":self.comments}
 
+	def render_stars(self):
+		result = ""
+		for i in range(0, self.rating):
+			result += "<span class='glyphicon glyphicon-star'></span>"
+		for i in range(self.rating, 5):
+			result += "<span class='glyphicon glyphicon-star-empty'></span>"
+		return result
 
 	# aggregate to get average review
 """
