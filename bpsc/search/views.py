@@ -68,8 +68,8 @@ class BaseResourceListView(ListView):
             return self.render_to_response(context)
         else:
             # TODO: Confirmation Page? Or on this page?
-            confirm_url = request.build_absolute_uri() + 'print/'
-            resource_params = '&'.join(['?resourceid=%s' % resource_id for resource_id in selected_resources])
+            confirm_url = request.build_absolute_uri() + 'print/?'
+            resource_params = '&'.join(['rid=%s' % resource_id for resource_id in selected_resources])
             return redirect(confirm_url + resource_params)
 
 class HousingResourceListView(BaseResourceListView):
@@ -102,11 +102,13 @@ class LegalResourceListView(BaseResourceListView):
 
 class BaseResourcePrintView(ListView):
     model = Resource
+    context_object_name = 'resource_list'
     tag = Tag
 
     def get_queryset(self):
-        resource_ids = self.request.GET.getlist('resourceid')
+        resource_ids = self.request.GET.getlist('rid')
         queryset = self.model.objects.filter(pk__in=resource_ids)
+        print queryset
         return queryset
 
     # TODO: Implement POST (printing)
@@ -114,21 +116,25 @@ class BaseResourcePrintView(ListView):
         self.object_list = self.get_queryset()
         return
 
-class HousingResourcePrintView(ListView):
+class HousingResourcePrintView(BaseResourcePrintView):
     model = HousingResource
+    template_name = 'housing_resource_print.html'
     tag = HousingTag
 
 
-class CommunityResourcePrintView(ListView):
+class CommunityResourcePrintView(BaseResourcePrintView):
     model = CommunityResource
+    template_name = 'community_resource_print.html'
     tag = CommunityTag
 
 
-class EmploymentResourcePrintView(ListView):
+class EmploymentResourcePrintView(BaseResourcePrintView):
     model = EmploymentResource
+    template_name = 'employment_resource_print.html'
     tag = EmploymentTag
 
 
-class LegalResourcePrintView(ListView):
+class LegalResourcePrintView(BaseResourcePrintView):
     model = LegalResource
+    template_name = 'legal_resource_print.html'
     tag = LegalTag
