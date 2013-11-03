@@ -1,1 +1,51 @@
 {% extends 'base_search.html' %}
+
+{% block title %}
+{{ block.super }}
+{% endblock %}
+
+{% block content %}
+
+<ul>
+{% for tag_type, value_list in tags.iteritems %}
+    <li><strong>{{ tag_type }}</strong></li>
+    <ul>
+    {% for value in value_list %}
+        <li><input type="checkbox" id="filter-{{ value|slugify }}" checked/> {{ value }}</li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+</ul>
+
+<table>
+    <thead>
+        <tr>
+            <td></td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Url</td>
+            <td>Tags</td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for resource in resource_list %}
+        <tr id="resource-{{ forloop.counter }}" filter-count={{ resource.tags.all|length }}>
+            <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
+            <td><a href="{% block resource_detail_url %}{% endblock %} ">{{ resource.name }}</a></td>
+            <td>{{ resource.description }}</td>
+            <td><a href="{{ resource.url }}">{{ resource.url }}</a></td>
+            <td>
+                {% for tag in resource.tags.all %}
+                    <span class="tag-{{ tag.value|slugify }}">{{ tag.value }}</span>
+                {% endfor %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
+{% block scripts %}
+{% include 'base_resource_list_tag_js.html' %}
+{% endblock %}

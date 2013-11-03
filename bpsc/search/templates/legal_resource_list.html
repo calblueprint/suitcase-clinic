@@ -1,0 +1,9 @@
+{% extends 'base_resource_list.html' %}
+
+{% block title %}
+{{ block.super }} | Legal
+{% endblock %}
+
+{% block resource_detail_url %}
+{% url 'search:legal_detail' pk=resource.pk slug=resource.name|slugify %}
+{% endblock %}
