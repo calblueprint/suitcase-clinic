@@ -47,8 +47,14 @@ class BaseResourceListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(BaseResourceListView, self).get_context_data(**kwargs)
-        # Retrieve all the related tags for this Resource
-        context['tags'] = self.tag.objects.all()
+        tags = self.tag.objects.all()
+        tag_dict = {t.tag_type: [] for t in tags}
+        for t in tags:
+            values_list = tag_dict.get(t.tag_type)
+            values_list.append(t.value)
+            tag_dict[t.tag_type] = values_list
+        # Tags is a dictionary that maps a tag_type to all of its distinct values
+        context['tags'] = tag_dict
         return context
 
     def post(self, request, *args, **kwargs):
