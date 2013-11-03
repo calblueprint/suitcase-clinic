@@ -11,6 +11,7 @@ class Tag(models.Model):
     class Meta:
         abstract = True
         unique_together = ('tag_type', 'value')
+        ordering = ['tag_type', 'value']
 
 
 class HousingTag(Tag):
