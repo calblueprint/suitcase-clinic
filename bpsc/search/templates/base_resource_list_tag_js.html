@@ -25,6 +25,7 @@ $(document).ready(function(){
                         $(this).attr("filter-count", curr - 1);
                         if (parseInt($(this).attr("filter-count")) == 0) {
                             $(this).fadeOut();
+                            $(this).find("input").prop("checked", false);
                         }
                     })
                 }
