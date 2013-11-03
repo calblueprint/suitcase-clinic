@@ -27,7 +27,7 @@
 
 		
 		{% for review in reviewformset %}
-		<tr>
+		<tr class="{{ review.service }}">
 			<td>{{ review.service }}</td>
 			<td>{{ review.date }}</td>
 			<td>{{ review.rating }}</td>
@@ -176,57 +176,57 @@
 	<script>
 		$('#housing_check').click(function() {
 			if ($(this).is(':checked')) {
-				$('.housing').slideDown();
+				$('.Housing').slideDown();
 			} else {
-				$('.housing').slideUp();	}
+				$('.Housing').slideUp();	}
 		});
 
 
 		$('#employment_check').click(function() {
 			if ($(this).is(':checked')) {
-				$('.employment').slideDown();
+				$('.Employment').slideDown();
 			}else {
-				$('.employment').slideUp();
+				$('.Employment').slideUp();
 			}	
 		});
 
 		$('#community_resources_check').click(function() {
 			if ($(this).is(':checked')) {
-				$('.community_resources').slideDown();
+				$('.Community_resources').slideDown();
 			}else {
-				$('.community_resources').slideUp();
+				$('.Community_resources').slideUp();
 			}	
 		});
 
 		$('#legal_check').click(function() {
 			if ($(this).is(':checked')) {
-				$('.legal').slideDown();
+				$('.Legal').slideDown();
 			}else {
-				$('.legal').slideUp();
+				$('.Legal').slideUp();
 			}	
 		});
 
 		$('#dental_check').click(function() {
 			if ($(this).is(':checked')) {
-				$('.dental').slideDown();
+				$('.Dental').slideDown();
 			}else {
-				$('.dental').slideUp();
+				$('.Dental').slideUp();
 			}	
 		});
 
 		$('#optometry_check').click(function() {
 			if ($(this).is(':checked')) {
-				$('.optometry').slideDown();
+				$('.Optometry').slideDown();
 			}else {
-				$('.optometry').slideUp();
+				$('.Optometry').slideUp();
 			}	
 		});
 
 		$('#medical_check').click(function() {
 			if ($(this).is(':checked')) {
-				$('.medical').slideDown();
+				$('.Medical').slideDown();
 			}else {
-				$('.medical').slideUp();
+				$('.Medical').slideUp();
 			}	
 		});
 
