@@ -1,0 +1,20 @@
+{% extends 'base_search.html' %}
+
+{% block title %}
+{{ block.super }} | Print
+{% endblock %}
+
+{% block head %}
+{% load staticfiles %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/base_resource_print.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id="printable-area">
+{% for resource in resource_list %}
+    {% include 'base_resource_detail_content.html' %}
+{% endfor %}
+</div>
+
+<input type="button" onclick="printDiv('printable-area')" value="Print" />
+{% endblock %}
