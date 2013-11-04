@@ -1,11 +1,12 @@
 {% extends 'base_search.html' %}
 
+{% load staticfiles %}
+
 {% block title %}
 {{ block.super }} | Print
 {% endblock %}
 
 {% block head %}
-{% load staticfiles %}
 <script type="text/javascript" src="{{ STATIC_URL }}js/base_resource_print.js"></script>
 {% endblock %}
 
@@ -21,7 +22,7 @@
             {{ field.label_tag }} {{ field }} {{ field.errors }}
         </div>
     {% endfor %}
-    <input type="submit" value="Log Client" />
     <input type="button" onclick="printDiv('printable-area')" value="Print" />
+    <input type="submit" value="Log Client" />
 </form>
 {% endblock %}

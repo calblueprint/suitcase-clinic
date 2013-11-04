@@ -1,7 +1,14 @@
 {% extends 'base_search.html' %}
 
+{% load staticfiles %}
+
 {% block title %}
 {{ block.super }}
+{% endblock %}
+
+{% block head %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/base_resource_list.js"></script>
 {% endblock %}
 
 {% block content %}
@@ -22,14 +29,16 @@
 
     <input type="submit" value="Print Selected Resources"/>
 
-    <table>
+    <table class="tablesorter" id="resource-table">
         <thead>
             <tr>
-                <td></td>
-                <td>Name</td>
-                <td>Description</td>
-                <td>Url</td>
-                <td>Tags</td>
+                <th></th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Url</th>
+                {% block table_head %}
+                {% endblock %}
+                <th>Tags</th>
             </tr>
         </thead>
         <tbody>
@@ -37,11 +46,15 @@
             <tr id="resource-{{ forloop.counter }}" filter-count={{ resource.tags.all|length }}>
                 <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
                 <td><a href="{% block resource_detail_url %}{% endblock %} ">{{ resource.name }}</a></td>
-                <td>{{ resource.description }}</td>
-                <td><a href="{{ resource.url }}">{{ resource.url }}</a></td>
+                <td>{{ resource.description|default:"-" }}</td>
+                <td><a href="{{ resource.url }}">{{ resource.url|default:"-" }}</a></td>
+                {% block table_body %}
+                {% endblock %}
                 <td>
                     {% for tag in resource.tags.all %}
                         <span class="tag-{{ tag.value|slugify }}">{{ tag.value }}</span>
+                    {% empty %}
+                    -
                     {% endfor %}
                 </td>
             </tr>
