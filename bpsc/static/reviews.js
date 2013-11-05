@@ -1,9 +1,7 @@
 function sortNewestFirst(a, b) {
-  // var date1 = $(a).find("p.review_date").textContent;
   var date1 = a.children[4].textContent;
   date1 = date1.split('/');
   date1 = new Date(date1[2], date1[0], date1[1] - 1);
-  // var date2 = $(b).find(".review_date").textContent;
   var date2 = b.children[4].textContent;
   date2 = date2.split('/');
   date2 = new Date(date2[2], date2[0], date2[1] - 1);
@@ -11,11 +9,9 @@ function sortNewestFirst(a, b) {
 }
 
 function sortOldestFirst(a, b) {
-  // var date1 = $(a).find("p.review_date").textContent;
   var date1 = a.children[4].textContent;
   date1 = date1.split('/');
   date1 = new Date(date1[2], date1[0], date1[1] - 1);
-  // var date2 = $(b).find(".review_date").textContent;
   var date2 = b.children[4].textContent;
   date2 = date2.split('/');
   date2 = new Date(date2[2], date2[0], date2[1] - 1);
@@ -23,15 +19,15 @@ function sortOldestFirst(a, b) {
 }
 
 function sortLowestReviewFirst(a, b) {
-  var date1 = a.children[4].textContent;
-  date1 = date1.split('/');
-  date1 = new Date(date1[2], date1[0], date1[1] - 1);
-  var date2 = b.children[4].textContent;
-  date2 = date2.split('/');
-  date2 = new Date(date2[2], date2[0], date2[1] - 1);
-  return date1 > date2 ? 1 : -1;
+  rating1 = a.children[2].className;
+  rating2 = b.children[2].className;
+  return rating1 > rating2 ? 1 : -1;
+}
 
-  var review1 = a.children
+function sortHighestReviewFirst(a, b) {
+  rating1 = a.children[2].className;
+  rating2 = b.children[2].className;
+  return rating1 < rating2 ? 1 : -1;
 }
 
 // function sortOldestFirst(a, b) {
@@ -51,6 +47,10 @@ $(document).ready(function () {
       $('ul#reviews > li').sort(sortNewestFirst).appendTo('ul#reviews');
     } else if (document.getElementById("sort_dropdown").value == "oldest") {
       $('ul#reviews > li').sort(sortOldestFirst).appendTo('ul#reviews');
+    } else if (document.getElementById("sort_dropdown").value == "lowestReview") {
+      $('ul#reviews > li').sort(sortLowestReviewFirst).appendTo('ul#reviews');
+    } else if (document.getElementById("sort_dropdown").value == "highestReview") {
+     $('ul#reviews > li').sort(sortHighestReviewFirst).appendTo('ul#reviews');
     }
     return false;
   };
