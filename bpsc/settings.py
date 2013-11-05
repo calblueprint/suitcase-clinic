@@ -74,12 +74,12 @@ STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
 # Additional locations of static files
-STATICFILES_DIRS = (
+#STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/home/maobster/projects/suitcaseClinic/bpsc/static',
-)
+    #'/home/maobster/projects/suitcaseClinic/bpsc/static',
+#)
 
 # List of finder classes that know how to find static files in
 # various locations.
