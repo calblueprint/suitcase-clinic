@@ -43,15 +43,22 @@ function sortHighestReviewFirst(a, b) {
 $(document).ready(function () {
   var desc = false;
   document.getElementById("sort_dropdown").onchange = function () {
-    if (document.getElementById("sort_dropdown").value == "newest") {
-      $('ul#reviews > li').sort(sortNewestFirst).appendTo('ul#reviews');
-    } else if (document.getElementById("sort_dropdown").value == "oldest") {
-      $('ul#reviews > li').sort(sortOldestFirst).appendTo('ul#reviews');
-    } else if (document.getElementById("sort_dropdown").value == "lowestReview") {
-      $('ul#reviews > li').sort(sortLowestReviewFirst).appendTo('ul#reviews');
-    } else if (document.getElementById("sort_dropdown").value == "highestReview") {
-     $('ul#reviews > li').sort(sortHighestReviewFirst).appendTo('ul#reviews');
-    }
+    var waitTime = 400;
+    $('ul#reviews > li').fadeOut(waitTime);
+    setTimeout(function() {
+      if (document.getElementById("sort_dropdown").value == "newest") {
+        $('ul#reviews > li').sort(sortNewestFirst).appendTo('ul#reviews');
+      } else if (document.getElementById("sort_dropdown").value == "oldest") {
+        $('ul#reviews > li').sort(sortOldestFirst).appendTo('ul#reviews');
+      } else if (document.getElementById("sort_dropdown").value == "lowestReview") {
+        $('ul#reviews > li').sort(sortLowestReviewFirst).appendTo('ul#reviews');
+      } else if (document.getElementById("sort_dropdown").value == "highestReview") {
+      $('ul#reviews > li').sort(sortHighestReviewFirst).appendTo('ul#reviews');
+      }
+
+    }, waitTime)
+    
+    $('ul#reviews > li').fadeIn(waitTime);
     return false;
   };
 
