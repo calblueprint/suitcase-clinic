@@ -28,7 +28,7 @@
 					<li class="review {{ review.service }}">
 						<h3>{{ review.service }}</h3>
 						<h4>Reviewed by: {{ review.reviewer }}</h4>
-						<p>{{ review.render_stars|safe }}</p>
+						<p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
 						<!-- <p>{{ review.rating }}</p> -->
 						<p>{{ review.comments }}</p>
 						<p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
@@ -42,6 +42,8 @@
 					<select id="sort_dropdown">
 						<option selected="selected" value="newest">Newest</option>
 						<option value="oldest">Oldest</option>
+						<option value="lowestReview">Lowest Review</option>
+						<option value="highestReview">Higest Review</option>
 					</select>
 
 				<h2>Filter By:</h2>
