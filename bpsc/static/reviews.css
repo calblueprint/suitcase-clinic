@@ -1,4 +1,7 @@
 #Grid .mix{
     opacity: 0;
     display: none;
+    padding: 10px;
+    width: 250px;
+    margin: 0 0 10px 10px;
 }
