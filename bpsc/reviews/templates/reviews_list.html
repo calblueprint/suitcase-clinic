@@ -18,25 +18,10 @@
 		<h1>Some sick reviews...</h1>
 
 		{% block content %}
-
-
-		<!-- Vincent's stuff -->
 		<form method="post" action="">
 		    {{ formset }}
 		</form>
 
-		
-		{% for review in reviewformset %}
-		<tr class="{{ review.service }}">
-			<td>{{ review.service }}</td>
-			<td>{{ review.date }}</td>
-			<td>{{ review.rating }}</td>
-			<td>{{ review.comments }}</td>
-			<td>{{ review.reviewer }}</td>
-		</tr>
-		{% endfor %}
-
-		<!-- Eugene's Stuff -->
 		<div class="row">
 			<div class="col-md-9">
 				<ul id = "reviews" class="list-unstyled">
@@ -51,70 +36,7 @@
 						<p>{{ review.reviewer }}</p>
 					</li>
 					{% endfor %}
-					<!-- HARDCODED TEMPORARILY UNTIL VINCENT GETS HIS SHIT TOGETHER -->
-					<li class="housing">
-						<h3 class="review_date">01.31.2013</h3>
-						<h3>Housing</h3>
-						<p>hello what's uppppp</p>
-					</li>
-
-					<li class="employment">
-						<h3 class="review_date">10.31.2013</h3>
-						<h3>THEY TOOK OUR JURRRRBBBBBS</h3>
-					</li>
-
-					<li class="dental">
-						<h3 class="review_date">3.31.2013</h3>
-						<h3>teeeth stufff</h3>
-						<p>aww yusssssss</p>
-					</li>
-
-					<li class="community_resources">
-						<h3 class="review_date">3.31.2013</h3>
-						<h3>resources for the communityyyyyy</h3>
-					</li>
-
-					<li class="housing">
-						<h3 class="review_date">2.31.2013</h3>
-						<h3>Housing</h3>
-						<p>hello what's uppppp</p>
-					</li>
-
-					<li class="employment">
-						<h3 class="review_date">01.31.2013</h3>
-						<h3>THEY TOOK OUR JURRRRBBBBBS</h3>
-					</li>
-
-					<li class="community_resources">
-						<h3 class="review_date">3.31.2013</h3>
-						<h3>resources for the communityyyyyy</h3>
-					</li>
-
-					<li class="legal">
-						<h3 class="review_date">5.31.2013</h3>
-						<h3>the lawwww la leyyyyyy follow it!</h3>
-					</li>
-
-					<li class="employment ">
-						<h3 class="review_date">01.31.2013</h3>
-						<h3>jerbbbb jerbbbbb jerbbbbbb</h3>
-					</li>
-
-					<li class="optometry">
-						<h3 class="review_date">10.31.2013</h3>
-						<h3>eyes eyes yes ice</h3>
-					</li>
-
-					<li class="dental">
-						<h3 class="review_date">10.31.2013</h3>
-						<h3>teeeth stufff</h3>
-						<p>aww yusssssss</p>
-					</li>
-
-					<li class="optometry">
-						<h3 class="review_date">3.31.2013</h3>
-						<h3>eyes eyes yes ice</h3>
-					</li>
+	
 				</ul>
 			</div>
 

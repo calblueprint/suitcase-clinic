@@ -1,17 +1,33 @@
 <html>
 	<head>
    		<title>Submit Reviews</title>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
 	</head>
 	<body>
-        The Suitcase Clinic would love to hear feedback from you to further improve the services it offers. 
+        <p> The Suitcase Clinic would love to hear feedback from you to further improve the services it offers. </p>
 
 
         <!--  html now works by review_formset, creates 1 form / service in views.py -->
-        <form method="post" action="">
+        <form method="post" action="" class="pure-form pure-form-aligned">
             {% csrf_token %}
             <table>
                 {{ reviewformset }}
             </table>
+
+          <!--   <table>
+                {{ reviewformset.management_form }}
+                {% for form in reviewformset %}
+                    <div class="pure-control-group"> 
+                        {{ form.service }} 
+                    </div>
+                    
+                    <div class="pure-control-group"> {{ form.rating }} </div>
+                    <div class="pure-control-group"> {{ form.comments }} </div>
+                    <div class="pure-control-group"> {{ form.reviewer }} </div>
+                    <div class="pure-control-group"> {{ form.date }} </div>
+                {% endfor %}
+            </table> -->
+
             <p>
                 <input type="submit" value="submit"></input>
             </p>

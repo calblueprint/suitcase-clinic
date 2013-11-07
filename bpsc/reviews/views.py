@@ -1,18 +1,17 @@
 from django.views.generic import ListView
+from django.views.generic import TemplateView
 from bpsc.reviews.models import Review
 from django.views.generic.edit import FormView
 from django.db import models
 from django.shortcuts import redirect
-from django.views.generic import TemplateView
 from bpsc.reviews.forms import ReviewForm
-from bpsc.reviews.models import Review
 from django.shortcuts import render_to_response
 from django.shortcuts import render
 
 from django.forms.models import modelformset_factory
 from django.forms.models import BaseModelFormSet
 
-services = ['Housing', 'Employment', 'Legal', 'Dental', 'Optometry', 'Medical']
+services = ['Housing']#, 'Employment', 'Legal', 'Dental', 'Optometry', 'Medical']
 
 def reviews(request):
 	return render(request, 'reviews.html')
@@ -34,19 +33,20 @@ class SubmitReviewListView(TemplateView):
 		Review_Formset = modelformset_factory(Review, form=ReviewForm, extra=len(services)) 
 		if self.request.method == "GET":
 			# a = Review_Formset()
+			# print(context['reviewformset'])
 			context['reviewformset'] = Review_Formset()
 			# print(context['reviewformset'])
 			for form, service in zip(context['reviewformset'], services):
 				form.fields['service'].initial = service
 			return context
 		else: # POST requests
-			data = {
-				 'form-TOTAL_FORMS': u'5',
-				 'form-INITIAL_FORMS': u'5',
-				 'form-MAX_NUM_FORMS': u'6',
-				 'form-0-title': u'TITLE1',
-				 'form-0-pub_date': u'',
-			}
+			# data = {
+			# 	 'form-TOTAL_FORMS': u'5',
+			# 	 'form-INITIAL_FORMS': u'5',
+			# 	 'form-MAX_NUM_FORMS': u'6',
+			# 	 'form-0-title': u'TITLE1',
+			# 	 'form-0-pub_date': u'',
+			# }
 			context['reviewformset'] = Review_Formset(self.request.POST)
 			# context['reviewformset'] = Review_Formset(data, self.request.POST)
 			return context
@@ -59,6 +59,7 @@ class SubmitReviewListView(TemplateView):
 			try:
 				for entry in reviewformset:
 					if entry.cleaned_data.get('rating') != "":
+						# VINCENT CHANGING THINGS HERE
 						entry.save()
 				return redirect('/reviews/reviews')
 			except:
