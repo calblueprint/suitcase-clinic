@@ -11,8 +11,6 @@
     <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'script.js' %}"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-
 </head>
 <body>
     <div class="container">
@@ -38,15 +36,21 @@
 			<button type="button" data-sort="data-rating" data-order="desc" class="sort btn btn-info">Lowest Review</button>
 		</div>
 
+		<div class="clearfix">
+			<a href="/reviews/submit" class="btn btn-success btn-lg">Add a new review!</a>
+		</div>
+
 		<ul id="Grid">
 			{% for review in review_list %}
-			<li class="mix {{ review.service }} mix_all review " data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
-				<h3>{{ review.service }}</h3>
-				<h4>Reviewed by: {{ review.reviewer }}</h4>
-				<p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
-				<!-- <p>{{ review.rating }}</p> -->
-				<p>{{ review.comments }}</p>
-				<p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
+			<li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
+				<div class="content">
+					<h3>{{ review.service }}</h3>
+					<h4>Reviewed by: {{ review.reviewer }}</h4>
+					<p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
+					<!-- <p>{{ review.rating }}</p> -->
+					<p>{{ review.comments }}</p>
+					<p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
+				</div>
 			</li>
 			{% endfor %}
 		</ul>	

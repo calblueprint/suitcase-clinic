@@ -1,3 +1,6 @@
 $(document).ready(function() {
-	$('#Grid').mixitup();
+	$('#Grid').mixitup( {
+		easing: 'smooth',
+		transitionSpeed: 500,
+	});
 });
