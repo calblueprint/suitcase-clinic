@@ -6,9 +6,12 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="{% static 'reviews.css' %}">
-	<script src="//code.jquery.com/jquery.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'script.js' %}"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{% static 'reviews.js' %}"></script>
+
 
 </head>
 <body>
@@ -20,12 +23,11 @@
 
 		{% block content %}
 
-		<!-- Eugene's Stuff -->
 		<div class="row">
 			<div class="col-md-9">
-				<ul id = "reviews" class="list-unstyled">
+				<ul id="Grid">
 					{% for review in review_list %}
-					<li class="review {{ review.service }}">
+					<li class="mix {{ review.service }} mix_all review ">
 						<h3>{{ review.service }}</h3>
 						<h4>Reviewed by: {{ review.reviewer }}</h4>
 						<p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
@@ -47,44 +49,32 @@
 					</select>
 
 				<h2>Filter By:</h2>
-				<ul class="list-unstyled">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="housing_check" checked> Housing
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="employment_check" checked> Employment
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="community_resources_check" checked> Community Resources
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="legal_check" checked> Legal
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="dental_check" checked> Dental
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="optometry_check" checked> Optometry
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="medical_check" checked> Medical
-						</label>
-					</div>
+				<ul >
+					<li class="filter active" data-filter="all">
+						<a href="#">Show All</a>
+					</li>
+					<li class="filter" data-filter="Housing">
+						<a href="#">Housing</a>
+					</li>
+					<li class="filter" data-filter="Employment">
+						<a href="#">Employment</a>
+					</li>
+					<li class="filter" data-filter="Community_Resources">
+						<a href="#">Community Resources</a>
+					</li>
+					<li class="filter" data-filter="Legal">
+						<a href="#">Legal</a>
+					</li>
+					<li class="filter" data-filter="Dental">
+						<a href="#">Dental</a>
+					</li>
+					<li class="filter" data-filter="Optometry">
+						<a href="#">Optometry</a>
+					</li>
+					<li class="filter" data-filter="Medical">
+						<a href="#">Medical</a>
+					</li>
 				</ul>
-
 			</div>
 		</div>
 		{% endblock %}
@@ -94,85 +84,6 @@
 	<p> <a href="/reviews/submit">Submit another review!</a> </p>
 	<p> <a href="/reviews/">Go back to reviews app!</a> </p>
 	
-	<script>
-		$('#housing_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Housing').slideDown();
-				$('.Housing').css("display") = "none";
-			} else {
-				$('.Housing').css("display", '');
-				$('.Housing').slideUp();	}
-
-		});
-
-
-		$('#employment_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Employment').slideDown();
-				$('.Employment').css("display") = "none";
-			}else {
-				$('.Employment').css("display", '');
-				$('.Employment').slideUp();
-
-			}	
-		});
-
-		$('#community_resources_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Community_resources').slideDown();
-				$('.Community_resources').css("display") = "none";
-			}else {
-				$('.Community_resources').css("display", '');
-				$('.Community_resources').slideUp();
-
-			}	
-		});
-
-		$('#legal_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Legal').slideDown();
-				$('.Legal').css("display") = "none";
-			}else {
-				$('.Legal').css("display", '');
-				$('.Legal').slideUp();
-
-			}	
-		});
-
-		$('#dental_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Dental').slideDown();
-				$('.Dental').css("display") = "none";
-			}else {
-				$('.Dental').css("display", '');
-				$('.Dental').slideUp();
-
-			}	
-		});
-
-		$('#optometry_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Optometry').slideDown();
-				$('.Optometry').css("display") = "none";
-			}else {
-				$('.Optometry').css("display", '');
-				$('.Optometry').slideUp();
-
-			}	
-		});
-
-		$('#medical_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Medical').slideDown();
-				$('.Medical').css("display") = "none";
-			}else {
-				$('.Medical').css("display", '');
-				$('.Medical').slideUp();
-
-			}	
-		});
-
-	</script>
 </body>
 </html>
 

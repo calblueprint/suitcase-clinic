@@ -1,7 +1,4 @@
-h1, h2, h3 {
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-li {
-	margin-top: 20px;
+#Grid .mix{
+    opacity: 0;
+    display: none;
 }

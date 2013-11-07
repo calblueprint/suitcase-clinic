@@ -41,6 +41,7 @@ function sortHighestReviewFirst(a, b) {
 // }
 
 $(document).ready(function () {
+
   var desc = false;
   document.getElementById("sort_dropdown").onchange = function () {
     var waitTime = 400;
