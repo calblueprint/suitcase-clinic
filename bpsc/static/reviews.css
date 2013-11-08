@@ -1,7 +1,19 @@
-h1, h2, h3 {
-	margin-top: 0px;
-	margin-bottom: 0px;
+#Grid .mix{
+    opacity: 0;
+    display: none;
+ }
+
+li.review {
+	padding: 18px 0 14px;
+	border-bottom: 1px solid #d7d7d7;
+	/*height: 99px;*/
+	width: 100%;
+	/*line-height: 99px;*/
+	vertical-align: top;
+	font-weight: 300;
 }
-li {
-	margin-top: 20px;
+
+.btn {
+	margin-top: 10px;
+	padding-bottom: 10px;
 }
