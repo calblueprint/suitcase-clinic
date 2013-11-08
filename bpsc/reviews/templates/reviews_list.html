@@ -6,152 +6,62 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="{% static 'reviews.css' %}">
-	<script src="//code.jquery.com/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{% static 'reviews.js' %}"></script>
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'script.js' %}"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-    <script src="//code.jquery.com/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script> 
     <div class="container">
-		<h1>Some sick reviews...</h1>
 
+		<h1>Reviews</h1>
 		{% block content %}
 
-		<!-- Eugene's Stuff -->
-		<div class="row">
-			<div class="col-md-9">
-				<ul id = "reviews" class="list-unstyled">
-					{% for review in review_list %}
-					<li class="review {{ review.service }}">
-						<h3>{{ review.service }}</h3>
-						<h4>Reviewed by: {{ review.reviewer }}</h4>
-						<p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
-						<!-- <p>{{ review.rating }}</p> -->
-						<p>{{ review.comments }}</p>
-						<p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
-					</li>
-					{% endfor %}
-				</ul>
-			</div>
-
-			<div class="col-md-3">
-				<h2>Sort By:</h2>
-					<select id="sort_dropdown">
-						<option selected="selected" value="newest">Newest</option>
-						<option value="oldest">Oldest</option>
-						<option value="lowestReview">Lowest Review</option>
-						<option value="highestReview">Higest Review</option>
-					</select>
-
-				<h2>Filter By:</h2>
-				<ul class="list-unstyled">
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="housing_check" checked> Housing
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="employment_check" checked> Employment
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="community_resources_check" checked> Community Resources
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="legal_check" checked> Legal
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="dental_check" checked> Dental
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="optometry_check" checked> Optometry
-						</label>
-					</div>
-					<div class="checkbox">
-						<label>
-							<input type="checkbox" id="medical_check" checked> Medical
-						</label>
-					</div>
-				</ul>
-
-			</div>
+		<div class="btn-group">
+			<button type="button" class="filter btn btn-primary" data-filter="all">Show All</button>
+			<button type="button" class="filter btn btn-primary" data-filter="Housing">Housing</button>
+			<button type="button" class="filter btn btn-primary" data-filter="Employment">Employment</button>
+			<button type="button" class="filter btn btn-primary" data-filter="Community Resources">Community Resources</button>
+			<button type="button" class="filter btn btn-primary" data-filter="Legal">Legal</button>
+			<button type="button" class="filter btn btn-primary" data-filter="Dental">Dental</button>
+			<button type="button" class="filter btn btn-primary" data-filter="Optometry">Optometry</button>
+			<button type="button" class="filter btn btn-primary" data-filter="Medical">Medical</button>
 		</div>
+
+		<div class="btn-group">
+			<button type="button" data-sort="data-date" data-order="desc" class="sort btn btn-info">Newest</button>
+			<button type="button" data-sort="data-date" data-order="asc" class="sort btn btn-info">Oldest</button>
+			<button type="button" data-sort="data-rating" data-order="asc" class="sort btn btn-info">Highest Review</button>
+			<button type="button" data-sort="data-rating" data-order="desc" class="sort btn btn-info">Lowest Review</button>
+		</div>
+
+		<div class="clearfix">
+			<a href="/reviews/submit" class="btn btn-success btn-lg">Add a new review!</a>
+		</div>
+
+		<ul id="Grid">
+			{% for review in review_list %}
+			<li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
+				<div class="content">
+					<h3>{{ review.service }}</h3>
+					<h4>Reviewed by: {{ review.reviewer }}</h4>
+					<p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
+					<!-- <p>{{ review.rating }}</p> -->
+					<p>{{ review.comments }}</p>
+					<p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
+				</div>
+			</li>
+			{% endfor %}
+		</ul>	
 		{% endblock %}
-	</div>
+		<p> <a href="/">Go back to home!</a> </p>
+		<p> <a href="/reviews/submit">Submit another review!</a> </p>
+		<p> <a href="/reviews/">Go back to reviews app!</a> </p>
+	</div> 	<!-- end container -->
 
-	<p> <a href="/">Go back to home!</a> </p>
-	<p> <a href="/reviews/submit">Submit another review!</a> </p>
-	<p> <a href="/reviews/">Go back to reviews app!</a> </p>
 	
-	<script>
-		$('#housing_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Housing').slideDown();
-			} else {
-				$('.Housing').slideUp();	}
-		});
-
-
-		$('#employment_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Employment').slideDown();
-			}else {
-				$('.Employment').slideUp();
-			}	
-		});
-
-		$('#community_resources_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Community_resources').slideDown();
-			}else {
-				$('.Community_resources').slideUp();
-			}	
-		});
-
-		$('#legal_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Legal').slideDown();
-			}else {
-				$('.Legal').slideUp();
-			}	
-		});
-
-		$('#dental_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Dental').slideDown();
-			}else {
-				$('.Dental').slideUp();
-			}	
-		});
-
-		$('#optometry_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Optometry').slideDown();
-			}else {
-				$('.Optometry').slideUp();
-			}	
-		});
-
-		$('#medical_check').click(function() {
-			if ($(this).is(':checked')) {
-				$('.Medical').slideDown();
-			}else {
-				$('.Medical').slideUp();
-			}	
-		});
-
-	</script>
+	
 </body>
 </html>
 
