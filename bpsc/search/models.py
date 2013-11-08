@@ -31,7 +31,7 @@ class LegalTag(Tag):
 
 
 class Resource(models.Model):
-    name = models.TextField(max_length=255)
+    name = models.CharField(max_length=255)
     description = models.TextField(blank=True)
     url = models.URLField(blank=True)
     street_address = models.CharField(max_length=255, blank=True)
@@ -40,6 +40,7 @@ class Resource(models.Model):
     latitude = models.DecimalField(max_digits=8, decimal_places=5, null=True, blank=True)
     longitude = models.DecimalField(max_digits=8, decimal_places=5, null=True, blank=True)
     phone = models.CharField(max_length=11, blank=True)
+    num_used = models.IntegerField(default=0)
 
     def __unicode__(self):
         return self.name
@@ -51,9 +52,7 @@ class Resource(models.Model):
 class HousingResource(Resource):
     tags = models.ManyToManyField(HousingTag, null=True, blank=True)
     posted = models.DateField()
-    expires = models.BooleanField(blank=True)
-    outdated = models.BooleanField(blank=True)
-    rent = models.IntegerField(blank=True)
+    outdated = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-posted']
@@ -61,15 +60,13 @@ class HousingResource(Resource):
 
 class CommunityResource(Resource):
     tags = models.ManyToManyField(CommunityTag, null=True, blank=True)
-    cost = models.IntegerField(blank=True)
-    insurance = models.BooleanField(blank=True)
 
 
 class EmploymentResource(Resource):
     tags = models.ManyToManyField(EmploymentTag, null=True, blank=True)
     posted = models.DateField()
-    expires = models.BooleanField(blank=True)
-    outdated = models.BooleanField(blank=True)
+    outdated = models.BooleanField(default=False)
+    resource_of_the_week = models.BooleanField(default=False)
 
     class Meta:
         ordering = ['-posted']
