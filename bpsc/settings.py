@@ -125,6 +125,7 @@ TEMPLATE_DIRS = (
 
 INSTALLED_APPS = (
     'django.contrib.admin',
+    'django.contrib.admindocs',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -135,8 +136,6 @@ INSTALLED_APPS = (
     'bpsc.search',
     'bpsc.users',
     'south',
-    # Uncomment the next line to enable admin documentation:
-    # 'django.contrib.admindocs',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
