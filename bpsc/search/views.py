@@ -69,9 +69,8 @@ class BaseResourceListView(ListView):
             context = self.get_context_data(object_list=self.object_list)
             return self.render_to_response(context)
         else:
-            # TODO: Confirmation Page? Or on this page?
             confirm_url = request.build_absolute_uri() + 'print/?'
-            resource_params = '&'.join(['rid=%s' % resource_id for resource_id in selected_resources])
+            resource_params = '&'.join(['rid=%s' % resource_id for resource_id in sorted(selected_resources)])
             return redirect(confirm_url + resource_params)
 
 class HousingResourceListView(BaseResourceListView):
