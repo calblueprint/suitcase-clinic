@@ -124,6 +124,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -134,13 +135,6 @@ INSTALLED_APPS = (
     'bpsc.search',
     'bpsc.users',
     'south',
-    'bpsc.search',
-    # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.messages',
-    'django.contrib.sessions',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
