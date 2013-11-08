@@ -4,6 +4,55 @@
 {{ block.super }} | Employment
 {% endblock %}
 
+{% block listing_of_the_week %}
+<h3>Listings Of the Week</h3>
+
+{% if listings_of_the_week %}
+<table class="tablesorter" id="resource-otw-table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Url</th>
+            <th>Posted</th>
+            <th>Tags</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for resource in listings_of_the_week %}
+        <tr id="resource-otw-{{ forloop.counter }}" filter-count={{ resource.tags.all|length }}>
+            <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
+            <td><a href="{% url 'search:employment_detail' pk=resource.pk slug=resource.name|slugify %}">{{ resource.name }}</a></td>
+            <td>{{ resource.description|default:"-" }}</td>
+            <td><a href="{{ resource.url }}">{{ resource.url|default:"-" }}</a></td>
+            <td>{{ resource.posted }}</td>
+            <td>
+                {% for tag in resource.tags.all %}
+                    <span class="tag-otw-{{ tag.value|slugify }}">{{ tag.value }}</span>
+                {% empty %}
+                -
+                {% endfor %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+There are no listings of the week for thisw week
+{% endif %}
+{% endblock %}
+
+{% block table_head %}
+<th>Posted</th>
+<th>Outdated</th>
+{% endblock %}
+
+{% block table_body %}
+<td>{{ resource.posted }}</td>
+<td>{{ resource.outdated|yesno:"Yes,No,-" }}</td>
+{% endblock %}
+
 {% block resource_detail_url %}
 {% url 'search:employment_detail' pk=resource.pk slug=resource.name|slugify %}
 {% endblock %}

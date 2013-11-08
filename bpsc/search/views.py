@@ -1,8 +1,7 @@
 # Create your views here.
 from django.contrib import messages
-from django.core.urlresolvers import reverse
 from django.shortcuts import get_object_or_404, redirect
-from django.views.generic import DetailView, FormView, ListView
+from django.views.generic import DetailView, ListView
 
 from bpsc.search.forms import ResourcePrintForm
 from bpsc.lib import send_suitcase_email
@@ -70,8 +69,10 @@ class BaseResourceListView(ListView):
             return self.render_to_response(context)
         else:
             confirm_url = request.build_absolute_uri() + 'print/?'
-            resource_params = '&'.join(['rid=%s' % resource_id for resource_id in sorted(selected_resources)])
+            # Eliminate any duplicate resource ids, possibly from selecting a listing of the week
+            resource_params = '&'.join(['rid=%s' % resource_id for resource_id in sorted(set(selected_resources))])
             return redirect(confirm_url + resource_params)
+
 
 class HousingResourceListView(BaseResourceListView):
     model = HousingResource
@@ -93,6 +94,11 @@ class EmploymentResourceListView(BaseResourceListView):
     template_name = 'employment_resource_list.html'
     tag = EmploymentTag
 
+    def get_context_data(self, **kwargs):
+        context = super(EmploymentResourceListView, self).get_context_data(**kwargs)
+        context['listings_of_the_week'] = EmploymentResource.objects.filter(listing_of_the_week=True)
+        return context
+
 
 class LegalResourceListView(BaseResourceListView):
     model = LegalResource
@@ -106,6 +112,10 @@ class BaseResourcePrintView(ListView):
     context_object_name = 'resource_list'
     tag = Tag
 
+    def dispatch(self, request, *args, **kwargs):
+        self.is_logged = request.GET.get('logged') == 'true'
+        return super(BaseResourcePrintView, self).dispatch(request, *args, **kwargs)
+
     def get_queryset(self):
         # Get the resources with the IDs in the url querystring
         resource_ids = self.request.GET.getlist('rid')
@@ -118,34 +128,36 @@ class BaseResourcePrintView(ListView):
             context['print_form'] = ResourcePrintForm(self.request.POST)
         else:
             context['print_form'] = ResourcePrintForm()
+        context['is_logged'] = self.is_logged
         return context
 
-
-
-    # TODO: Implement POST (printing)
     def post(self, request, *args, **kwargs):
         self.object_list = self.get_queryset()
         context = self.get_context_data(object_list=self.object_list)
         print_form = context['print_form']
         if print_form.is_valid():
+            for resource in context['resource_list']:
+                resource.num_used += 1
+                resource.save()
+            logged_url = request.build_absolute_uri() + '&logged=true'
             email_context_dict = {
                 'client_name': print_form.cleaned_data.get('client_name'),
                 'client_phone': print_form.cleaned_data.get('client_phone'),
                 'client_email': print_form.cleaned_data.get('client_email'),
-                'resource_url': request.build_absolute_uri(),
+                'resource_url': logged_url,
                 'resource_type': self.resource_type,
             }
             send_suitcase_email('print_resource.yml', email_context_dict,
                     [print_form.cleaned_data.get('user_email')])
-            messages.success(request, 'Resources were printed and emailed successfully.')
-            return redirect(self.success_url)
+            messages.success(request, 'Resources were logged and emailed successfully.')
+            return redirect(logged_url)
         else:
             return self.render_to_response(context)
 
 class HousingResourcePrintView(BaseResourcePrintView):
     model = HousingResource
     template_name = 'housing_resource_print.html'
-    success_url = 'search:housing_list'
+    list_url = 'search:housing_list'
     tag = HousingTag
     resource_type = 'Housing'
 
@@ -153,7 +165,7 @@ class HousingResourcePrintView(BaseResourcePrintView):
 class CommunityResourcePrintView(BaseResourcePrintView):
     model = CommunityResource
     template_name = 'community_resource_print.html'
-    success_url = 'search:community_list'
+    list_url = 'search:community_list'
     tag = CommunityTag
     resource_type = 'Community'
 
@@ -161,7 +173,7 @@ class CommunityResourcePrintView(BaseResourcePrintView):
 class EmploymentResourcePrintView(BaseResourcePrintView):
     model = EmploymentResource
     template_name = 'employment_resource_print.html'
-    success_url = 'search:employment_list'
+    list_url = 'search:employment_list'
     tag = EmploymentTag
     resource_type = 'Employment'
 
@@ -169,6 +181,6 @@ class EmploymentResourcePrintView(BaseResourcePrintView):
 class LegalResourcePrintView(BaseResourcePrintView):
     model = LegalResource
     template_name = 'legal_resource_print.html'
-    success_url = 'search:legal_list'
+    list_url = 'search:legal_list'
     tag = LegalTag
     resource_type = 'Legal'

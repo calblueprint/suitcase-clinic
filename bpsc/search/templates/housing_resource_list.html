@@ -10,10 +10,10 @@
 
 {% block table_head %}
 <th>Posted</th>
-<th>Expires</th>
+<th>Outdated</th>
 {% endblock %}
 
 {% block table_body %}
 <td>{{ resource.posted }}</td>
-<td>{{ resource.valid_until|default:"-" }}</td>
+<td>{{ resource.outdated|yesno:"Yes,No,-" }}</td>
 {% endblock %}
