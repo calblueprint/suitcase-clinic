@@ -1,0 +1,73 @@
+{% extends 'base_search.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+{{ block.super }}
+{% endblock %}
+
+{% block head %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/base_resource_list.js"></script>
+{% endblock %}
+
+{% block content %}
+
+<ul>
+{% for tag_type, value_list in tags.iteritems %}
+    <li><strong>{{ tag_type }}</strong></li>
+    <ul>
+    {% for value in value_list %}
+        <li><input type="checkbox" id="filter-{{ value|slugify }}" checked/> {{ value }}</li>
+    {% endfor %}
+    </ul>
+{% endfor %}
+</ul>
+
+<form method="post">
+    {% csrf_token %}
+
+    <input type="submit" value="Print Selected Resources"/>
+
+    {% block listing_of_the_week %}
+    {% endblock %}
+
+    <h3>All Listings</h3>
+    <table class="tablesorter" id="resource-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Url</th>
+                {% block table_head %}
+                {% endblock %}
+                <th>Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resource in resource_list %}
+            <tr id="resource-{{ forloop.counter }}" filter-count={{ resource.tags.all|length }}>
+                <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
+                <td><a href="{% block resource_detail_url %}{% endblock %} ">{{ resource.name }}</a></td>
+                <td>{{ resource.description|default:"-" }}</td>
+                <td><a href="{{ resource.url }}">{{ resource.url|default:"-" }}</a></td>
+                {% block table_body %}
+                {% endblock %}
+                <td>
+                    {% for tag in resource.tags.all %}
+                        <span class="tag-{{ tag.value|slugify }}">{{ tag.value }}</span>
+                    {% empty %}
+                    -
+                    {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</form>
+{% endblock %}
+
+{% block scripts %}
+{% include 'base_resource_list_tag_js.html' %}
+{% endblock %}

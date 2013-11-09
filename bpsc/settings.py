@@ -130,10 +130,10 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bpsc.users',
     'bpsc.reviews',
+    'bpsc.search',
+    'bpsc.users',
     'south',
-    'bpsc.search'
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
@@ -171,7 +171,18 @@ LOGGING = {
     }
 }
 
+# Setup email backends - during development, write email out to console
+if "IS_STAGING" in os.environ or "IS_PRODUCTION" in os.environ:
+    EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
+# Email settings for using sendgrid with Heroku
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'sendgrid_username' # Change this later
+EMAIL_HOST_PASSWORD = 'sendgrid_password' # Change this later
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

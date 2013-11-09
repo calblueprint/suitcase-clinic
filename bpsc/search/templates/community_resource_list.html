@@ -1,0 +1,9 @@
+{% extends 'base_resource_list.html' %}
+
+{% block title %}
+{{ block.super }} | Community
+{% endblock %}
+
+{% block resource_detail_url %}
+{% url 'search:community_detail' pk=resource.pk slug=resource.name|slugify %}
+{% endblock %}

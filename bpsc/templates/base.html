@@ -9,6 +9,7 @@
     {% block meta %}
     {% endblock %}
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     {% block head %}
     {% endblock %}
 </head>
@@ -21,6 +22,16 @@
         </div>
 
         <div class="content">
+        {% block messages %}
+        {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endblock %}
+
         {% block content %}
         {% endblock %}
         </div>

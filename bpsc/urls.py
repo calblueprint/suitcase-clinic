@@ -19,10 +19,8 @@ urlpatterns = patterns('',
 
     url(r'^$', home, name='home'),
     url(r'^survey/$', survey, name='survey'),
-    url(r'^search/$', search, name='search'),
     url(r'^contact/$', contact, name='contact'),
-    
-    url(r'^search/$', search),
+    url(r'^search/', include('bpsc.search.urls', app_name='search', namespace='search')),
     url(r'^users/', include('bpsc.users.urls', app_name='users', namespace='users')),
     url(r'^reviews/', include('bpsc.reviews.urls', app_name='reviews', namespace='reviews')),
 )
