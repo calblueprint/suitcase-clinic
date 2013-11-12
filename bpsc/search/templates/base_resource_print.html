@@ -1,0 +1,34 @@
+{% extends 'base_search.html' %}
+
+{% load staticfiles %}
+
+{% block title %}
+{{ block.super }} | Print
+{% endblock %}
+
+{% block head %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/base_resource_print.js"></script>
+{% endblock %}
+
+{% block content %}
+<a href="{% block list_url %}{% endblock %}">Return to listings</a>
+
+<div id="printable-area">
+{% include 'base_resource_detail_list.html' %}
+</div>
+
+{% if not is_logged %}
+<form method="post">
+    {% csrf_token %}
+    {% for field in print_form %}
+        <div class="field-wrapper">
+            {{ field.label_tag }} {{ field }} {{ field.errors }}
+        </div>
+    {% endfor %}
+    <input type="submit" value="Log Client" />
+    <input type="button" onclick="printDiv('printable-area')" value="Print" />
+</form>
+{% else %}
+<input type="button" onclick="printDiv('printable-area')" value="Print" />
+{% endif %}
+{% endblock %}

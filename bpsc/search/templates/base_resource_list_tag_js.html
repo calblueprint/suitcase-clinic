@@ -1,0 +1,38 @@
+<!--
+Dynamically generates javascript code for each tag value for a resource.
+Each row in the resource list table has a count for the number of tags
+that are selected by the user (by default, all tags are selected, so the
+count is the number of tags each resource has). When this count reaches
+0, the row is hidden. This creates an "or" behavior with the tags - a
+resource is only hidden when all of its tag values are deselected.
+-->
+<script>
+$(document).ready(function(){
+
+{% for tag_type, value_list in tags.iteritems %}
+    {% for value in value_list %}
+        {% with value|slugify as v %}
+            $("#filter-{{ v }}").change(function () {
+                if($(this).is(":checked")) {
+                    $(".tag-{{ v }}").parents("tr").fadeIn();
+                    $(".tag-{{ v }}").parents("tr").map(function(){
+                        var curr = parseInt($(this).attr("filter-count"));
+                        $(this).attr("filter-count", curr + 1);
+                    })
+                } else {
+                    $(".tag-{{ v }}").parents("tr").map(function(){
+                        var curr = parseInt($(this).attr("filter-count"));
+                        $(this).attr("filter-count", curr - 1);
+                        if (parseInt($(this).attr("filter-count")) == 0) {
+                            $(this).fadeOut();
+                            $(this).find("input").prop("checked", false);
+                        }
+                    })
+                }
+            });
+        {% endwith %}
+    {% endfor %}
+{% endfor %}
+
+});
+</script>
