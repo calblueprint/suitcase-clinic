@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Submit Reviews
+{% endblock %}
+
+{% block content %}
+    <p> The Suitcase Clinic would love to hear feedback from you to further improve the services it offers. </p>
+
+
+    <!--  html now works by review_formset, creates 1 form / service in views.py -->
+    <form method="post" action="" class="pure-form pure-form-aligned">
+        {% csrf_token %}
+        <table>
+            
+            <!-- Built-in Form Setup -->
+            <!-- {{ reviewform }}  -->
+
+            <div class="pure-control-group"> Service {{ reviewform.service }}   {{ reviewform.service.errors}}      </div>
+            <div class="pure-control-group"> Rating {{ reviewform.rating }}     {{ reviewform.rating.errors}}       </div>
+            <div class="pure-control-group"> Comments {{ reviewform.comments }} {{ reviewform.comments.errors}}     </div>
+            <div class="pure-control-group"> Reviewer {{ reviewform.reviewer }} {{ reviewform.reviewer.errors}}     </div>
+
+        </table>
+
+        <p>
+            <input type="submit" value="submit"></input>
+        </p>
+    </form>
+
+    <p> <a href="/">Go back to home!</a> </p>
+    <p> <a href="/reviews">Go back to reviews app!</a> </p>
+    <p> <a href="/reviews/reviews">Read some reviews!</a> </p>
+{% endblock %}

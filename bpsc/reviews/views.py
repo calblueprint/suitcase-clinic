@@ -11,7 +11,7 @@ from django.shortcuts import render
 from django.forms.models import modelformset_factory
 from django.forms.models import BaseModelFormSet
 
-services = ['Housing']#, 'Employment', 'Legal', 'Dental', 'Optometry', 'Medical']
+from django.contrib import messages
 
 def reviews(request):
 	return render(request, 'reviews.html')
@@ -21,7 +21,7 @@ class ReviewListView(ListView):
 	model = Review
 
 class SubmitReviewListView(TemplateView):
-	template_name = 'submit_review.html'
+	template_name = 'base_submit_review.html'
 	# form_class = ReviewForm
    
 	def form_valid(self, form):
@@ -30,14 +30,14 @@ class SubmitReviewListView(TemplateView):
 
 	def get_context_data(self, **kwargs):
 		context = super(SubmitReviewListView, self).get_context_data(**kwargs)
-		Review_Formset = modelformset_factory(Review, form=ReviewForm, extra=len(services)) 
+		# Review_Formset = modelformset_factory(Review, form=ReviewForm, extra=len(services)) 
 		if self.request.method == "GET":
 			# a = Review_Formset()
 			# print(context['reviewformset'])
-			context['reviewformset'] = Review_Formset()
+			context['reviewform'] = ReviewForm()
 			# print(context['reviewformset'])
-			for form, service in zip(context['reviewformset'], services):
-				form.fields['service'].initial = service
+			# for form, service in zip(context['reviewform'], services):
+			# 	form.field['service'].initial = service
 			return context
 		else: # POST requests
 			# data = {
@@ -47,24 +47,24 @@ class SubmitReviewListView(TemplateView):
 			# 	 'form-0-title': u'TITLE1',
 			# 	 'form-0-pub_date': u'',
 			# }
-			context['reviewformset'] = Review_Formset(self.request.POST)
-			# context['reviewformset'] = Review_Formset(data, self.request.POST)
+			context['reviewform'] = ReviewForm(self.request.POST)
+			# context['reviewform'] = Review_Formset(data, self.request.POST)
 			return context
 
 	# THIS FUNCION IS FOR POST VALIDATION
 	def post(self, request, *args, **kwargs):
 		context = self.get_context_data(**kwargs)
-		reviewformset = context['reviewformset']
-		if reviewformset.is_valid():
-			try:
-				for entry in reviewformset:
-					if entry.cleaned_data.get('rating') != "":
-						# VINCENT CHANGING THINGS HERE
-						entry.save()
-				return redirect('/reviews/reviews')
-			except:
-				print "Bad form: missing rating or service"
-				return redirect('/reviews/submit')
+		reviewform = context['reviewform']
+		if reviewform.is_valid():
+			# try:
+			reviewform.save()
+			# messages.success(request, 'Review was successfully submitted!')
+			messages.success(request, 'Review was successfully submitted!')
+			return redirect('/reviews/reviews')
+
+		#except:
+
+			
 			# SENDS USERS TO /REVIEWS/REVIEWS
 			
 
