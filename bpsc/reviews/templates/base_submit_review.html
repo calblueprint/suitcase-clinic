@@ -16,10 +16,17 @@
             <!-- Built-in Form Setup -->
             <!-- {{ reviewform }}  -->
 
-            <div class="pure-control-group"> Service {{ reviewform.service }}   {{ reviewform.service.errors}}      </div>
-            <div class="pure-control-group"> Rating {{ reviewform.rating }}     {{ reviewform.rating.errors}}       </div>
-            <div class="pure-control-group"> Comments {{ reviewform.comments }} {{ reviewform.comments.errors}}     </div>
-            <div class="pure-control-group"> Reviewer {{ reviewform.reviewer }} {{ reviewform.reviewer.errors}}     </div>
+            <div class="pure-control-group"> Service    {{ reviewform.service }}    {{ reviewform.service.errors}}      </div>
+            <div class="pure-control-group"> Rating     <!-- {{ reviewform.rating }}  -->    {{ reviewform.rating.errors}} <!-- </div> -->      
+                <input type="radio" name="rating" value="1">1 
+                <input type="radio" name="rating" value="2">2 
+                <input type="radio" name="rating" value="3">3 
+                <input type="radio" name="rating" value="4">4 
+                <input type="radio" name="rating" value="5">5 
+            </div>
+
+            <div class="pure-control-group"> Comments   {{ reviewform.comments }}   {{ reviewform.comments.errors}}     </div>
+            <div class="pure-control-group"> Reviewer   {{ reviewform.reviewer }}   {{ reviewform.reviewer.errors}}     </div>
 
         </table>
 
