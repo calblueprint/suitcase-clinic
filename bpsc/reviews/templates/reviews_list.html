@@ -1,8 +1,10 @@
+{% extends 'base.html' %}
+
 {% load staticfiles %}
 
 <!DOCTYPE html>
 <html>
-<head>
+{% block head %}
         <title></title>
         <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="{% static 'reviews.css' %}">
@@ -11,7 +13,8 @@
     <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'script.js' %}"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-</head>
+{% endblock %}
+
 <body>
     <div class="container">
 
