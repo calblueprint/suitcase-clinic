@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Tag(models.Model):
-    tag_type = models.TextField(max_length=255)
-    value = models.TextField(max_length=255, unique=True)
+    tag_type = models.CharField(max_length=255)
+    value = models.CharField(max_length=255, unique=True)
 
     def __unicode__(self):
         return self.tag_type + ': ' + self.value
