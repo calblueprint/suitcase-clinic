@@ -1,6 +1,7 @@
 from django import forms
 from django.contrib.localflavor.us.forms import USPhoneNumberField
 
+
 class ResourcePrintForm(forms.Form):
     # We set the 'queryset' field in __init__. This is passed from the view
     client_name = forms.CharField(label="Client's Name")

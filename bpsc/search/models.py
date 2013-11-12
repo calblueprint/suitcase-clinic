@@ -2,8 +2,10 @@ from django.db import models
 
 
 class Tag(models.Model):
-    tag_type = models.TextField(max_length=255)
-    value = models.TextField(max_length=255, unique=True)
+    tag_type = models.CharField('Tag Category', max_length=255,
+            help_text='Category of this tag (e.g. Location, Price, etc.)')
+    value = models.CharField('Tag Value', max_length=255, unique=True,
+        help_text='Value of this tag (e.g. Berkeley, $400 Max, etc.)')
 
     def __unicode__(self):
         return self.tag_type + ': ' + self.value
@@ -15,33 +17,39 @@ class Tag(models.Model):
 
 
 class HousingTag(Tag):
-    pass
+    class Meta(Tag.Meta):
+        verbose_name = 'Housing Tag'
 
 
 class CommunityTag(Tag):
-    pass
+    class Meta(Tag.Meta):
+        verbose_name = 'Community Tag'
 
 
 class EmploymentTag(Tag):
-    pass
+    class Meta(Tag.Meta):
+        verbose_name = 'Employment Tag'
 
 
 class LegalTag(Tag):
-    pass
+    class Meta(Tag.Meta):
+        verbose_name = 'Legal Tag'
 
 
 class Resource(models.Model):
-    name = models.CharField(max_length=255)
-    description = models.TextField(blank=True)
-    url = models.URLField(blank=True)
-    street_address = models.CharField(max_length=255, blank=True)
-    city = models.CharField(max_length=255, blank=True)
-    zipcode = models.IntegerField(null=True, blank=True)
-    latitude = models.DecimalField(max_digits=8, decimal_places=5, null=True, blank=True)
-    longitude = models.DecimalField(max_digits=8, decimal_places=5, null=True, blank=True)
-    phone = models.CharField(max_length=11, blank=True)
-    num_used = models.IntegerField(default=0)
-    auto_added = models.BooleanField(default=False)
+    name = models.CharField('Name', max_length=255)
+    description = models.TextField('Description',blank=True)
+    url = models.URLField('URL', blank=True)
+    street_address = models.CharField('Street Address', max_length=255, blank=True)
+    city = models.CharField('City', max_length=255, blank=True)
+    zipcode = models.IntegerField('ZIP Code', null=True, blank=True)
+    latitude = models.DecimalField('Latitude', max_digits=8, decimal_places=5, null=True, blank=True)
+    longitude = models.DecimalField('Longitude', max_digits=8, decimal_places=5, null=True, blank=True)
+    phone = models.CharField('Phone', max_length=11, blank=True)
+    num_used = models.IntegerField('Number of Uses', default=0,
+            help_text='Number of times this resource has been given to a client')
+    auto_added = models.BooleanField('Auto-added', default=False,
+            help_text='Set to "true" if resource was automatically added')
 
     def __unicode__(self):
         return self.name
@@ -51,33 +59,40 @@ class Resource(models.Model):
 
 
 class HousingResource(Resource):
-    tags = models.ManyToManyField(HousingTag, null=True, blank=True)
-    posted = models.DateField()
-    outdated = models.BooleanField(default=False)
+    posted = models.DateField('Date Posted')
+    outdated = models.BooleanField('Outdated', default=False,
+            help_text='Set to "true" if it has been more than 6 weeks since this resource was posted')
+    tags = models.ManyToManyField(HousingTag, verbose_name='Tags', null=True, blank=True)
 
     class Meta:
         ordering = ['auto_added', '-posted']
+        verbose_name = 'Housing Resource'
 
 
 class CommunityResource(Resource):
-    tags = models.ManyToManyField(CommunityTag, null=True, blank=True)
+    tags = models.ManyToManyField(CommunityTag, verbose_name='Tags', null=True, blank=True)
 
     class Meta:
         ordering = ['auto_added']
+        verbose_name = 'Community Resource'
 
 
 class EmploymentResource(Resource):
-    tags = models.ManyToManyField(EmploymentTag, null=True, blank=True)
-    posted = models.DateField()
-    outdated = models.BooleanField(default=False)
-    listing_of_the_week = models.BooleanField(default=False)
+    posted = models.DateField('Date Posted')
+    outdated = models.BooleanField('Outdated', default=False,
+            help_text='Set to "true" if it has been more than 6 weeks since this resource was posted')
+    listing_of_the_week = models.BooleanField('Listing of the Week', default=False,
+            help_text='Set to "true" if this resource has been marked as a "Listing of the Week"')
+    tags = models.ManyToManyField(EmploymentTag, verbose_name='Tags', null=True, blank=True)
 
     class Meta:
         ordering = ['auto_added', '-posted']
+        verbose_name = 'Employment Resource'
 
 
 class LegalResource(Resource):
-    tags = models.ManyToManyField(LegalTag, null=True, blank=True)
+    tags = models.ManyToManyField(LegalTag, verbose_name='Tags',null=True, blank=True)
 
     class Meta:
         ordering = ['auto_added']
+        verbose_name = 'Legal Resource'
