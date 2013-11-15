@@ -1,7 +1,11 @@
-<DOCTYPE html>
-<html lang="en">
-  <head>
+{% extends 'base.html' %}
+
+<!-- <DOCTYPE html> -->
+<!-- <html lang="en"> -->
+  <!-- <head> -->
     {% load staticfiles %}
+    {% block head %}    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -11,13 +15,13 @@
     <!-- Bootstrap core CSS -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="{% static 'css/bpsc.css' %}" rel="stylesheet">
-
+    {% endblock %}
     <!-- Add custom CSS here -->
 
-  </head>
+  <!-- </head> -->
 
-  <body>
-
+  <!-- <body> -->
+  {% block content %}
     <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -75,6 +79,7 @@
     <!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
     <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
     <script src=""http://www.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css""></script>
-  </body>
+  <!-- </body> -->
+  {% endblock %}
 </html>
 

@@ -1,7 +1,10 @@
+{% extends 'base.html' %}
+<!-- 
 <DOCTYPE html>
 <html lang="en">
-  <head>
+  <head> -->
     {% load staticfiles %}
+    {% block head %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -39,11 +42,14 @@
 		margin: 50px 0;
 	}
     </style>
+    
+  {% endblock %}
 
-  </head>
+  <!-- </head> -->
 
-  <body>
-    <!-- TEST -->
+  <!-- <body> -->
+  {% block content %}
+
 
     <nav class="navbar navbar-static-top" role="navigation">
       <div class="container">
@@ -69,61 +75,7 @@
       </div><!-- /.container -->
     </nav>
     
-<!--     <div id="Pictures" class="carousel slide">
-      
-        <ol class="carousel-indicators">
-          <li data-target="#picture1" data-slide-to="0" class="active"></li>
-          <li data-target="#picture2" data-slide-to="1"></li>
-          <li data-target="#picture3" data-slide-to="2"></li>
-        </ol>
-
-        
-        <div class="carousel-inner">
-          <div class="item active">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide One');"></div>
-            <div class="carousel-caption">
-              <h1>Picture captions go here</h1>
-            </div>
-          </div>
-          <div class="item">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Two');"></div>
-            <div class="carousel-caption">
-              <h1>Caption 2</h1>
-            </div>
-          </div>
-          <div class="item">
-            <div class="fill" style="background-image:url('http://placehold.it/1900x1080&text=Slide Three');"></div>
-            <div class="carousel-caption">
-              <h1>Caption 3</h1>
-            </div>
-          </div>
-        </div>
-
-       
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="icon-prev"></span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="icon-next"></span>
-        </a>
-
-        <p> <a href="/reviews/">See the review app!</a> </p>
-
-    </div> -->
-
     <div class="container container-home">
-
-<!--       <div class="row section">
-        <div class="col-lg-12">
-          <h1>Home Page For BPSC Webapp</h1>
-          <p>We can have additional inforation about BPSC here</p>
-          <ul>
-          	<li>Blah</li>
-          	<li>Blah</li>
-            <li><a href="/reviews/">See the review app!</a> </li>
-          </ul>
-        </div>
-      </div> -->
 
       <div class="row">
   <button type="button" class="btn btn-default btn-lg btn-block btn-home">
@@ -170,6 +122,8 @@
     <!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
     <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
     <script src=""http://www.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css""></script>
-  </body>
+  {% endblock %}
+
+  <!-- </body> -->
 </html>
 
