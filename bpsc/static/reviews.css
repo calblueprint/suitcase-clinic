@@ -11,9 +11,26 @@ body {
 	height: 135px;
 }
 
+.tab {
+	width: 400px;
+	display: inline-block;
+	position: relative;
+	top: 69px;
+	right: 3px;
+}
+
+.tab right {
+	float: right;
+}
+
+.tab img {
+	width: 100%;
+	height: auto;
+}
+
 .body-container {
 	padding: 30px;
-	background-color: #fdd5b2;
+	background-color: #fde7d0;
 }
 
 .container {

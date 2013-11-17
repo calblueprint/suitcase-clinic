@@ -41,7 +41,8 @@ audio:not([controls]) {
 }*/
 
 html {
-  font-family: Geneva, Tahoma, Verdana, sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  /*font-family: Geneva, Tahoma, Verdana, sans-serif;*/
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -299,7 +300,8 @@ html {
 }
 
 body {
-  font-family: Geneva, Tahoma, Verdana, sans-serif;
+  /*font-family: Geneva, Tahoma, Verdana, sans-serif;  */
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -430,7 +432,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: Geneva, Tahoma, Verdana, sans-serif;
+  /*font-family: Geneva, Tahoma, Verdana, sans-serif;*/
+  font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 500;
   line-height: 1.1;
 }
