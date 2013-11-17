@@ -1,74 +1,78 @@
 {% extends 'base.html' %}
 
     {% load staticfiles %}
+
     {% block head %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Read Reviews</title>
+        <title>Read Reviews</title>
 
-    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="{% static 'bpsc.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'reviews.css' %}">
+        <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bpsc.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'reviews.css' %}">
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'script.js' %}"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'script.js' %}"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     {% endblock %}
 
     {% block content %}
-    <div class="container">
-      
-        
-        <div class="row">
-            <div class="col-md-4">
-                <div class="clearfix">
-                    <a href="/reviews/submit" class="btn btn-success btn-md">Add a new review!</a>
-                </div>
-            </div>
-
-            <div class="col-md-8">
-                <div class="btn-group">
-                    <button type="button" data-sort="data-date" data-order="desc" class="sort btn btn-info">Newest</button>
-                    <button type="button" data-sort="data-date" data-order="asc" class="sort btn btn-info">Oldest</button>
-                    <button type="button" data-sort="data-rating" data-order="asc" class="sort btn btn-info">Highest Review</button>
-                    <button type="button" data-sort="data-rating" data-order="desc" class="sort btn btn-info">Lowest Review</button>
-                </div>
-            </div>
+    <div class="outer-container">
+        <div class="header-stuff">
         </div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <ul class="list-unstyled">
-                    <li><button type="button" class="filter btn btn-big" data-filter="all">Show All</button></li>
-                    <li><button type="button" class="filter btn btn-big" data-filter="Housing">Housing</button></li>
-                    <li><button type="button" class="filter btn btn-big" data-filter="Employment">Employment</button></li>
-                    <li><button type="button" class="filter btn btn-big" data-filter="Community Resources">Community Resources</button></li>
-                    <li><button type="button" class="filter btn btn-big" data-filter="Legal">Legal</button></li>
-                    <li><button type="button" class="filter btn btn-big" data-filter="Dental">Dental</button></li>
-                    <li><button type="button" class="filter btn btn-big" data-filter="Optometry">Optometry</button></li>
-                    <li><button type="button" class="filter btn btn-big" data-filter="Medical">Medical</button></li>
-                </ul>
-            </div>
+        <div class="body-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
 
-            <div class="col-md-8 review-container">
-                <ul class="list-unstyled" id="Grid">
-                    {% for review in review_list %}
-                    <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
-                        <div class="review-content">
-                            <h3>{{ review.service }}</h3>
-                            <p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
-                            <p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
-                            <p>{{ review.comments }}</p>
-                            <p class="reviewed">Reviewed by: {{ review.reviewer }}</p>
+                    <div class="col-md-8">
+                        <div class="btn-group">
+                            <button type="button" data-sort="data-date" data-order="desc" class="sort btn btn-info">Newest</button>
+                            <button type="button" data-sort="data-date" data-order="asc" class="sort btn btn-info">Oldest</button>
+                            <button type="button" data-sort="data-rating" data-order="asc" class="sort btn btn-info">Highest Review</button>
+                            <button type="button" data-sort="data-rating" data-order="desc" class="sort btn btn-info">Lowest Review</button>
                         </div>
-                    </li>
-                    {% endfor %}
-                </ul>        
-            </div>
-        </div>
-        {% endblock %}
-    </div> <!-- end container -->     
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-unstyled">
+                            <li><button type="button" class="filter btn btn-big" data-filter="all">Show All</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Housing">Housing</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Employment">Employment</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Community Resources">Community Resources</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Legal">Legal</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Dental">Dental</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Optometry">Optometry</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Medical">Medical</button></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-8 review-container">
+                        <ul class="list-unstyled" id="Grid">
+                            {% for review in review_list %}
+                            <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
+                                <div class="review-content">
+                                    <h3>{{ review.service }}</h3>
+                                    <p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
+                                    <p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
+                                    <p>{{ review.comments }}</p>
+                                    <p class="reviewed">Reviewed by: {{ review.reviewer }}</p>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>        
+                    </div>
+                </div>
+                {% endblock %}
+            </div> <!-- end container -->   
+        </div> <!-- end body-container -->
+    </div> <!-- end outer-container -->    
