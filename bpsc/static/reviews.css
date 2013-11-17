@@ -8,14 +8,27 @@ body {
 
 .header-stuff {
 	background-color: white;
-	height: 135px;
+	height: 185px;
+	position: relative;
+}
+
+.logo {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	width: 190px;
+}
+
+.logo img {
+	width: 100%;
+	height: auto;
 }
 
 .tab {
 	width: 400px;
 	display: inline-block;
 	position: relative;
-	top: 69px;
+	top: 119px;
 	right: 3px;
 }
 
@@ -31,6 +44,13 @@ body {
 .body-container {
 	padding: 30px;
 	background-color: #fde7d0;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-bottomleft: 15px;
+
 }
 
 .container {
@@ -43,7 +63,10 @@ body {
  }
 
 li.review {
-	padding: 18px 0 14px;
+	padding: 0px 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #dad8d7;
 	width: 100%;
 	vertical-align: top;
 	font-weight: 300;
@@ -89,4 +112,24 @@ li.review {
 	margin-top: 0px;
 	padding-top: 0px;
 	font-size: 80%;
+}
+
+.sort-param {
+	/*width: 20%;*/
+	margin-right: 65px;
+}
+
+.sort-param a {
+	text-decoration: none;
+	color: black;
+	font-size: 200%;
+}
+
+.sort-param a:hover,
+.sort-param a.active {
+	border-bottom: 4px solid #de1f26;
+}
+
+.glyphicon-star {
+	color: #de1f26;
 }

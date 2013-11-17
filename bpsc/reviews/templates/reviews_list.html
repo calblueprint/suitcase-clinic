@@ -24,6 +24,9 @@
     {% block content %}
     <div class="outer-container">
         <div class="header-stuff">
+            <div class="logo">
+                <img src="{% static 'css/images/SuitcaseLogo.png' %}">
+            </div>
             
             <div class="tab right">
                 <img src="{% static 'css/images/FOLDERTAB_readreviews.png' %}">
@@ -40,12 +43,20 @@
                     </div>
 
                     <div class="col-md-8">
-                        <div class="btn-group">
-                            <button type="button" data-sort="data-date" data-order="desc" class="sort btn btn-info">Newest</button>
-                            <button type="button" data-sort="data-date" data-order="asc" class="sort btn btn-info">Oldest</button>
-                            <button type="button" data-sort="data-rating" data-order="asc" class="sort btn btn-info">Highest Review</button>
-                            <button type="button" data-sort="data-rating" data-order="desc" class="sort btn btn-info">Lowest Review</button>
-                        </div>
+                        <ul class="list-inline">
+                            <li class="sort-param">
+                                <a data-sort="data-date" data-order="desc" class="sort active" href="#">Newest</a>
+                            </li>
+                            <li class="sort-param">
+                                <a data-sort="data-date" data-order="asc" class="sort" href="#">Oldest</a>
+                            </li>
+                            <li class="sort-param">
+                                <a data-sort="data-rating" data-order="asc" class="sort" href="#">Highest Review</a>
+                            </li>
+                            <li class="sort-param">
+                                <a data-sort="data-rating" data-order="desc" class="sort" href="#">Lowest Review</a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
@@ -64,7 +75,7 @@
                     </div>
 
                     <div class="col-md-8 review-container">
-                        <ul class="list-unstyled" id="Grid">
+                        <ul class="list-unstyled pre-scrollable" id="Grid">
                             {% for review in review_list %}
                             <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
                                 <div class="review-content">
