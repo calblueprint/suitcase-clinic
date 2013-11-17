@@ -1,69 +1,96 @@
 {% extends 'base.html' %}
 
-{% load staticfiles %}
+    {% load staticfiles %}
 
-<!DOCTYPE html>
-<html>
-{% block head %}
-        <title></title>
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Read Reviews</title>
+
         <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bpsc.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'reviews.css' %}">
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'script.js' %}"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-{% endblock %}
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'script.js' %}"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    {% endblock %}
 
-<body>
-    <div class="container">
+    {% block content %}
+    <div class="outer-container">
+        <div class="header-stuff">
+            <div class="logo">
+                <img src="{% static 'css/images/SuitcaseLogo.png' %}">
+            </div>
+            
+            <div class="tab right">
+                <img src="{% static 'css/images/FOLDERTAB_readreviews.png' %}">
+            </div>
+            <div class="tab left">
+                <img src="{% static 'css/images/FOLDERTAB_givereviews.png' %}">
+            </div>
+        </div>
 
-                <h1>Reviews</h1>
-                {% block content %}
+        <div class="body-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                    </div>
 
-                <div class="btn-group">
-                        <button type="button" class="filter btn btn-primary" data-filter="all">Show All</button>
-                        <button type="button" class="filter btn btn-primary" data-filter="Housing">Housing</button>
-                        <button type="button" class="filter btn btn-primary" data-filter="Employment">Employment</button>
-                        <button type="button" class="filter btn btn-primary" data-filter="Community Resources">Community Resources</button>
-                        <button type="button" class="filter btn btn-primary" data-filter="Legal">Legal</button>
-                        <button type="button" class="filter btn btn-primary" data-filter="Dental">Dental</button>
-                        <button type="button" class="filter btn btn-primary" data-filter="Optometry">Optometry</button>
-                        <button type="button" class="filter btn btn-primary" data-filter="Medical">Medical</button>
+                    <div class="col-md-8">
+                        <ul class="list-inline">
+                            <li class="sort-param">
+                                <a data-sort="data-date" data-order="desc" class="sort active" href="#">Newest</a>
+                            </li>
+                            <li class="sort-param">
+                                <a data-sort="data-date" data-order="asc" class="sort" href="#">Oldest</a>
+                            </li>
+                            <li class="sort-param">
+                                <a data-sort="data-rating" data-order="asc" class="sort" href="#">Highest Review</a>
+                            </li>
+                            <li class="sort-param">
+                                <a data-sort="data-rating" data-order="desc" class="sort" href="#">Lowest Review</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="btn-group">
-                        <button type="button" data-sort="data-date" data-order="desc" class="sort btn btn-info">Newest</button>
-                        <button type="button" data-sort="data-date" data-order="asc" class="sort btn btn-info">Oldest</button>
-                        <button type="button" data-sort="data-rating" data-order="asc" class="sort btn btn-info">Highest Review</button>
-                        <button type="button" data-sort="data-rating" data-order="desc" class="sort btn btn-info">Lowest Review</button>
-                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-unstyled">
+                            <li><button type="button" class="filter btn btn-big" data-filter="all">Show All</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Housing">Housing</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Employment">Employment</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Community Resources">Community Resources</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Legal">Legal</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Dental">Dental</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Optometry">Optometry</button></li>
+                            <li><button type="button" class="filter btn btn-big" data-filter="Medical">Medical</button></li>
+                        </ul>
+                    </div>
 
-                <div class="clearfix">
-                        <a href="/reviews/submit" class="btn btn-success btn-lg">Add a new review!</a>
-                </div>
-
-                <ul id="Grid">
-                        {% for review in review_list %}
-                        <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
-                                <div class="content">
-                                        <h3>{{ review.service }}</h3>
-                                        <h4>Reviewed by: {{ review.reviewer }}</h4>
-                                        <p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
-                                        <!-- <p>{{ review.rating }}</p> -->
-                                        <p>{{ review.comments }}</p>
-                                        <p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
+                    <div class="col-md-8 review-container">
+                        <ul class="list-unstyled pre-scrollable" id="Grid">
+                            {% for review in review_list %}
+                            <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
+                                <div class="review-content">
+                                    <h3>{{ review.service }}</h3>
+                                    <p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
+                                    <p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
+                                    <p>{{ review.comments }}</p>
+                                    <p class="reviewed">Reviewed by: {{ review.reviewer }}</p>
                                 </div>
-                        </li>
-                        {% endfor %}
-                </ul>        
+                            </li>
+                            {% endfor %}
+                        </ul>        
+                    </div>
+                </div>
                 {% endblock %}
-                <p> <a href="/">Go back to home!</a> </p>
-                <p> <a href="/reviews/submit">Submit another review!</a> </p>
-                <p> <a href="/reviews/">Go back to reviews app!</a> </p>
-        </div>         <!-- end container -->
-
-        
-        
-</body>
-</html>
+            </div> <!-- end container -->   
+        </div> <!-- end body-container -->
+    </div> <!-- end outer-container -->    

@@ -1,19 +1,135 @@
+html {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+body {
+	background-color: white;
+}
+
+.header-stuff {
+	background-color: white;
+	height: 185px;
+	position: relative;
+}
+
+.logo {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	width: 190px;
+}
+
+.logo img {
+	width: 100%;
+	height: auto;
+}
+
+.tab {
+	width: 400px;
+	display: inline-block;
+	position: relative;
+	top: 119px;
+	right: 3px;
+}
+
+.tab right {
+	float: right;
+}
+
+.tab img {
+	width: 100%;
+	height: auto;
+}
+
+.body-container {
+	padding: 30px;
+	background-color: #fde7d0;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-bottomleft: 15px;
+
+}
+
+.container {
+	background-color: white;
+}
+
 #Grid .mix{
     opacity: 0;
     display: none;
  }
 
 li.review {
-	padding: 18px 0 14px;
-	border-bottom: 1px solid #d7d7d7;
-	/*height: 99px;*/
+	padding: 0px 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: #dad8d7;
 	width: 100%;
-	/*line-height: 99px;*/
 	vertical-align: top;
 	font-weight: 300;
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	text-transform: uppercase;
 }
 
 .btn {
 	margin-top: 10px;
 	padding-bottom: 10px;
+}
+
+.btn-big {
+  display: block;
+  width: 100%;
+  height: 75px;
+  border-radius: 0px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  font-size: 220%;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.btn-big:hover,
+.btn-big:focus,
+.btn-big:active,
+.btn-big.active {
+    background-color: white; 
+    color: black;
+  	border-color: #2e2f2f;
+}
+
+.pre-scrollable {
+	max-height: 670px;
+}
+
+.review-content {
+	padding: 1px;
+}
+
+.reviewed {
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size: 80%;
+}
+
+.sort-param {
+	/*width: 20%;*/
+	margin-right: 65px;
+}
+
+.sort-param a {
+	text-decoration: none;
+	color: black;
+	font-size: 200%;
+}
+
+.sort-param a:hover,
+.sort-param a.active {
+	border-bottom: 4px solid #de1f26;
+}
+
+.glyphicon-star {
+	color: #de1f26;
 }
