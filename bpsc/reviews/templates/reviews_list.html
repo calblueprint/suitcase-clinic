@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+    {% load staticfiles %}
+
     {% block head %}
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +11,28 @@
         <title>Read Reviews</title>
 
         <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bpsc.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'reviews.css' %}">
         <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'script.js' %}"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     {% endblock %}
 
     {% block content %}
     <div class="outer-container">
         <div class="header-stuff">
+            <div class="logo">
+                <img src="{% static 'css/images/SuitcaseLogo.png' %}">
+            </div>
+            
+            <div class="tab right">
+                <img src="{% static 'css/images/FOLDERTAB_readreviews.png' %}">
+            </div>
+            <div class="tab left">
+                <img src="{% static 'css/images/FOLDERTAB_givereviews.png' %}">
             </div>
         </div>
 
