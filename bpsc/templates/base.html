@@ -9,36 +9,49 @@
     {% block meta %}
     {% endblock %}
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bpsc.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'reviews.css' %}">
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="{% static 'script.js' %}"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
     {% block head %}
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     {% endblock %}
 </head>
 
 <body>
     <div class="container">
-        <div class="header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="{% static 'css/images/SuitcaseLogo.png' %}">
+            </div>
+
         {% block header %}
         {% endblock %}
+
         </div>
 
-        <div class="content">
-        {% block messages %}
-        {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        {% endblock %}
+        <div class="body-container">
+            {% block messages %}
+            {% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endblock %}
 
-        {% block content %}
-        {% endblock %}
+            {% block content %}
+            {% endblock %}
         </div>
 
-        <div class="footer">
-        {% block footer %}
-        {% endblock %}
+        <div class="footer-container">
+            {% block footer %}
+            {% endblock %}
         </div>
 
     </div>
