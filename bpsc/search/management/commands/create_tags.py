@@ -5,9 +5,9 @@ from bpsc.search.models import *
 class Command(BaseCommand):
 	help = 'Creates all tag objects to use for tagging resources'
 
-	housing_tags = {'Category':['Senior', 'Veteran', 'HIV/AIDS', 'Disability', 'Individual', 'Family', 'Youth', 'Transitional', 'Rental Assistance', 'Emergency', 'Homeless'], 
+	housing_tags = {'Category':['Senior', 'Veteran', 'HIV/AIDS', 'Disability', 'Individual', 'Family', 'Youth',  'Rental Assistance',  'Homeless'], 
 					'Price':['AMI', 'Section 8', '400', '800', '1200'], 
-					'Type of Housing':['SRO', 'Studio', '1 BR', '1+ BR'],
+					'Type of Housing':['SRO', 'Studio', '1 BR', '1+ BR', 'Transitional','Emergency'],
 					'County':['Alameda', 'Contra Costa', 'San Francisco', 'Santa Clara', 'San Mateo', 'Marin', 'Solano', 'Napa', 'Other']}
 
 	community_tags = {'Type of Service':['Medical', 'Dental', 'Optometry', 'Mental', 'Shelter', 'Shower', 'Meals', 'Miscellaneous'],
