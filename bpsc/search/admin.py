@@ -16,7 +16,7 @@ def remove_listing_otw(modeladmin, request, queryset):
 remove_listing_otw.short_description = 'Remove selected from "Listings Of The Week'
 
 class ResourceAdmin(admin.ModelAdmin):
-    list_display = ['name', 'street_address', 'city', 'zipcode', 'num_used', 'auto_added']
+    list_display = ['name', 'url', 'num_used', 'auto_added']
     list_display_links = ['name',]
     readonly_fields = ['num_used', 'auto_added']
 
