@@ -70,7 +70,10 @@ class HousingResource(Resource):
 
 
 class CommunityResource(Resource):
+    posted = models.DateField('Date Posted')
     tags = models.ManyToManyField(CommunityTag, verbose_name='Tags', null=True, blank=True)
+    outdated = models.BooleanField('Outdated', default=False,
+            help_text='Set to "true" if it has been more than 6 months since this resource was edited')
 
     class Meta:
         ordering = ['auto_added']
