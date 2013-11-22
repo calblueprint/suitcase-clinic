@@ -25,42 +25,48 @@ class Command(BaseCommand):
 
 	def set_housing_tags(self):
 		HousingTag.objects.all().delete()
-		for tag_type, tag_name in Command.housing_tags:
-			self.stdout.write('housing: ' + tag_type + ": " + tag_name)
-			tag = HousingTag()
-			tag.tag_type = tag_type
-			tag.value = tag_name
-			tag.save()
+		for tag_type, tag_list in Command.housing_tags.items():
+			for tag_name in tag_list:
+				self.stdout.write('housing: ' + tag_type + ": " + tag_name)
+				tag = HousingTag()
+				tag.tag_type = tag_type
+				tag.value = tag_name
+				tag.save()
 
 	def set_community_tags(self):
 		CommunityTag.objects.all().delete()
-		for tag_type, tag_name in Command.community_tags:
-			self.stdout.write('community: ' + tag_type + ": " + tag_name)
-			tag = CommunityTag()
-			tag.tag_type = tag_type
-			tag.value = tag_name
-			tag.save()
+		for tag_type, tag_list in Command.community_tags.items():
+			for tag_name in tag_list:
+				self.stdout.write('community: ' + tag_type + ": " + tag_name)
+				tag = CommunityTag()
+				tag.tag_type = tag_type
+				tag.value = tag_name
+				tag.save()
 
 	def set_employment_tags(self):
 		EmploymentTag.objects.all().delete()
-		for tag_type, tag_name in Command.employment_tags:
-			self.stdout.write('employment: ' + tag_type + ": " + tag_name)
-			tag = EmploymentTag()
-			tag.tag_type = tag_type
-			tag.value = tag_name
-			tag.save()
+		for tag_type, tag_list in Command.employment_tags.items():
+			for tag_name in tag_list:
+				self.stdout.write('employment: ' + tag_type + ": " + tag_name)
+				tag = EmploymentTag()
+				tag.tag_type = tag_type
+				tag.value = tag_name
+				tag.save()
 
 	def set_legal_tags(self):
 		LegalTag.objects.all().delete()
-		for tag_type, tag_name in Command.legal_tags:
-			self.stdout.write('legal: ' + tag_type + ": " + tag_name)
-			tag = LegalTag()
-			tag.tag_type = tag_type
-			tag.value = tag_name
-			tag.save()
+		for tag_type, tag_list in Command.legal_tags.items():
+			for tag_name in tag_list:
+				self.stdout.write('legal: ' + tag_type + ": " + tag_name)
+				tag = LegalTag()
+				tag.tag_type = tag_type
+				tag.value = tag_name
+				tag.save()
 
 	def handle(self, *args, **options):
 		self.set_housing_tags()
 		self.set_community_tags()
 		self.set_employment_tags()
 		self.set_legal_tags()
+
+
