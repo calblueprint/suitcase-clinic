@@ -35,7 +35,7 @@ class Command(BaseCommand):
 
 	def set_community_tags(self):
 		CommunityTag.objects.all().delete()
-		for tag_type, tag_name in Command.community_tags.items():
+		for tag_type, tag_list in Command.community_tags.items():
 			for tag_name in tag_list:
 				self.stdout.write('community: ' + tag_type + ": " + tag_name)
 				tag = CommunityTag()
@@ -70,4 +70,3 @@ class Command(BaseCommand):
 		self.set_legal_tags()
 
 
-		
