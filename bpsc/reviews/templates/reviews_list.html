@@ -16,9 +16,11 @@
         <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!--
         <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
         <script type="text/javascript" src="{% static 'script.js' %}"></script>
         <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        -->
     {% endblock %}
 
     {% block content %}
@@ -27,7 +29,7 @@
             <div class="logo">
                 <img src="{% static 'css/images/SuitcaseLogo.png' %}">
             </div>
-            
+
             <div class="tab right">
                 <img src="{% static 'css/images/FOLDERTAB_readreviews.png' %}">
             </div>
@@ -87,11 +89,11 @@
                                 </div>
                             </li>
                             {% endfor %}
-                        </ul>        
+                        </ul>
                     </div>
                 </div>
-            </div> <!-- end container -->   
+            </div> <!-- end container -->
         </div> <!-- end body-container -->
-    </div> <!-- end outer-container -->    
+    </div> <!-- end outer-container -->
 
 {% endblock %}
