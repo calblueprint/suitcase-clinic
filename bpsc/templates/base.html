@@ -17,6 +17,9 @@
 <body>
     <div class="container">
         <div class="header">
+            <div class="hidden-login">
+                <a href="{% url 'login' %}?next={% firstof request.path '/' %}">Login</a>
+            </div>
         {% block header %}
         {% endblock %}
         </div>

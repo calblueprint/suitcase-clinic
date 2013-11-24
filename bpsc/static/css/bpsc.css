@@ -55,7 +55,7 @@ h6,
 .btn-default.active {
 /*  background-color: #3a3c3c;
   border-color: #2e2f2f;*/
-    background-color: #de1f26; 
+    background-color: #de1f26;
   border-color: #2e2f2f;
   /*background-color: #CDCDCD;*/
 }
@@ -129,4 +129,10 @@ h6,
   background-size: 280px auto;
 }
 
+.hidden-login a {
+    visibility: hidden;
+}
 
+.hidden-login:hover a {
+    visibility: visible;
+}
