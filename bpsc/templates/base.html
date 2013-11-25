@@ -17,9 +17,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="hidden-login">
-                <a href="{% url 'login' %}?next={% firstof request.path '/' %}">Login</a>
-            </div>
+            {% if user.is_authenticated %}
+                <span>{{ user.first_name }} {{ user.last_name }}</span> |
+                <span><a href="{% url 'admin:index' %}">Admin Dashboard</a></span> |
+                <span><a href="{% url 'logout' %}?next={% firstof request.path '/' %}">Logout</a></span>
+            {% else %}
+                <span class="hidden-login">
+                    <a class="hidden-login" href="{% url 'login' %}?next={% firstof request.path '/' %}">Login</a>
+                </span>
+            {% endif %}
         {% block header %}
         {% endblock %}
         </div>
