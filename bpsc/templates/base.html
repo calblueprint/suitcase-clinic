@@ -3,11 +3,15 @@
 
 <head>
     {% load staticfiles %}
-    <title>{% block title %}Suitcase Clinic{% endblock %}</title>
+    <title>{% block title %}Suitcase Clinic Portal{% endblock %}</title>
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block meta %}
     {% endblock %}
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/bpsc.css' %}" rel="stylesheet">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     {% block head %}
