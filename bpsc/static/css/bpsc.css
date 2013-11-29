@@ -60,19 +60,10 @@ h6,
   /*background-color: #CDCDCD;*/
 }
 
-.navbar {
-  position: relative;
-  min-height: 50px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  border-radius: 4px;
-}
 
-.navbar-nav {
-  margin-top: 10px;
-  margin-bottom: 15px;
+ul.nav.navbar-nav {
+  padding-top: 135px;
+  margin-right: 20px;
 }
 
 
@@ -80,6 +71,7 @@ h6,
   background-image: url('images/tab.png');
   padding-top: 15px;
   padding-bottom: 15px;
+
   line-height: 20px;
 /*  color: #777777; */
 
