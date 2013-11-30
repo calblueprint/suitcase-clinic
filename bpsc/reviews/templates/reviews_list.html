@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
     {% load staticfiles %}
 
     {% block head %}
@@ -9,6 +8,8 @@
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reviews.css' %}">
+
 
         <title>Read Reviews</title>
         
@@ -16,58 +17,58 @@
 
     {% block content %}
 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                </div>
-
-                <div class="col-md-8">
-                    <ul class="list-inline">
-                        <li class="sort-param">
-                            <a data-sort="data-date" data-order="desc" class="sort active" href="#">Newest</a>
-                        </li>
-                        <li class="sort-param">
-                            <a data-sort="data-date" data-order="asc" class="sort" href="#">Oldest</a>
-                        </li>
-                        <li class="sort-param">
-                            <a data-sort="data-rating" data-order="asc" class="sort" href="#">Highest Review</a>
-                        </li>
-                        <li class="sort-param">
-                            <a data-sort="data-rating" data-order="desc" class="sort" href="#">Lowest Review</a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
             </div>
 
-            <div class="row">
-                <div class="col-md-4">
-                    <ul class="list-unstyled">
-                        <li><button type="button" class="filter btn btn-big" data-filter="all">Show All</button></li>
-                        <li><button type="button" class="filter btn btn-big" data-filter="Housing">Housing</button></li>
-                        <li><button type="button" class="filter btn btn-big" data-filter="Employment">Employment</button></li>
-                        <li><button type="button" class="filter btn btn-big" data-filter="Community Resources">Community Resources</button></li>
-                        <li><button type="button" class="filter btn btn-big" data-filter="Legal">Legal</button></li>
-                        <li><button type="button" class="filter btn btn-big" data-filter="Dental">Dental</button></li>
-                        <li><button type="button" class="filter btn btn-big" data-filter="Optometry">Optometry</button></li>
-                        <li><button type="button" class="filter btn btn-big" data-filter="Medical">Medical</button></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-8 review-container">
-                    <ul class="list-unstyled pre-scrollable" id="Grid">
-                        {% for review in review_list %}
-                        <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
-                            <div class="review-content">
-                                <h3>{{ review.service }}</h3>
-                                <p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
-                                <p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
-                                <p>{{ review.comments }}</p>
-                                <p class="reviewed">Reviewed by: {{ review.reviewer }}</p>
-                            </div>
-                        </li>
-                        {% endfor %}
-                    </ul>        
-                </div>
+            <div class="col-md-8">
+                <ul class="list-inline">
+                    <li class="sort-param">
+                        <a data-sort="data-date" data-order="desc" class="sort active" href="#">Newest</a>
+                    </li>
+                    <li class="sort-param">
+                        <a data-sort="data-date" data-order="asc" class="sort" href="#">Oldest</a>
+                    </li>
+                    <li class="sort-param">
+                        <a data-sort="data-rating" data-order="asc" class="sort" href="#">Highest Review</a>
+                    </li>
+                    <li class="sort-param">
+                        <a data-sort="data-rating" data-order="desc" class="sort" href="#">Lowest Review</a>
+                    </li>
+                </ul>
             </div>
-        </div> <!-- end container -->   
-{% endblock %}
+        </div>
+
+        <div class="row">
+            <div class="col-md-4">
+                <ul class="list-unstyled">
+                    <li><button type="button" class="filter btn btn-big" data-filter="all">Show All</button></li>
+                    <li><button type="button" class="filter btn btn-big" data-filter="Housing">Housing</button></li>
+                    <li><button type="button" class="filter btn btn-big" data-filter="Employment">Employment</button></li>
+                    <li><button type="button" class="filter btn btn-big" data-filter="Community Resources">Community Resources</button></li>
+                    <li><button type="button" class="filter btn btn-big" data-filter="Legal">Legal</button></li>
+                    <li><button type="button" class="filter btn btn-big" data-filter="Dental">Dental</button></li>
+                    <li><button type="button" class="filter btn btn-big" data-filter="Optometry">Optometry</button></li>
+                    <li><button type="button" class="filter btn btn-big" data-filter="Medical">Medical</button></li>
+                </ul>
+            </div>
+
+            <div class="col-md-8 review-container">
+                <ul class="list-unstyled pre-scrollable" id="Grid">
+                    {% for review in review_list %}
+                    <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
+                        <div class="review-content">
+                            <h3>{{ review.service }}</h3>
+                            <p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
+                            <p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
+                            <p>{{ review.comments }}</p>
+                            <p class="reviewed">Reviewed by: {{ review.reviewer }}</p>
+                        </div>
+                    </li>
+                    {% endfor %}
+                </ul>        
+            </div>
+        </div>
+    </div> <!-- end container -->   
+    {% endblock %}
