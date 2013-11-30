@@ -121,13 +121,15 @@ ul.nav.navbar-nav {
   position: relative;
   right: 18px;
   padding-top: 200px;
-  margin-right: 20px;
+  margin-left: 1px;
 }
 
 
 .navbar-nav > li > a {
-  background-image: url('images/tab.png');
-  padding-top: 15px;
+  background-image: url('images/FOLDERTAB_regular.png');
+  background-size: 250px 51px;
+  background-repeat: no-repeat;
+  padding-top: 20px;
   padding-bottom: 15px;
   line-height: 20px;
   border-radius: 4px;
@@ -142,8 +144,7 @@ ul.nav.navbar-nav {
 .navbar-nav > .hiddentab > a,
 .navbar-nav > .hiddentab > a:hover,
 .navbar-nav > .hiddentab > a:focus {
-  color: #545454;
-  background-image: url('images/tab-hidden.png');
+  background-image: url('images/FOLDERTAB_shadow.png');
 
 }
 
