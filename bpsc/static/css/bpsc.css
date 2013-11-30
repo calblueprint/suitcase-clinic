@@ -116,7 +116,7 @@ body {
   background-color: white;
 }
 
-ul.nav.navbar-nav {
+.base .nav.navbar-nav {
   position: relative;
   right: 18px;
   padding-top: 200px;
@@ -124,7 +124,7 @@ ul.nav.navbar-nav {
 }
 
 
-.navbar-nav > li > a {
+.base .navbar-nav > li > a {
   background-image: url('images/FOLDERTAB_regular.png');
   background-size: 250px 51px;
   background-repeat: no-repeat;
@@ -140,41 +140,29 @@ ul.nav.navbar-nav {
   color: #000000;
 }
 
-.navbar-nav > .hiddentab > a,
-.navbar-nav > .hiddentab > a:hover,
-.navbar-nav > .hiddentab > a:focus {
+.base .navbar-nav > .hiddentab > a,
+.base .navbar-nav > .hiddentab > a:hover,
+.base .navbar-nav > .hiddentab > a:focus {
   background-image: url('images/FOLDERTAB_shadow.png');
 
 }
 
-.navbar-nav > li > a:hover,
-.navbar-nav > li > a:focus {
+.base .navbar-nav > li > a:hover,
+.base .navbar-nav > li > a:focus {
   color: #333333;
   background-color: transparent;
 }
 
-.navbar-nav > .active > a,
-.navbar-nav > .active > a:hover,
-.navbar-nav > .active > a:focus {
+.base .navbar-nav > .active > a,
+.base .navbar-nav > .active > a:hover,
+.base .navbar-nav > .active > a:focus {
   color: #555555;
   background-color: #d5d5d5;
 }
 
-.navbar-nav > .disabled > a,
-.navbar-nav > .disabled > a:hover,
-.navbar-nav > .disabled > a:focus {
+.base .navbar-nav > .disabled > a,
+.base .navbar-nav > .disabled > a:hover,
+.base .navbar-nav > .disabled > a:focus {
   color: #cccccc;
   background-color: transparent;
 }
-
-/*.navbar-static-top {
-  border-radius: 0;
-  border-width: 0;
-  padding-top:135px;
-  background-image: url("images/SuitcaseLogo.png");
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: 280px auto;
-}*/
-
-
