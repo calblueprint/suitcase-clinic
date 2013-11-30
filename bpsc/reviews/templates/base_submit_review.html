@@ -12,54 +12,49 @@
 
 {% block content %}
     <div class="container">
-        <h2>Tell us what you think!</h2>
-        
-        <p> The Suitcase Clinic would love to hear feedback from you to further improve the services it offers. </p>
+
+        <div class="form-description">
+            <h2>Tell us what you think!</h2>
+            
+            <p> The Suitcase Clinic would love to hear feedback from you to further improve the services it offers. </p>
+        </div>
 
 
         <!--  html now works by review_formset, creates 1 form / service in views.py -->
-        <form method="post" action="" class="pure-form pure-form-aligned">
-            {% csrf_token %}
-        
-            <div class="pure-control-group"> 
-                <h3>Service:</h3>    
-                {{ reviewform.service }}    
-                {{ reviewform.service.errors}}      
-            </div>
+        <div class="review-form">
+            <form method="post" action="" class="pure-form pure-form-aligned">
+                {% csrf_token %}
 
-            <div class="pure-control-group"> <h3>Rating:</h3>     <!-- {{ reviewform.rating }}  -->    {{ reviewform.rating.errors}} <!-- </div> -->  
+                        <div class="pure-control-group"> 
+                            <h3>Service:</h3>    
+                            {{ reviewform.service }}    
+                            {{ reviewform.service.errors}}      
+                        </div>
 
-               
+                        <div class="pure-control-group stars"> 
+                            <h3>Rating:</h3>     <!-- {{ reviewform.rating }}  -->    
+                            {{ reviewform.rating.errors}} <!-- </div> -->  
+                            <input type="number" data-clearable="remove" class="rating" id="star-rating" name="rating">
+                        </div>
 
 
 
+                        <div class="pure-control-group"> 
+                            <h3>Comments:</h3>   
+                            {{ reviewform.comments }}   
+                            {{ reviewform.comments.errors}}     
+                        </div>
 
-                <input type="number" class="rating" name="rating" value="1">1 
-                <input type="number" class="rating" name="rating" value="2">2 
-                <input type="number" class="rating" name="rating" value="3">3 
-                <input type="number" class="rating" name="rating" value="4">4 
-                <input type="number" class="rating" name="rating" value="5">5 
-                
-            </div>
+                        <div class="pure-control-group"> 
+                            <h3>Reviewed by (optional):</h3>   
+                            {{ reviewform.reviewer }}   
+                            {{ reviewform.reviewer.errors}}     
+                        </div>
 
-            <div class="pure-control-group"> 
-                <h3>Comments:</h3>   
-                {{ reviewform.comments }}   
-                {{ reviewform.comments.errors}}     
-            </div>
 
-            <div class="pure-control-group"> 
-                <h3>Reviewed by (optional):</h3>   
-                {{ reviewform.reviewer }}   
-                {{ reviewform.reviewer.errors}}     
-            </div>
-
-            <input class="btn btn-success" type="submit" value="submit"></input>
-        </form>
-
-        <p> <a href="/">Go back to home!</a> </p>
-        <p> <a href="/reviews">Go back to reviews app!</a> </p>
-        <p> <a href="/reviews/reviews">Read some reviews!</a> </p>
+                <input class="btn btn-success btn-lg" type="submit" value="submit"></input>
+            </form>
+        </div>
     </div>
 
 {% endblock %}
