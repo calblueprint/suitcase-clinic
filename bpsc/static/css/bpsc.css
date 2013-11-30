@@ -17,7 +17,7 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-
+p,
 h1,
 h2,
 h3,
@@ -34,6 +34,10 @@ h6,
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 500;
   line-height: 1.1;
+}
+
+p {
+  font-size: 130%;
 }
 
 .btn-default {
