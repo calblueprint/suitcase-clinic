@@ -1,5 +1,3 @@
-
-
 .tab {
 	width: 400px;
 	display: inline-block;
@@ -26,7 +24,6 @@
 li.sort-param {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	text-transform: uppercase;
-	padding-right: 50px;
 }
 
 li.review {
