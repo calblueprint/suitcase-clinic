@@ -1,7 +1,3 @@
-html {
-	font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-
 body {
 	background-color: white;
 }
@@ -115,7 +111,6 @@ li.review {
 }
 
 .sort-param {
-	/*width: 20%;*/
 	margin-right: 65px;
 }
 
