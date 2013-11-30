@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/review_form.css' %}">
+    <script src="{% static 'js/bootstrap-rating-input.min.js' %}" type="text/javascript"></script>
+{% endblock %}
+
 {% block title %}
     Submit Reviews
 {% endblock %}
@@ -22,12 +27,19 @@
                 {{ reviewform.service.errors}}      
             </div>
 
-            <div class="pure-control-group"> <h3>Rating:</h3>     <!-- {{ reviewform.rating }}  -->    {{ reviewform.rating.errors}} <!-- </div> -->      
-                <input type="radio" name="rating" value="1">1 
-                <input type="radio" name="rating" value="2">2 
-                <input type="radio" name="rating" value="3">3 
-                <input type="radio" name="rating" value="4">4 
-                <input type="radio" name="rating" value="5">5 
+            <div class="pure-control-group"> <h3>Rating:</h3>     <!-- {{ reviewform.rating }}  -->    {{ reviewform.rating.errors}} <!-- </div> -->  
+
+               
+
+
+
+
+                <input type="number" class="rating" name="rating" value="1">1 
+                <input type="number" class="rating" name="rating" value="2">2 
+                <input type="number" class="rating" name="rating" value="3">3 
+                <input type="number" class="rating" name="rating" value="4">4 
+                <input type="number" class="rating" name="rating" value="5">5 
+                
             </div>
 
             <div class="pure-control-group"> 
