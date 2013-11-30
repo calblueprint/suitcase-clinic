@@ -129,15 +129,13 @@ ul.nav.navbar-nav {
   background-image: url('images/tab.png');
   padding-top: 15px;
   padding-bottom: 15px;
-
   line-height: 20px;
-/*  color: #777777; */
-
   border-radius: 4px;
   width:250px;
   text-align: center;
   font-size: 18pt;
-  font-weight: bold;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 230%;
   color: #000000;
 }
 

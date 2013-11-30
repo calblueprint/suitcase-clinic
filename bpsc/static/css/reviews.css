@@ -1,3 +1,5 @@
+
+
 .tab {
 	width: 400px;
 	display: inline-block;
@@ -15,26 +17,17 @@
 	height: auto;
 }
 
-.body-container {
-	padding: 30px;
-	background-color: #fde7d0;
-	-webkit-border-top-right-radius: 15px;
-	-moz-border-radius-topright: 15px;
-	-webkit-border-bottom-right-radius: 15px;
-	-moz-border-radius-bottomright: 15px;
-	-webkit-border-bottom-left-radius: 15px;
-	-moz-border-radius-bottomleft: 15px;
-
-}
-
-.container {
-	background-color: white;
-}
 
 #Grid .mix{
     opacity: 0;
     display: none;
  }
+
+li.sort-param {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+	text-transform: uppercase;
+	padding-right: 50px;
+}
 
 li.review {
 	padding: 0px 10px;
@@ -89,7 +82,7 @@ li.review {
 }
 
 .sort-param {
-	margin-right: 65px;
+	margin-right: 10px;
 }
 
 .sort-param a {
