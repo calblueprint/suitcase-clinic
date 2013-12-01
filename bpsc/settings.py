@@ -136,7 +136,10 @@ INSTALLED_APPS = (
     'bpsc.search',
     'bpsc.users',
     'south',
+    'bpsc.ckeditor'
 )
+
+CKEDITOR_UPLOAD_PATH = "bpsc/ckeditor/django-ckeditor/media/uploads"
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 

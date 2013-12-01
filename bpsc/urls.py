@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^search/', include('bpsc.search.urls', app_name='search', namespace='search')),
     url(r'^users/', include('bpsc.users.urls', app_name='users', namespace='users')),
     url(r'^reviews/', include('bpsc.reviews.urls', app_name='reviews', namespace='reviews')),
-    url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
+    url(r'^admin/doccl/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^ckeditor/', include('bpsc.ckeditor.urls', app_name='ckeditor', namespace='ckeditor')),
 )
