@@ -1,4 +1,11 @@
-<form method="post" action="{% url 'users:login' %}">
+{% extends 'base.html' %}
+
+{% block title %}
+{{ block.super }} | Login
+{% endblock %}
+
+{% block content %}
+<form method="post">
 {% csrf_token %}
 
 <table>
@@ -15,3 +22,4 @@
 <input type="submit" value="Log In" />
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
+{% endblock %}
