@@ -1,5 +1,24 @@
 {% extends 'base.html' %}
 
+{% load staticfiles %}
+
+{% block head %}
+<link href="{% static 'css/search.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
 {% block title %}
 Resource Search
+{% endblock %}
+
+{% block content %}
+<div id="content-container">
+    <div id="sidebar-container">
+        {% block sidebar %}
+        {% endblock %}
+    </div>
+    <div id="body-container">
+        {% block body %}
+        {% endblock %}
+    </div>
+</div>
 {% endblock %}

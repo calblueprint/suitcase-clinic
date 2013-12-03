@@ -40,7 +40,6 @@ p {
   font-size: 130%;
 }
 
-.btn-default {
   color: #000000;
 /*  background-color: #474949;
   border-color: #474949;*/
@@ -67,12 +66,6 @@ p {
 
 body {
   background-color: white;
-}
-
-.header-stuff {
-  background-color: white;
-  height: 250px;
-  position: relative;
 }
 
 .logo {
@@ -105,7 +98,6 @@ body {
 }
 
 .body-container {
-  padding: 30px;
   background-color: #fde7d0;
   -webkit-border-top-right-radius: 15px;
   -moz-border-radius-topright: 15px;
@@ -117,68 +109,86 @@ body {
 }
 
 .container {
-  background-color: white;
+    background-color: white;
 }
 
-.base .nav.navbar-nav {
+#navbar-container {
+	padding: 0;
+    border: 0;
+    margin: 0;
+	background-color: transparent !important;
+	position: relative;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.nav {
+    padding-bottom: 0;
+}
+
+.navbar-nav {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.navbar-nav > li {
+    padding-bottom: 0;
+    border: 0;
+    bottom: 0;
+}
+
+.nav.navbar-nav {
   position: relative;
   right: 18px;
-  padding-top: 200px;
   margin-left: 1px;
 }
 
 
-.base .navbar-nav > li > a {
+.navbar-nav > li > a {
   background-image: url('images/FOLDERTAB_regular.png');
-  background-size: 250px 51px;
+  background-size: 125px 51px;
   background-repeat: no-repeat;
   padding-top: 20px;
   padding-bottom: 15px;
   line-height: 20px;
-  border-radius: 4px;
-  width:250px;
+  border-radius: 0px;
+  width:125px;
   text-align: center;
-  font-size: 18pt;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 230%;
   color: #000000;
 }
 
-.base .navbar-nav > .hiddentab > a,
-.base .navbar-nav > .hiddentab > a:hover,
-.base .navbar-nav > .hiddentab > a:focus {
+.navbar-nav > .hiddentab > a,
+.navbar-nav > .hiddentab > a:hover,
+.navbar-nav > .hiddentab > a:focus {
   background-image: url('images/FOLDERTAB_shadow.png');
 
 }
 
-.base .navbar-nav > li > a:hover,
-.base .navbar-nav > li > a:focus {
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
   color: #333333;
   background-color: transparent;
 }
 
-.base .navbar-nav > .active > a,
-.base .navbar-nav > .active > a:hover,
-.base .navbar-nav > .active > a:focus {
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
   color: #555555;
   background-color: #d5d5d5;
 }
 
-.base .navbar-nav > .disabled > a,
-.base .navbar-nav > .disabled > a:hover,
-.base .navbar-nav > .disabled > a:focus {
+.navbar-nav > .disabled > a,
+.navbar-nav > .disabled > a:hover,
+.navbar-nav > .disabled > a:focus {
   color: #cccccc;
   background-color: transparent;
 }
 
 .navbar-static-top {
-  border-radius: 0;
-  border-width: 0;
-  padding-top:135px;
-  background-image: url("images/SuitcaseLogo.png");
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: 280px auto;
+   border: 0;
+   background-color: white !important;
 }
 
 .hidden-login a {
@@ -187,4 +197,24 @@ body {
 
 .hidden-login:hover a {
     visibility: visible;
+}
+
+#header {
+  border-radius: 0;
+  border-width: 0;
+  margin-top: 15px;
+  padding-bottom: 120px;
+  background-image: url("images/SuitcaseLogo.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 200px auto;
+}
+
+#admin-panel {
+    background-color: transparent;
+}
+
+#content {
+    border-top: 5px;
+    height: 100%;
 }

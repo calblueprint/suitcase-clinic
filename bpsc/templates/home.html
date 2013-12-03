@@ -7,34 +7,41 @@
 <meta name="author" content="">
 {% endblock %}
 
-  {% block content %}
-    <div class="container container-home">
+{% block head %}
+<!-- Bootstrap core CSS -->
+<!-- Add custom CSS here -->
+{% endblock %}
+
+{% block content %}
+
+<div class="container container-home">
+
       <div class="row">
-        <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-          <div class="buttonlabel">
-            <img src="{% static 'css/images/icon-employment.png' %}" height="70px" width="70px">EMPLOYMENT</img>
-          </div>
-        </button>
-          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-          <div class="buttonlabel">
-            <img src="{% static 'css/images/icon-housing.png' %}" height="70px" width="70px">HOUSING</img>
-          </div>
-        </button>
-          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-          <div class="buttonlabel">
-            <img src="{% static 'css/images/icon-commresources.png' %}" height="70px" width="70px">COMMUNITY RESOURCES</img>
-          </div>
-        </button>
-          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-          <div class="buttonlabel">
-            <img src="{% static 'css/images/icon-govaid.png' %}" height="70px" width="70px">GOVERNMENT AID</img>
-          </div>
-        </button>
-          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-          <div class="buttonlabel">
-            <img src="{% static 'css/images/icon-legal.png' %}" height="70px" width="70px">LEGAL</img>
-          </div>
-        </button>
-      </div>
-    </div><!-- /.container --> 
+    <button type="button" class="btn btn-default btn-lg btn-block btn-home" onClick="location.href='{% url 'search:employment_list' %}'">
+    <div class="buttonlabel">
+        <img src="{% static 'css/images/icon-employment.png' %}"  height="70px" width="70px">EMPLOYMENT</img>
+    </div>
+    </button>
+    <button type="button" class="btn btn-default btn-lg btn-block btn-home" onClick="location.href='{% url 'search:housing_list' %}'">
+    <div class="buttonlabel">
+      <img src="{% static 'css/images/icon-housing.png' %}"  height="70px" width="70px">HOUSING</img>
+    </div>
+    </button>
+    <button type="button" class="btn btn-default btn-lg btn-block btn-home" onClick="location.href='{% url 'search:community_list' %}'">
+    <div class="buttonlabel">
+      <img src="{% static 'css/images/icon-commresources.png' %}"  height="70px" width="70px">COMMUNITY RESOURCES</img>
+    </div>
+    </button>
+    <button type="button" class="btn btn-default btn-lg btn-block btn-home" onClick="location.href='{% url 'home' %}'">
+    <div class="buttonlabel">
+      <img src="{% static 'css/images/icon-govaid.png' %}"  height="70px" width="70px">GOVERNMENT AID</img>
+    </div>
+    </button>
+    <button type="button" class="btn btn-default btn-lg btn-block btn-home" onClick="location.href='{% url 'search:legal_list' %}'">
+    <div class="buttonlabel">
+      <img src="{% static 'css/images/icon-legal.png' %}"  height="70px" width="70px">LEGAL</img>
+    </div>
+    </button>
+    </div>
+</div>
   {% endblock %}
