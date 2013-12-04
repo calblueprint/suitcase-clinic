@@ -59,7 +59,7 @@ p {
 .btn-default.active {
 /*  background-color: #3a3c3c;
   border-color: #2e2f2f;*/
-    background-color: #de1f26; 
+    background-color: #de1f26;
   border-color: #2e2f2f;
   /*background-color: #CDCDCD;*/
 }
@@ -169,4 +169,22 @@ body {
 .base .navbar-nav > .disabled > a:focus {
   color: #cccccc;
   background-color: transparent;
+}
+
+.navbar-static-top {
+  border-radius: 0;
+  border-width: 0;
+  padding-top:135px;
+  background-image: url("images/SuitcaseLogo.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: 280px auto;
+}
+
+.hidden-login a {
+    visibility: hidden;
+}
+
+.hidden-login:hover a {
+    visibility: visible;
 }

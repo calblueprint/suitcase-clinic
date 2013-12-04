@@ -1,29 +1,12 @@
 {% extends 'base.html' %}
-<!-- 
-<DOCTYPE html>
-<html lang="en">
-  <head> -->
-    {% load staticfiles %}
-    {% block head %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title> Suitcase Clinic Portal </title>
-    <!-- Bootstrap core CSS -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{% static 'css/bpsc.css' %}" rel="stylesheet">
+{% load staticfiles %}
 
-    <!-- Add custom CSS here -->
-    
-   
-    
-  {% endblock %}
+{% block meta %}
+<meta name="description" content="">
+<meta name="author" content="">
+{% endblock %}
 
-  <!-- </head> -->
-
-  <!-- <body> -->
   {% block content %}
     <div class="container container-home">
       <div class="row">
@@ -53,13 +36,5 @@
           </div>
         </button>
       </div>
-      
-      
-      
-
     </div><!-- /.container --> 
   {% endblock %}
-
-  <!-- </body> -->
-</html>
-
