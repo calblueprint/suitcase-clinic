@@ -15,5 +15,5 @@ urlpatterns = patterns('',
     url(r'^reviews/', include('bpsc.reviews.urls', app_name='reviews', namespace='reviews')),
     url(r'^admin/doccl/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^ckeditor/', include('bpsc.ckeditor.urls', app_name='ckeditor', namespace='ckeditor')),
+    url(r'^ckeditor/', include('ckeditor.urls')),
 )

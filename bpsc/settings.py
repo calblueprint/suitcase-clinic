@@ -136,10 +136,9 @@ INSTALLED_APPS = (
     'bpsc.search',
     'bpsc.users',
     'south',
-    'bpsc.ckeditor'
+    'bpsc.wysiwyg',
+    'ckeditor'
 )
-
-CKEDITOR_UPLOAD_PATH = "bpsc/ckeditor/django-ckeditor/media/uploads"
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 
@@ -200,3 +199,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'media', 'uploads')
+
