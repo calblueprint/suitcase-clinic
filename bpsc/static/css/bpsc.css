@@ -17,7 +17,7 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
-
+p,
 h1,
 h2,
 h3,
@@ -34,6 +34,10 @@ h6,
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-weight: 500;
   line-height: 1.1;
+}
+
+p {
+  font-size: 130%;
 }
 
 .btn-default {
@@ -55,66 +59,114 @@ h6,
 .btn-default.active {
 /*  background-color: #3a3c3c;
   border-color: #2e2f2f;*/
-    background-color: #de1f26; 
+    background-color: #de1f26;
   border-color: #2e2f2f;
   /*background-color: #CDCDCD;*/
 }
 
-.navbar {
+
+body {
+  background-color: white;
+}
+
+.header-stuff {
+  background-color: white;
+  height: 250px;
   position: relative;
-  min-height: 50px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom: 20px;
-  background-color: #ffffff;
-  border-radius: 4px;
 }
 
-.navbar-nav {
-  margin-top: 10px;
-  margin-bottom: 15px;
+.logo {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 265px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.tab {
+  width: 400px;
+  display: inline-block;
+  position: relative;
+  top: 119px;
+  right: 3px;
+}
+
+.tab right {
+  float: right;
+}
+
+.tab img {
+  width: 100%;
+  height: auto;
+}
+
+.body-container {
+  padding: 30px;
+  background-color: #fde7d0;
+  -webkit-border-top-right-radius: 15px;
+  -moz-border-radius-topright: 15px;
+  -webkit-border-bottom-right-radius: 15px;
+  -moz-border-radius-bottomright: 15px;
+  -webkit-border-bottom-left-radius: 15px;
+  -moz-border-radius-bottomleft: 15px;
+
+}
+
+.container {
+  background-color: white;
+}
+
+.base .nav.navbar-nav {
+  position: relative;
+  right: 18px;
+  padding-top: 200px;
+  margin-left: 1px;
 }
 
 
-.navbar-nav > li > a {
-  background-image: url('images/tab.png');
-  padding-top: 15px;
+.base .navbar-nav > li > a {
+  background-image: url('images/FOLDERTAB_regular.png');
+  background-size: 250px 51px;
+  background-repeat: no-repeat;
+  padding-top: 20px;
   padding-bottom: 15px;
   line-height: 20px;
-/*  color: #777777; */
-
   border-radius: 4px;
   width:250px;
   text-align: center;
   font-size: 18pt;
-  font-weight: bold;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 230%;
   color: #000000;
 }
 
-.navbar-nav > .hiddentab > a,
-.navbar-nav > .hiddentab > a:hover,
-.navbar-nav > .hiddentab > a:focus {
-  color: #545454;
-  background-image: url('images/tab-hidden.png');
+.base .navbar-nav > .hiddentab > a,
+.base .navbar-nav > .hiddentab > a:hover,
+.base .navbar-nav > .hiddentab > a:focus {
+  background-image: url('images/FOLDERTAB_shadow.png');
 
 }
 
-.navbar-nav > li > a:hover,
-.navbar-nav > li > a:focus {
+.base .navbar-nav > li > a:hover,
+.base .navbar-nav > li > a:focus {
   color: #333333;
   background-color: transparent;
 }
 
-.navbar-nav > .active > a,
-.navbar-nav > .active > a:hover,
-.navbar-nav > .active > a:focus {
+.base .navbar-nav > .active > a,
+.base .navbar-nav > .active > a:hover,
+.base .navbar-nav > .active > a:focus {
   color: #555555;
   background-color: #d5d5d5;
 }
 
-.navbar-nav > .disabled > a,
-.navbar-nav > .disabled > a:hover,
-.navbar-nav > .disabled > a:focus {
+.base .navbar-nav > .disabled > a,
+.base .navbar-nav > .disabled > a:hover,
+.base .navbar-nav > .disabled > a:focus {
   color: #cccccc;
   background-color: transparent;
 }
@@ -129,4 +181,10 @@ h6,
   background-size: 280px auto;
 }
 
+.hidden-login a {
+    visibility: hidden;
+}
 
+.hidden-login:hover a {
+    visibility: visible;
+}

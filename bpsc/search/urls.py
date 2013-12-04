@@ -7,7 +7,8 @@ from bpsc.search.views import (
     HousingResourceDetailView, CommunityResourceDetailView,
     EmploymentResourceDetailView, LegalResourceDetailView,
     HousingResourcePrintView, CommunityResourcePrintView,
-    EmploymentResourcePrintView, LegalResourcePrintView
+    EmploymentResourcePrintView, LegalResourcePrintView,
+    GovernmentResourceView
 )
 
 urlpatterns = patterns(
@@ -24,5 +25,6 @@ urlpatterns = patterns(
     url(r'^community/$', CommunityResourceListView.as_view(), name='community_list'),
     url(r'^employment/$', EmploymentResourceListView.as_view(), name='employment_list'),
     url(r'^legal/$', LegalResourceListView.as_view(), name='legal_list'),
+    url(r'^government/$', GovernmentResourceView.as_view(), name='government'),
 )
 
