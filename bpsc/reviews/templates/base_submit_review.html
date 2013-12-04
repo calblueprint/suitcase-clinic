@@ -1,41 +1,92 @@
 {% extends 'base.html' %}
 
-{% block title %}
-    Submit Reviews
-{% endblock %}
+    {% load staticfiles %}
 
-{% block content %}
-    <p> The Suitcase Clinic would love to hear feedback from you to further improve the services it offers. </p>
+    {% block title %}
+        Submit Reviews
+    {% endblock %}
 
+    {% block head %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <!--  html now works by review_formset, creates 1 form / service in views.py -->
-    <form method="post" action="" class="pure-form pure-form-aligned">
-        {% csrf_token %}
-        <table>
-            
-            <!-- Built-in Form Setup -->
-            <!-- {{ reviewform }}  -->
+        <title>Read Reviews</title>
 
-            <div class="pure-control-group"> Service    {{ reviewform.service }}    {{ reviewform.service.errors}}      </div>
-            <div class="pure-control-group"> Rating     <!-- {{ reviewform.rating }}  -->    {{ reviewform.rating.errors}} <!-- </div> -->      
-                <input type="radio" name="rating" value="1">1 
-                <input type="radio" name="rating" value="2">2 
-                <input type="radio" name="rating" value="3">3 
-                <input type="radio" name="rating" value="4">4 
-                <input type="radio" name="rating" value="5">5 
+        <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bpsc.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'reviews.css' %}">
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'script.js' %}"></script>
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    {% endblock %}
+
+    {% block content %}
+
+        <div class="outer-container">
+            <div class="header-stuff">
+                <div class="logo">
+                    <img src="{% static 'css/images/SuitcaseLogo.png' %}">
+                </div>
+                <div class="tab right">
+                    <img src="{% static 'css/images/FOLDERTAB_readreviews.png' %}" >
+                </div>
+                <div class="tab left">
+                    <img src="{% static 'css/images/FOLDERTAB_givereviews.png' %}">
+                </div>
             </div>
 
-            <div class="pure-control-group"> Comments   {{ reviewform.comments }}   {{ reviewform.comments.errors}}     </div>
-            <div class="pure-control-group"> Reviewer   {{ reviewform.reviewer }}   {{ reviewform.reviewer.errors}}     </div>
+            <div class="body-container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">
+                        </div>
 
-        </table>
+                        <div class="col-md-8">
+                            <ul class="list-inline">
 
-        <p>
-            <input type="submit" value="submit"></input>
-        </p>
-    </form>
 
-    <p> <a href="/">Go back to home!</a> </p>
-    <p> <a href="/reviews">Go back to reviews app!</a> </p>
-    <p> <a href="/reviews/reviews">Read some reviews!</a> </p>
+
+                                <form method="post" action="" role="form">
+                                    {% csrf_token %}
+
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+
+                                            <div class="pure-control-group"> Service {{ reviewform.service }} {{ reviewform.service.errors}} </div>
+                                            <div class="pure-control-group"> Rating {{ reviewform.rating.errors }}       
+                                                <input type="radio" name="rating" value="1">1 
+                                                <input type="radio" name="rating" value="2">2 
+                                                <input type="radio" name="rating" value="3">3 
+                                                <input type="radio" name="rating" value="4">4 
+                                                <input type="radio" name="rating" value="5">5 
+                                            </div>
+
+                                            <div class="pure-control-group"> Comments   {{ reviewform.comments }}   {{ reviewform.comments.errors}}  </div>
+                                            <div class="pure-control-group"> Reviewer   {{ reviewform.reviewer }}   {{ reviewform.reviewer.errors}}  </div>
+
+                                        </table>
+
+                                        <p>
+                                            <input type="submit" value="submit"></input>
+                                        </p>
+                                    </div>
+                                </form>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p> <a href="/">Go back to home!</a> </p>
+        <p> <a href="/reviews">Go back to reviews app!</a> </p>
+        <p> <a href="/reviews/reviews">Read some reviews!</a> </p>
+
 {% endblock %}
