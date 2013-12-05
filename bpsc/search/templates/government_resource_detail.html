@@ -1,0 +1,10 @@
+{% extends 'base_search.html' %}
+
+{% block title %}
+{{ block.super }} | Government
+{% endblock %}
+
+
+{% block content %}
+	{{ resource.content|safe }}
+{% endblock %}
