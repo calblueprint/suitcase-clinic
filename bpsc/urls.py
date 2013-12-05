@@ -1,8 +1,9 @@
 from django.conf.urls import *
 from django.contrib import admin
-
+from django.conf.urls.defaults import handler404, handler500
 from bpsc.views import search, survey, home, contact
 from bpsc.users.views import LoginView, LogoutView
+from bpsc import views
 
 # Uncomment the next two lines to enable the admin:
 admin.autodiscover()
@@ -19,3 +20,6 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^ckeditor/', include('ckeditor.urls')),
 )
+
+handler500 = 'bpsc.views.server_error_500'
+handler404 = 'bpsc.views.server_error_404'
