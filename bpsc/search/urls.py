@@ -27,4 +27,3 @@ urlpatterns = patterns(
     url(r'^legal/$', LegalResourceListView.as_view(), name='legal_list'),
     url(r'^government/$', GovernmentResourceView.as_view(), name='government'),
 )
-
