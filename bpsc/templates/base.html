@@ -37,50 +37,50 @@
                   <ul class="base nav navbar-nav">
                     <li class="activetab"><a href="{% url 'home' %}">RESOURCES</a></li>
                     <li class="hiddentab"><a href="/reviews/reviews">REVIEWS</a></li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-        <div class="header">
-            {% if user.is_authenticated %}
-                <span>{{ user.first_name }} {{ user.last_name }}</span> |
-                <span><a href="{% url 'admin:index' %}">Admin Dashboard</a></span> |
-                <span><a href="{% url 'logout' %}?next={% firstof request.path '/' %}">Logout</a></span>
-            {% else %}
-                <span class="hidden-login">
-                    <a class="hidden-login" href="{% url 'login' %}?next={% firstof request.path '/' %}">Login</a>
-                </span>
-            {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="header">
+        {% if user.is_authenticated %}
+        <span>{{ user.first_name }} {{ user.last_name }}</span> |
+        <span><a href="{% url 'admin:index' %}">Admin Dashboard</a></span> |
+        <span><a href="{% url 'logout' %}?next={% firstof request.path '/' %}">Logout</a></span>
+        {% else %}
+        <span class="hidden-login">
+            <a class="hidden-login" href="{% url 'login' %}?next={% firstof request.path '/' %}">Login</a>
+        </span>
+        {% endif %}
         {% block header %}
         {% endblock %}
 
-        </div>
-        </div>
-        <div class="body-container">
-            {% block messages %}
-                {% if messages %}
-                <ul class="messages">
-                    {% for message in messages %}
-                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
-            {% endblock %}
-
-
-            {% block content %}
-            {% endblock %}
-        </div>
-
-        <div class="footer-container">
-            {% block footer %}
-            {% endblock %}
-        </div>
-
     </div>
-
-    {% block scripts %}
+</div>
+<div class="body-container">
+    {% block messages %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
     {% endblock %}
+
+
+    {% block content %}
+    {% endblock %}
+</div>
+
+<div class="footer-container">
+    {% block footer %}
+    {% endblock %}
+</div>
+
+</div>
+
+{% block scripts %}
+{% endblock %}
 </body>
 
 </html>

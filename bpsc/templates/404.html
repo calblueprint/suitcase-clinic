@@ -7,10 +7,25 @@
 <meta name="author" content="">
 {% endblock %}
 
+{% block head %}
+<link href="{% static 'css/error.css' %}" rel="stylesheet">
+
+{% endblock %}
+
 {% block content %}
 <div class="container container-home">
 	<div class="row">
-		You have reached a pretty 404 error page!
+        <img class="displayed" src="{% static 'css/images/error.png' %}" height="300px" width="400px"></img>
+		<p class="bolded">
+			SORRY
+		</p>
+		<p class="content1">
+			An error came up with your request.
+		</p>
+		<br>
+		<p class="content2">
+			Please try again.
+		</p>
 	</div>
 </div><!-- /.container --> 
 {% endblock %}
