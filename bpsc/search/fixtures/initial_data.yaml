@@ -87,22 +87,24 @@
     tags:
       - 1
 
-- model: search.CommunityResource
-  pk: 2
+- model: search.communityresource
+  pk: 1
   fields:
-    name: "Super Medical Service"
-    description: "medicine medicine"
-    url: "http://www.medicine.com"
-    street_address: "1234 Medicine Ave"
-    city: "Berkeley"
-    zipcode: 94709
-    latitude: 37.88888
-    longitude: -122.22222
-    phone: 5105100510
+    auto_added: false
+    city: Berkeley
+    description: "<p><img alt=\"\" src=\"https://scontent-a-pao.xx.fbcdn.net/hphotos-prn2/1476422_10200911902550313_1529318357_n.jpg\"\
+      \ style=\"width: 200px; height: 200px;\" /></p>\r\n\r\n<p><u><strong><span style=\"\
+      font-size: 13px; line-height: 1.6em;\">Need medicine ? Suitcase Clinics got\
+      \ you!</span></strong></u></p>\r\n"
+    latitude: '37.88888'
+    longitude: '-122.22222'
+    name: Super Medical Service
     num_used: 0
-    auto_added: False
-    tags:
-      - 2
+    phone: '5105100510'
+    street_address: 1234 Medicine Ave
+    tags: [2]
+    url: http://www.medicine.com/
+    zipcode: 94709
 
 - model: search.HousingResource
   pk: 1
@@ -144,26 +146,26 @@
     posted: "2013-10-25"
     outdated: False
 
-- model: search.EmploymentResource
-  pk: 1
+- model: search.communityresource
+  pk: 2
   fields:
-    name: "Berkeley jobs"
-    description: "Lots of jobs here"
-    url: "http://www.job.com"
-    street_address: "1234 Job Ave"
-    city: "Berkeley"
-    zipcode: 94709
-    latitude: 37.12345
-    longitude: -122.1234
-    phone: 5109992222
+    auto_added: false
+    city: Berkeley
+    description: "<p><img alt=\"\" src=\"https://scontent-a-pao.xx.fbcdn.net/hphotos-ash3/313_26259603122_9872_n.jpg\"\
+      \ style=\"width: 100px; height: 140px;\" /></p>\r\n\r\n<p>Lots of jobs here</p>\r\
+      \n"
+    latitude: '37.12345'
+    listing_of_the_week: true
+    longitude: '-122.12340'
+    name: Berkeley jobs
     num_used: 0
-    auto_added: False
-    tags:
-      - 1
-      - 3
-    posted: "2013-10-31"
-    outdated: False
-    listing_of_the_week: True
+    outdated: false
+    phone: '5109992222'
+    posted: 2013-10-31
+    street_address: 1234 Job Ave
+    tags: [1, 3]
+    url: http://www.job.com/
+    zipcode: 94709
 
 - model: search.EmploymentResource
   pk: 2
@@ -185,3 +187,26 @@
     posted: "2013-10-30"
     outdated: False
     listing_of_the_week: False
+
+- model: search.housingresource
+  pk: 1
+  fields:
+    auto_added: false
+    city: Berkeley
+    description: "<p><strong style=\"font-size: 13px; line-height: 1.6em;\">wow so\
+      \ cool</strong></p>\r\n\r\n<p><strong style=\"font-size: 13px; line-height:\
+      \ 1.6em;\"><img alt=\"\" src=\"https://scontent-b-pao.xx.fbcdn.net/hphotos-frc3/26328_10151580366513123_1028291324_n.jpg?lvh=1\"\
+      \ style=\"width: 150px; height: 100px;\" /></strong></p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n"
+    latitude: '36.12345'
+    longitude: '-123.12340'
+    name: Cool Houses
+    num_used: 0
+    outdated: false
+    phone: '5101234555'
+    posted: 2013-10-25
+    street_address: 1234 Cool Ave
+    tags: [4, 2]
+    url: http://www.coolhouses.com/
+    zipcode: 94709
+
