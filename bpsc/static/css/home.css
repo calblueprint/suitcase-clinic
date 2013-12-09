@@ -37,12 +37,24 @@ p {
 	text-align: center;
 }	
 
+.tab-box a {
+	text-decoration: none;
+}
+
 .box-name {
 	background-color: black;
 	color: white;
 	margin: auto;
 	padding: auto;
 	height: 70px;
+}
+
+.box-name:hover {
+	background-color: #de1f26;
+}
+
+.box-description {
+	color: black;
 }
 
 .box-name p {
