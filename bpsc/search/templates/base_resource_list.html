@@ -10,6 +10,7 @@
 {{ block.super }}
 <script type="text/javascript" src="{{ STATIC_URL }}js/jquery.tablesorter.min.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/base_resource_list.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/tablesorter.css' %}">
 {% endblock %}
 
 {% block sidebar %}
@@ -40,9 +41,8 @@
         <thead>
             <tr>
                 <th></th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Url</th>
+                <th class="header">Name</th>
+                <th class="header">Url</th>
                 {% block table_head %}
                 {% endblock %}
                 <th>Tags</th>
@@ -53,13 +53,12 @@
             <tr id="resource-{{ forloop.counter }}" filter-count={{ resource.tags.all|length }}>
                 <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
                 <td><a href="{% block resource_detail_url %}{% endblock %} ">{{ resource.name }}</a></td>
-                <td>{{ resource.description|safe|default:"-" }}</td>
                 <td><a href="{{ resource.url }}">{{ resource.url|default:"-" }}</a></td>
                 {% block table_body %}
                 {% endblock %}
                 <td>
                     {% for tag in resource.tags.all %}
-                        <span class="tag-{{ tag.value|slugify }}">{{ tag.value }}</span>
+                        <span class="resource-tag tag-{{ tag.value|slugify }}">{{ tag.value }}</span>
                     {% empty %}
                     -
                     {% endfor %}
