@@ -4,6 +4,8 @@
 {{ block.super }} | Legal
 {% endblock %}
 
+{% block navbar-legal %}{% endblock %}
+
 {% block resource_detail_url %}
 {% url 'search:legal_detail' pk=resource.pk slug=resource.name|slugify %}
 {% endblock %}
