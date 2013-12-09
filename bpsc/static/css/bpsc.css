@@ -134,8 +134,8 @@ body {
 
 .nav.navbar-nav {
   position: relative;
-  right: 18px;
-  margin-left: 1px;
+  right: 15px;
+
 }
 
 .navbar-nav > li > a {
@@ -143,7 +143,7 @@ body {
   background-size: 183px 51px;
   background-repeat: no-repeat;
   padding-top: 20px;
-  padding-bottom: 15px;
+  padding-bottom: 11px;
   line-height: 20px;
   border-radius: 0px;
   width:183px;
