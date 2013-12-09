@@ -66,7 +66,7 @@ body {
   position: absolute;
   right: 30px;
   top: 30px;
-  width: 265px;
+  width: 500px;
 }
 
 .logo img {
@@ -92,7 +92,7 @@ body {
 }
 
 .wrapper-container {
-  width: 1300px;
+  width: 1255px;
   margin:auto;
 }
 
@@ -107,6 +107,7 @@ body {
 }
 
 .container {
+    margin-top: 30px;
     background-color: white;
 }
 
@@ -145,14 +146,14 @@ body {
 
 .navbar-nav > li > a {
   background-image: url('images/Tab_Regular.png');
-  background-size: 183px 50px;
+  background-size: 204px 50px;
   background-repeat: no-repeat;
   padding-top: 20px;
   padding-bottom: 11px;
   line-height: 20px;
   border-radius: 0px;
   height: 50px;
-  width:183px;
+  width:204px;
   text-align: center;
   color: #000000;
   font-size: 1.75em;
