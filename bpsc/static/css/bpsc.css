@@ -36,6 +36,7 @@ h6,
   line-height: 1.1;
 }
 
+
 p {
   font-size: 130%;
 }
@@ -90,6 +91,11 @@ body {
   height: auto;
 }
 
+.wrapper-container {
+  width: 1300px;
+  margin:auto;
+}
+
 .body-container {
   background-color: #fde7d0;
   -webkit-border-top-right-radius: 15px;
@@ -127,7 +133,7 @@ body {
 }
 
 .navbar-nav > li {
-    padding-bottom: 0;
+    padding-bottom: 0px;
     border: 0;
     bottom: 0;
 }
@@ -135,20 +141,21 @@ body {
 .nav.navbar-nav {
   position: relative;
   right: 15px;
-
 }
 
 .navbar-nav > li > a {
   background-image: url('images/Tab_Regular.png');
-  background-size: 183px 51px;
+  background-size: 183px 50px;
   background-repeat: no-repeat;
   padding-top: 20px;
   padding-bottom: 11px;
   line-height: 20px;
   border-radius: 0px;
+  height: 50px;
   width:183px;
   text-align: center;
   color: #000000;
+  font-size: 1.75em;
 }
 
 .navbar-nav > .hiddentab > a,

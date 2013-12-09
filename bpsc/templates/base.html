@@ -26,7 +26,6 @@
 </head>
 
 <body>
-    <div class="container">
         <div id="header">
             <div id="admin-panel">
             {% if user.is_authenticated %}
@@ -42,7 +41,7 @@
         {% block header %}
         {% endblock %}
         </div>
-
+        <div class="wrapper-container">
         <div id="navbar-container">
             <nav role="navigation" class="navbar navbar-static-top">
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -53,7 +52,7 @@
                         <li class="hiddentab"><a href="{% url 'search:community_list' %}">COMMUNITY</a></li>
                         <li class="hiddentab"><a href="{% url 'home' %}">GOVERNMENT</a></li>
                         <li class="hiddentab"><a href="{% url 'search:legal_list' %}">LEGAL</a></li>
-                        <li class="hiddentab"><a href="{% url 'reviews:reviews' %}">REVIEWS</a></li>
+                        <li class="hiddentab"><a href="{% url 'reviews:reviews_list' %}">REVIEWS</a></li>
                         {% endblock %}
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -71,10 +70,8 @@
                 {% endif %}
             {% endblock %}
             
-            <div id="content">
                 {% block content %}
                 {% endblock %}
-            </div>
         </div>
 
         <div id="footer">
@@ -82,10 +79,11 @@
         {% endblock %}
         </div>
 
-    </div>
 
     {% block scripts %}
     {% endblock %}
+
+    </div>
 </body>
 
 </html>
