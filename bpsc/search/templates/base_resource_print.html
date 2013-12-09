@@ -7,12 +7,15 @@
 {% endblock %}
 
 {% block head %}
+{{ block.super }}
 <script type="text/javascript" src="{{ STATIC_URL }}js/base_resource_print.js"></script>
 {% endblock %}
 
-{% block content %}
+{% block sidebar %}
 <a href="{% block list_url %}{% endblock %}">Return to listings</a>
+{% endblock %}
 
+{% block body %}
 <div id="printable-area">
 {% include 'base_resource_detail_list.html' %}
 </div>

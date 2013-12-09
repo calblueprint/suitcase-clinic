@@ -1,5 +1,11 @@
 {% extends 'base_resource_detail.html' %}
 
+{% block navbar-employment %}{% endblock %}
+
+{% block sidebar %}
+<a href="{% url 'search:employment_list' %}">Back To Listings</a>
+{% endblock %}
+
 {% block title %}
 {{ block.super }} | Employment
 {% endblock %}
