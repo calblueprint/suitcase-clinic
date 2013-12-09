@@ -1,0 +1,45 @@
+body {
+	color: black;
+}
+
+p {
+	font-size: 2.4em;
+}
+
+.welcome {
+	text-align: center;
+}
+
+#big-welcome {
+	font-size: 4em;
+}
+
+.redline {
+	margin: auto;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width: 70%;
+	border-top-style: solid;
+	border-top-width: 5px;
+	border-top-color: #de1f26;
+}
+
+.tab-box {
+	font-size: .8em;
+	width: 220px;
+	display: inline-block;
+	text-align: center;
+}	
+
+.box-name {
+	background-color: black;
+	color: white;
+	margin: auto;
+	padding: auto;
+	height: 70px;
+}
+
+.box-name p {
+	line-height: 70px;
+	vertical-align: middle;
+}
