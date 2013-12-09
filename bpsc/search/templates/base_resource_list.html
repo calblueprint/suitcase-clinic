@@ -62,7 +62,14 @@
     {% block listing_of_the_week %}
     {% endblock %}
 
-    <h3>All Listings</h3>
+
+    <div class="automatic-resources">
+    {% block batch_resource_table %}
+    {% endblock %}
+    </div>
+
+    <div class="manual-resources">
+    <h3>{% block manual_resource_title %}All Listings{% endblock %}</h3>
     <table class="tablesorter" id="resource-table">
         <thead>
             <tr>
@@ -93,6 +100,7 @@
             {% endfor %}
         </tbody>
     </table>
+    </div>
 </form>
 {% endblock %}
 

@@ -8,11 +8,11 @@ from bpsc.search.views import (
     EmploymentResourceDetailView, LegalResourceDetailView,
     HousingResourcePrintView, CommunityResourcePrintView,
     EmploymentResourcePrintView, LegalResourcePrintView,
-    GovernmentResourceView
+    GovernmentResourceView, BatchHousingResourceDetailView
 )
 
 from bpsc.wysiwyg.views import (
-    ResumeResourceView, CoverLetterResourceView, 
+    ResumeResourceView, CoverLetterResourceView,
     MentalResourceView, DentalResourceView,
     MedicalResourceView
 )
@@ -20,6 +20,7 @@ from bpsc.wysiwyg.views import (
 urlpatterns = patterns(
     '',
     url(r'^housing/(?P<pk>\d+)/(?P<slug>[-\w\d]+)/$', HousingResourceDetailView.as_view(), name='housing_detail'),
+    url(r'^housing/batch/(?P<pk>\d+)/(?P<slug>[-\w\d]+)/$', BatchHousingResourceDetailView.as_view(), name='batch_housing_detail'),
     url(r'^community/(?P<pk>\d+)/(?P<slug>[-\w\d]+)/$', CommunityResourceDetailView.as_view(), name='community_detail'),
     url(r'^community/mental/$', MentalResourceView.as_view(), name='community_mental'),
     url(r'^community/dental/$', DentalResourceView.as_view(), name='community_dental'),

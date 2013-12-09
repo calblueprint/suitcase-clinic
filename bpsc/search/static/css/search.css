@@ -71,6 +71,10 @@ html, body {
     width: 100%;
 }
 
+#batch-resource-table {
+    width: 100%;
+}
+
 .resource-tag {
     padding: 3px;
     border:1px solid;

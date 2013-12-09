@@ -19,3 +19,39 @@
 {% block resource_detail_url %}
 {% url 'search:housing_detail' pk=resource.pk slug=resource.name|slugify %}
 {% endblock %}
+
+{% block manual_resource_title %}
+Manually Added Listings
+{% endblock %}
+
+{% block batch_resource_table %}
+    <h3>Monthly Listings</h3>
+    <table class="tablesorter" id="batch-resource-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th class="header">Property</th>
+                <th class="header">Types of Units</th>
+                <th class="header">Amenities</th>
+                <th class="header">Income Requirements</th>
+                <th class="header">Rent/Occupancy Limits</th>
+                <th class="header">How To Apply</th>
+                <th class="header">Posted</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for resource in batch_resource_list %}
+            <tr id="batch-resource-{{ forloop.counter }}">
+                <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
+                <td><a href="{% url 'search:batch_housing_detail' pk=resource.pk slug=resource.prop|slugify %}">{{ resource.prop }}</a></td>
+                <td>{{ resource.types_of_units }}</td>
+                <td>{{ resource.amenities }}</td>
+                <td>{{ resource.income_requirements }}</td>
+                <td>{{ resource.rent_occupancy }}</td>
+                <td>{{ resource.how_to_apply }}</td>
+                <td>{{ resource.posted }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

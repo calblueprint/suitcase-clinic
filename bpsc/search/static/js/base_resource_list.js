@@ -1,6 +1,7 @@
 $(document).ready(function()
     {
         $("#resource-table").tablesorter();
+        $("#batch-resource-table").tablesorter();
     }
 
     function getParameter(paramName) {

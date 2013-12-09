@@ -8,7 +8,8 @@ from bpsc.search.forms import ResourcePrintForm, MapForm
 from bpsc.lib import send_suitcase_email
 from bpsc.search.models import (
     Tag, HousingTag, CommunityTag, EmploymentTag, LegalTag, Resource,
-    HousingResource, CommunityResource, EmploymentResource, LegalResource
+    HousingResource, CommunityResource, EmploymentResource, LegalResource,
+    BatchHousingResource
 )
 from bpsc.wysiwyg.models import Post
 
@@ -17,16 +18,9 @@ from gmapi.forms.widgets import GoogleMap
 from django import forms
 from django.shortcuts import render_to_response
 
-class BaseResourceDetailView(DetailView):
-    model = Resource
-
-    def get_object(self, queryset=None):
-        pk = self.kwargs.get(self.pk_url_kwarg, None)
-        return get_object_or_404(self.model, pk=pk)
-
+class MapMixin(object):
     def get_context_data(self, **kwargs):
-        context = super(BaseResourceDetailView, self).get_context_data(**kwargs)
-
+        context = super(MapMixin, self).get_context_data(**kwargs)
         gmap = maps.Map(opts = {
             'center': maps.LatLng(self.object.latitude, self.object.longitude),
             'mapTypeId': maps.MapTypeId.ROADMAP,
@@ -47,32 +41,47 @@ class BaseResourceDetailView(DetailView):
             'disableAutoPan': False
         })
         info.open(gmap, marker)
-
         context['form'] = MapForm(initial={'map': gmap})
         return context
 
-class HousingResourceDetailView(BaseResourceDetailView):
+
+class BaseResourceDetailView(DetailView):
+    model = Resource
+
+    def get_object(self, queryset=None):
+        pk = self.kwargs.get(self.pk_url_kwarg, None)
+        return get_object_or_404(self.model, pk=pk)
+
+
+class HousingResourceDetailView(MapMixin, BaseResourceDetailView):
     model = HousingResource
     context_object_name = 'resource'
     template_name = 'housing_resource_detail.html'
     resource_type = 'Housing'
 
 
-class CommunityResourceDetailView(BaseResourceDetailView):
+class BatchHousingResourceDetailView(BaseResourceDetailView):
+    model = BatchHousingResource
+    context_object_name = 'resource'
+    template_name = 'batch_housing_resource_detail.html'
+    resource_type = 'Housing'
+
+
+class CommunityResourceDetailView(MapMixin, BaseResourceDetailView):
     model = CommunityResource
     context_object_name = 'resource'
     template_name = 'community_resource_detail.html'
     resource_type = 'Community'
 
 
-class EmploymentResourceDetailView(BaseResourceDetailView):
+class EmploymentResourceDetailView(MapMixin, BaseResourceDetailView):
     model = EmploymentResource
     context_object_name = 'resource'
     template_name = 'employment_resource_detail.html'
     resource_type = 'Employment'
 
 
-class LegalResourceDetailView(BaseResourceDetailView):
+class LegalResourceDetailView(MapMixin, BaseResourceDetailView):
     model = LegalResource
     context_object_name = 'resource'
     template_name = 'legal_resource_detail.html'
@@ -138,6 +147,11 @@ class HousingResourceListView(BaseResourceListView):
     template_name = 'housing_resource_list.html'
     resource_type = 'Housing'
     tag = HousingTag
+
+    def get_context_data(self, **kwargs):
+        context = super(HousingResourceListView, self).get_context_data(**kwargs)
+        context['batch_resource_list'] = BatchHousingResource.objects.all()
+        return context
 
 class CommunityResourceListView(BaseResourceListView):
     model = CommunityResource
