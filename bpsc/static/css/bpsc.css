@@ -106,7 +106,8 @@ body {
   -moz-border-radius-bottomright: 15px;
   -webkit-border-bottom-left-radius: 15px;
   -moz-border-radius-bottomleft: 15px;
-  padding-bottom: 45px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   margin-bottom: 45px;
 }
 
@@ -223,16 +224,12 @@ body {
     height: 100%;
 }
 
-.body-container {
-  padding-top: 15px
+#footer {
+  margin-top: 10px;
+  margin-left: 45px;
 }
 
-img.facebook {
-  height: 20px;
-  width: 20px;
-}
-
-img.twitter {
+.social-media-icon {
   height: 20px;
   width: 20px;
 }
