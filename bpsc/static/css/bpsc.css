@@ -106,6 +106,8 @@ body {
   -moz-border-radius-bottomright: 15px;
   -webkit-border-bottom-left-radius: 15px;
   -moz-border-radius-bottomleft: 15px;
+  padding-bottom: 45px;
+  margin-bottom: 45px;
 }
 
 .container {
