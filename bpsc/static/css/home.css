@@ -24,6 +24,12 @@ p {
 	border-top-color: #de1f26;
 }
 
+.tab-descriptions {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
 .tab-box {
 	font-size: .8em;
 	width: 220px;
