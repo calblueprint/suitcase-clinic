@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 
 class Tag(models.Model):
     tag_type = models.CharField('Tag Category', max_length=255,
@@ -38,7 +38,7 @@ class LegalTag(Tag):
 
 class Resource(models.Model):
     name = models.CharField('Name', max_length=255)
-    description = models.TextField('Description',blank=True)
+    description = RichTextField('Description',blank=True)
     url = models.URLField('URL', blank=True)
     street_address = models.CharField('Street Address', max_length=255, blank=True)
     city = models.CharField('City', max_length=255, blank=True)

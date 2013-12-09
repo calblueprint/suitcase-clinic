@@ -24,7 +24,7 @@
         <tr id="resource-otw-{{ forloop.counter }}" filter-count={{ resource.tags.all|length }}>
             <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
             <td><a href="{% url 'search:employment_detail' pk=resource.pk slug=resource.name|slugify %}">{{ resource.name }}</a></td>
-            <td>{{ resource.description|default:"-" }}</td>
+            <td>{{ resource.description|safe|default:"-" }}</td>
             <td><a href="{{ resource.url }}">{{ resource.url|default:"-" }}</a></td>
             <td>{{ resource.posted }}</td>
             <td>

@@ -1,3 +1,5 @@
+from django.shortcuts import render_to_response
+from django.template import RequestContext
 from django.http import HttpResponse
 from django.shortcuts import render
 
@@ -12,3 +14,9 @@ def home(request):
 
 def contact(request):
 	return render(request, 'contact.html')
+
+def server_error_500(request):
+	return render(request, '500.html')
+
+def server_error_404(request):
+	return render(request, '404.html')

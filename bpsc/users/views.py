@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib import messages
 from django.contrib.auth import login as auth_login, logout as auth_logout
 from django.contrib.auth.forms import AuthenticationForm
 from django.core.urlresolvers import reverse_lazy
@@ -28,14 +29,16 @@ class LoginView(FormView):
         auth_login(self.request, form.get_user())
         if self.request.session.test_cookie_worked():
             self.request.session.delete_test_cookie()
-        return redirect('home')
+        return redirect(self.next_url)
 
     def form_invalid(self, form):
+        messages.error(self.request, 'Incorrect login or password')
         return self.render_to_response(self.get_context_data(form=form))
 
     @method_decorator(sensitive_post_parameters('password'))
     def dispatch(self, request, *args, **kwargs):
         request.session.set_test_cookie()
+        self.next_url = request.GET.get('next', 'home')
         return super(LoginView, self).dispatch(request, *args, **kwargs)
 
 

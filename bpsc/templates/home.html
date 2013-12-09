@@ -1,129 +1,40 @@
 {% extends 'base.html' %}
-<!-- 
-<DOCTYPE html>
-<html lang="en">
-  <head> -->
-    {% load staticfiles %}
-    {% block head %}
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title> Suitcase Clinic Portal </title>
-    <!-- Bootstrap core CSS -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{% static 'css/bpsc.css' %}" rel="stylesheet">
+{% load staticfiles %}
 
-    <!-- Add custom CSS here -->
-    
-    <style media="screen" type="text/css" href="css/half-slider.css">
-	html, body {
-	  height:100%;
-	}
-	.carousel {
-       		height:50%;
-	}
-	.item,
-	.active,
-	.carousel-inner {
-		height:100%;
-	}
-	.fill {
-		width:100%;
-		height:100%;
-		background-position: center;
-		background-size: cover;
-	}
-	.section {
-		margin: 50px 0;
-	}
-	footer {
-		margin: 50px 0;
-	}
-    </style>
-    
-  {% endblock %}
+{% block meta %}
+<meta name="description" content="">
+<meta name="author" content="">
+{% endblock %}
 
-  <!-- </head> -->
-
-  <!-- <body> -->
   {% block content %}
-
-
-    <nav class="navbar navbar-static-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-	    <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar">Test1</span>
-            <span class="icon-bar">Test2</span>
-            <span class="icon-bar">Test3</span>
-          </button>
-	  <!-- <a class="navbar-brand">BPSC Home Page</a> -->
-        </div>
-<!-- <div class="container"> <a href="#"><img class = "brand" src="http://placehold.it/269x50" alt="SparkCharger" /></a> -->
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="{% url 'home' %}">RESOURCES</a></li>
-            <li class="hiddentab"><a href="/reviews/reviews">REVIEWS</a></li>
-            <li class="hiddentab"><a href="{% url 'contact' %}">CONTACT</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
-    
     <div class="container container-home">
-
       <div class="row">
-  <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-    <div class="buttonlabel">
-      <img src="{% static 'css/images/icon-employment.png' %}" height="70px" width="70px">EMPLOYMENT</img>
-    </div>
-  </button>
-    <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-    <div class="buttonlabel">
-      <img src="{% static 'css/images/icon-housing.png' %}" height="70px" width="70px">HOUSING</img>
-    </div>
-  </button>
-    <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-    <div class="buttonlabel">
-      <img src="{% static 'css/images/icon-commresources.png' %}" height="70px" width="70px">COMMUNITY RESOURCES</img>
-    </div>
-  </button>
-    <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-    <div class="buttonlabel">
-      <img src="{% static 'css/images/icon-govaid.png' %}" height="70px" width="70px">GOVERNMENT AID</img>
-    </div>
-  </button>
-    <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-    <div class="buttonlabel">
-      <img src="{% static 'css/images/icon-legal.png' %}" height="70px" width="70px">LEGAL</img>
-    </div>
-  </button>
-</div>
-      
-      <hr>
-      
-      <footer>
-        <div class="row">
-          <div class="col-lg-12">
-            <p>Copyright &copy; Company 2013 &middot; Facebook &middot; Twitter &middot; Google+</p>
+        <button type="button" class="btn btn-default btn-lg btn-block btn-home">
+          <div class="buttonlabel">
+            <img src="{% static 'css/images/icon-employment.png' %}" height="70px" width="70px">EMPLOYMENT</img>
           </div>
-        </div>
-      </footer>
-
-    </div><!-- /.container -->
-
-    <!-- Bootstrap core JavaScript -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!-- Make sure to add jQuery - download the most recent version at http://jquery.com/ -->
-    <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src=""http://www.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css""></script>
+        </button>
+          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
+          <div class="buttonlabel">
+            <img src="{% static 'css/images/icon-housing.png' %}" height="70px" width="70px">HOUSING</img>
+          </div>
+        </button>
+          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
+          <div class="buttonlabel">
+            <img src="{% static 'css/images/icon-commresources.png' %}" height="70px" width="70px">COMMUNITY RESOURCES</img>
+          </div>
+        </button>
+          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
+          <div class="buttonlabel">
+            <img src="{% static 'css/images/icon-govaid.png' %}" height="70px" width="70px">GOVERNMENT AID</img>
+          </div>
+        </button>
+          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
+          <div class="buttonlabel">
+            <img src="{% static 'css/images/icon-legal.png' %}" height="70px" width="70px">LEGAL</img>
+          </div>
+        </button>
+      </div>
+    </div><!-- /.container --> 
   {% endblock %}
-
-  <!-- </body> -->
-</html>
-

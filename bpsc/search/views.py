@@ -5,6 +5,7 @@ from django.views.generic import DetailView, ListView
 
 from bpsc.search.forms import ResourcePrintForm
 from bpsc.lib import send_suitcase_email
+from bpsc.wysiwyg.models import Post
 from bpsc.search.models import (
     Tag, HousingTag, CommunityTag, EmploymentTag, LegalTag, Resource,
     HousingResource, CommunityResource, EmploymentResource, LegalResource
@@ -184,3 +185,11 @@ class LegalResourcePrintView(BaseResourcePrintView):
     list_url = 'search:legal_list'
     tag = LegalTag
     resource_type = 'Legal'
+
+class GovernmentResourceView(DetailView):
+    model = Post
+    context_object_name = 'resource'
+    template_name = 'government_resource_detail.html'
+
+    def get_object(self, **kwargs):
+        return Post.objects.get(url='search:government')
