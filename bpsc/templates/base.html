@@ -43,6 +43,23 @@
         {% endblock %}
         </div>
 
+        <div id="navbar-container">
+            <nav role="navigation" class="navbar navbar-static-top">
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        {% block navbar-list %}
+                        <li class=""><a href="{% url 'search:employment_list' %}">EMPLOYMENT</a></li>
+                        <li class="hiddentab"><a href="{% url 'search:housing_list' %}">HOUSING</a></li>
+                        <li class="hiddentab"><a href="{% url 'search:community_list' %}">COMMUNITY</a></li>
+                        <li class="hiddentab"><a href="{% url 'home' %}">GOVERNMENT</a></li>
+                        <li class="hiddentab"><a href="{% url 'search:legal_list' %}">LEGAL</a></li>
+                        <li class="hiddentab"><a href="{% url 'reviews:reviews' %}">REVIEWS</a></li>
+                        {% endblock %}
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+
         <div class="body-container">
             {% block messages %}
                 {% if messages %}
@@ -53,22 +70,7 @@
                 </ul>
                 {% endif %}
             {% endblock %}
-            <div id="navbar-container">
-                <nav role="navigation" class="navbar navbar-static-top">
-                    <div class="collapse navbar-collapse navbar-ex1-collapse">
-                        <ul class="nav navbar-nav">
-                            {% block navbar-list %}
-                            <li class="hiddentab"><a href="{% url 'search:employment_list' %}">EMPLOYMENT</a></li>
-                            <li class="hiddentab"><a href="{% url 'search:housing_list' %}">HOUSING</a></li>
-                            <li class="hiddentab"><a href="{% url 'search:community_list' %}">COMMUNITY</a></li>
-                            <li class="hiddentab"><a href="{% url 'home' %}">GOVERNMENT</a></li>
-                            <li class="hiddentab"><a href="{% url 'search:legal_list' %}">LEGAL</a></li>
-                            <li class="hiddentab"><a href="{% url 'reviews:reviews' %}">REVIEWS</a></li>
-                            {% endblock %}
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </nav>
-            </div>
+            
             <div id="content">
                 {% block content %}
                 {% endblock %}

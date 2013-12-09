@@ -17,6 +17,7 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+li,
 p,
 h1,
 h2,
@@ -32,19 +33,11 @@ h6,
 .h6 {
   /*font-family: Geneva, Tahoma, Verdana, sans-serif;*/
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-weight: 500;
   line-height: 1.1;
 }
 
 p {
   font-size: 130%;
-}
-
-  color: #000000;
-/*  background-color: #474949;
-  border-color: #474949;*/
-    background-color: #ffffff;
-  border-color: #ffffff;
 }
 
 .buttonlabel{
@@ -105,7 +98,6 @@ body {
   -moz-border-radius-bottomright: 15px;
   -webkit-border-bottom-left-radius: 15px;
   -moz-border-radius-bottomleft: 15px;
-
 }
 
 .container {
@@ -114,8 +106,9 @@ body {
 
 #navbar-container {
 	padding: 0;
-    border: 0;
-    margin: 0;
+  border:  0;
+  margin-top: 10px;
+  margin-bottom: 0px;
 	background-color: transparent !important;
 	position: relative;
 }
@@ -145,16 +138,15 @@ body {
   margin-left: 1px;
 }
 
-
 .navbar-nav > li > a {
-  background-image: url('images/FOLDERTAB_regular.png');
-  background-size: 125px 51px;
+  background-image: url('images/Tab_Regular.png');
+  background-size: 183px 51px;
   background-repeat: no-repeat;
   padding-top: 20px;
   padding-bottom: 15px;
   line-height: 20px;
   border-radius: 0px;
-  width:125px;
+  width:183px;
   text-align: center;
   color: #000000;
 }
@@ -162,7 +154,7 @@ body {
 .navbar-nav > .hiddentab > a,
 .navbar-nav > .hiddentab > a:hover,
 .navbar-nav > .hiddentab > a:focus {
-  background-image: url('images/FOLDERTAB_shadow.png');
+  background-image: url('images/Tab_Shadow.png');
 
 }
 
@@ -217,4 +209,8 @@ body {
 #content {
     border-top: 5px;
     height: 100%;
+}
+
+.body-container {
+  padding-top: 15px
 }
