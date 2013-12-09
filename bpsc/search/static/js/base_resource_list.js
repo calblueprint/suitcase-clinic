@@ -14,11 +14,4 @@ $(document).ready(function()
       }
       return null;
     }
-
-    $(window).load(function(){
-        if (getParamater('form_error') === 'true') {
-            $('#printModal').modal('show');
-        }
-    });
-
 );
