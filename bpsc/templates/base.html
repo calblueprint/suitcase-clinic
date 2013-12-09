@@ -10,12 +10,13 @@
     {% block meta %}
     {% endblock %}
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
     <link href="{% static 'css/bpsc.css' %}" rel="stylesheet">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/bpsc.css' %}">
-    
+
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css'>
 
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
@@ -25,62 +26,70 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header-stuff">
-            <div class="logo">
-                <img src="{% static 'css/images/SuitcaseLogo.png' %}">
+        <div id="header">
+            <div id="admin-panel">
+            {% if user.is_authenticated %}
+                <span>{{ user.first_name }} {{ user.last_name }}</span> |
+                <span><a href="{% url 'admin:index' %}">Admin Dashboard</a></span> |
+                <span><a href="{% url 'logout' %}?next={% firstof request.path '/' %}">Logout</a></span>
+            {% else %}
+                <span class="hidden-login">
+                    <a class="hidden-login" href="{% url 'login' %}?next={% firstof request.path '/' %}">Login</a>
+                </span>
+            {% endif %}
             </div>
-
-            <nav class="base navbar navbar-static-top" role="navigation">
-              <div class="nav-container">
-                <div class="collapse navbar-collapse">
-                  <ul class="base nav navbar-nav">
-                    <li class="activetab"><a href="{% url 'home' %}">RESOURCES</a></li>
-                    <li class="hiddentab"><a href="/reviews/reviews">REVIEWS</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <div class="header">
-        {% if user.is_authenticated %}
-        <span>{{ user.first_name }} {{ user.last_name }}</span> |
-        <span><a href="{% url 'admin:index' %}">Admin Dashboard</a></span> |
-        <span><a href="{% url 'logout' %}?next={% firstof request.path '/' %}">Logout</a></span>
-        {% else %}
-        <span class="hidden-login">
-            <a class="hidden-login" href="{% url 'login' %}?next={% firstof request.path '/' %}">Login</a>
-        </span>
-        {% endif %}
         {% block header %}
         {% endblock %}
+        </div>
+        <div class="wrapper-container">
+        <div id="navbar-container">
+            <nav role="navigation" class="navbar navbar-static-top">
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav">
+                        {% block navbar-list %}
+                        <li {% block navbar-employment %}class="hiddentab"{% endblock %}><a href="{% url 'search:employment_list' %}">EMPLOYMENT</a></li>
+                                               
+                        <li {% block navbar-housing %}class="hiddentab"{% endblock %}><a href="{% url 'search:housing_list' %}">HOUSING</a></li>
+                                               
+                        <li {% block navbar-community %}class="hiddentab"{% endblock %}><a href="{% url 'search:community_list' %}">COMMUNITY</a></li>
+                                               
+                        <li {% block navbar-government %}class="hiddentab"{% endblock %}><a href="{% url 'home' %}">GOVERNMENT</a></li>
+                                               
+                        <li {% block navbar-legal %}class="hiddentab"{% endblock %}><a href="{% url 'search:legal_list' %}">LEGAL</a></li>
+                                               
+                        <li {% block navbar-reviews %}class="hiddentab"{% endblock %}><a href="{% url 'reviews:reviews_list' %}">REVIEWS</a></li>
+                        {% endblock %}
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </nav>
+        </div>
+
+        <div class="body-container">
+            {% block messages %}
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            {% endblock %}
+            
+                {% block content %}
+                {% endblock %}
+        </div>
+
+        <div id="footer">
+        {% block footer %}
+        {% endblock %}
+        </div>
+
+
+    {% block scripts %}
+    {% endblock %}
 
     </div>
-</div>
-<div class="body-container">
-    {% block messages %}
-    {% if messages %}
-    <ul class="messages">
-        {% for message in messages %}
-        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endblock %}
 
-
-    {% block content %}
-    {% endblock %}
-</div>
-
-<div class="footer-container">
-    {% block footer %}
-    {% endblock %}
-</div>
-
-</div>
-
-{% block scripts %}
-{% endblock %}
 </body>
 
 </html>
