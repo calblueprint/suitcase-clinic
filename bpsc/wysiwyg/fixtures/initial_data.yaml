@@ -387,277 +387,664 @@
       \n", name: Government Aid Guides, url: 'search:government'}
   model: wysiwyg.post
   pk: 5
-- fields: {content: "<p>EMERGENCY</p>\r\n\r\n<p>GENERAL HEALTH</p>\r\n\r\n<p>WOMEN&rsquo;S\
-      \ AND REPRODUCTIVE HEALTH</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Emergency</strong></p>\r\
-      \n\r\n<p>Highland General Hospital</p>\r\n\r\n<p><span style=\"font-size: 13px;\
-      \ line-height: 1.6em;\">Address: 1411 East 31st Street, Oakland, CA 94602</span></p>\r\
-      \n\r\n<p>Phone: Mon-Fri (7:00am-5:00pm)</p>\r\n\r\n<p>General: 510-437-4473</p>\r\
-      \n\r\n<p>Appointment: (510) 437-8510&nbsp;</p>\r\n\r\n<p>Registration: (510)\
-      \ 437-4459&nbsp;</p>\r\n\r\n<p>Hours: Urgent Care Clinic: Mon-Fri (8:00am-8:30pm)&nbsp;</p>\r\
-      \n\r\n<p>ER: Open 24/7</p>\r\n\r\n<p>Services: Emergency medical care, general\
-      \ and specialist medical care&nbsp;</p>\r\n\r\n<p>Payment: Attenuated payment\
-      \ system for patients below a certain income level</p>\r\n\r\n<p>&nbsp;</p>\r\
-      \n\r\n<p><strong>General Health</strong></p>\r\n\r\n<p>Berkeley Free Clinic</p>\r\
+- fields: {content: "<p align=\"center\"><strong>Suitcase Medical Resources</strong></p>\r\
+      \n\r\n<h1>Emergency</h1>\r\n\r\n<h1>General Health</h1>\r\n\r\n<h1>Women&rsquo;s\
+      \ and Reproductive Health</h1>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Emergency</strong></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>Highland General Hospital</p>\r\n\r\n<p>Address:\
+      \ 1411 East 31st Street, Oakland, CA 94602</p>\r\n\r\n<p>Phone: Mon-Fri (7:00am-5:00pm)</p>\r\
+      \n\r\n<p>General: 510-437-4473</p>\r\n\r\n<p>Appointment: (510) 437-8510</p>\r\
+      \n\r\n<p>Registration: (510) 437-4459</p>\r\n\r\n<p>Hours: Urgent Care Clinic:\
+      \ Mon-Fri (8:00am-8:30pm)</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+      \ ER: Open 24/7</p>\r\n\r\n<p>Services: Emergency medical care, general and\
+      \ specialist medical care</p>\r\n\r\n<p>Payment: Attenuated payment system for\
+      \ patients below a certain income level</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>General\
+      \ Health</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Berkeley Free Clinic</p>\r\
       \n\r\n<p>Address: 2339 Durant Avenue, Berkeley, CA 94704</p>\r\n\r\n<p>Phone:\
       \ 510-548-2570 or 800-6-CLINIC</p>\r\n\r\n<p>Hours: Mon/Wed/Fri (3:00pm-9:00pm)</p>\r\
       \n\r\n<p>Tue/Thu (5:30pm-9:00pm)</p>\r\n\r\n<p>Sat (11:30am-9:00pm)</p>\r\n\r\
-      \n<p>Sun (4:00pm-7:00pm)</p>\r\n\r\n<p>Services: Medical: Mon/Wed/Thu/Fri; Tetanus\
-      \ boosters, colds, sore throats, simple skin&nbsp;</p>\r\n\r\n<p>concerns, wounds/burns,\
-      \ limited ear/respiratory concerns, STI, UTI, pregnancy</p>\r\n\r\n<p>TB Testing:\
-      \ Mon/Tue/Wed/Thu/Fri/Sat</p>\r\n\r\n<p>STI and HIV testing: Sun; Drop-in confidential\
-      \ STI testing and anonymous HIV testing,&nbsp;</p>\r\n\r\n<p>first-come first-serve</p>\r\
-      \n\r\n<p>Payment: Free</p>\r\n\r\n<p>Order of Malta</p>\r\n\r\n<p>Address: 2121\
-      \ Harrison Street, Suite 120, Oakland, CA 94612</p>\r\n\r\n<p>Phone: 510-587-3000</p>\r\
-      \n\r\n<p>Hours: Mon/Wed (8:30am-12:00pm, 1:00pm-4:00pm)</p>\r\n\r\n<p>Fri (8:30am-12:00pm)</p>\r\
-      \n\r\n<p>Services: Cardiology, ENT, neurology, internal medicine, obstetrics,\
-      \ gynecology, oncology, x-<br />\r\nrays, blood CVC testing, physicals, prescriptions</p>\r\
-      \n\r\n<p>Payment: Free; lower costs for prescription medications</p>\r\n\r\n\
-      <p>Notes: Must make prior appointment, long waits for appointment slots are\
-      \ common</p>\r\n\r\n<p>Lifelong Primary Care</p>\r\n\r\n<p>Address: 2001 Dwight\
-      \ Way, Berkeley, CA 94704</p>\r\n\r\n<p>Phone: 510-981-4100</p>\r\n\r\n<p>Hours:\
-      \ Mon (8:30am-8:00pm)</p>\r\n\r\n<p>Tue/Wed/Thu/Fri (8:30am-5:00pm)</p>\r\n\r\
-      \n<p>Services: Adult primary care, women&rsquo;s health, chronic disease screening\
-      \ and&nbsp;</p>\r\n\r\n<p>management, specialist referrals, mental health, HIV/AIDS\
-      \ testing and treatment,&nbsp;</p>\r\n\r\n<p>podiatry, acupuncture, health education,\
-      \ social services resources</p>\r\n\r\n<p>Payment: Accepts private insurance,\
-      \ Medi-Cal, Medi-Care, and uninsured clients</p>\r\n\r\n<p>Notes: Uninsured\
-      \ clients should call member services (510) 704-6010 or (510) 981-4100</p>\r\
-      \n\r\n<p>Lifelong Downtown Oakland&nbsp;</p>\r\n\r\n<p>Address: 616 16th Street,\
-      \ Oakland, CA 94612</p>\r\n\r\n<p>Phone: 510-981-4100</p>\r\n\r\n<p>Hours: Mon-Fri\
-      \ (8:30am-5:00pm)</p>\r\n\r\n<p>Services: Adult primary care, chronic disease\
-      \ screening and management, specialist&nbsp;</p>\r\n\r\n<p>referrals, mental\
-      \ health, podiatry, social services resources</p>\r\n\r\n<p>Payment: Accepts\
-      \ private insurance, Medi-Cal, Medi-Care, and uninsured clients</p>\r\n\r\n\
-      <p>Notes: Uninsured clients should call member services (510) 704-6010 or (510)\
-      \ 981-4100</p>\r\n\r\n<p>Note: Lifelong has several other locations including\
-      \ West Berkeley (2031 6th Street) and East&nbsp;</p>\r\n\r\n<p>Oakland (10700\
-      \ MacArthur Boulevard)</p>\r\n\r\n<p>La Clinica de la Raza Fruitvale Village</p>\r\
-      \n\r\n<p>Address: 3451 East 12th Street, Oakland, CA 94601</p>\r\n\r\n<p>Phone:\
-      \ 510-535-3500</p>\r\n\r\n<p>Hours: Mon/Tue/Thu/Fri (8:30am-12:30pm, 1:30pm-5:30pm)</p>\r\
-      \n\r\n<p>Wed (8:30a-11:30am, 1:30pm-5:30pm)</p>\r\n\r\n<p>Sat: (9:00am-12:30pm)</p>\r\
-      \n\r\n<p>Evening clinics: Mon/Tue/Wed/Thu (5:30pm-7:30pm)</p>\r\n\r\n<p>Services:\
-      \ Dental, family medicine, health education, pediatrics, pharmacy, preventive&nbsp;</p>\r\
-      \n\r\n<p>medicine, women&#39;s health, x-rays and laboratory</p>\r\n\r\n<p>Payment:\
-      \ Accepts Medicare, Medi-cal, Dental-cal, and many other public and private\
-      \ insurance&nbsp;</p>\r\n\r\n<p>plans; patients may qualify for a sliding scale\
-      \ fee discount based on income; special&nbsp;</p>\r\n\r\n<p>discounts are available\
-      \ in certain services for eligible patients</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n\
-      <p><strong>Women&rsquo;s and Reproductive Health</strong></p>\r\n\r\n<p>Many\
-      \ of the clinics listed above will also provide women&rsquo;s and reproductive\
-      \ health services; for&nbsp;</p>\r\n\r\n<p>urgent OB/GYN care Highland Hospital\
-      \ has a Women&rsquo;s Urgent Care Clinic&nbsp;</p>\r\n\r\n<p>Planned Parenthood:\
-      \ El Cerrito Health Center</p>\r\n\r\n<p>Address: 320 El Cerrito Plaza, El Cerrito,\
-      \ CA 94530</p>\r\n\r\n<p>Phone: 510-527-5806</p>\r\n\r\n<p>Hours: Mon/Tue/Thu/Fri\
+      \n<p>Sun (4:00pm-7:00pm)</p>\r\n\r\n<p style=\"margin-left:.5in;\">Services:\
+      \ Medical: Mon/Wed/Thu/Fri; Tetanus boosters, colds, sore throats, simple skin\
+      \ concerns, wounds/burns, limited ear/respiratory concerns, STI, UTI, pregnancy</p>\r\
+      \n\r\n<p style=\"margin-left:.5in;\">TB Testing: Mon/Tue/Wed/Thu/Fri/Sat</p>\r\
+      \n\r\n<p style=\"margin-left:.5in;\">STI and HIV testing: Sun; Drop-in confidential\
+      \ STI testing and anonymous HIV testing, first-come first-serve</p>\r\n\r\n\
+      <p>Payment: Free</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\r\
+      \n\r\n<p>Order of Malta</p>\r\n\r\n<p>Address: 2121 Harrison Street, Suite 120,\
+      \ Oakland, CA 94612</p>\r\n\r\n<p>Phone: 510-587-3000</p>\r\n\r\n<p>Hours: Mon/Wed\
+      \ (8:30am-12:00pm, 1:00pm-4:00pm)</p>\r\n\r\n<p>Fri (8:30am-12:00pm)</p>\r\n\
+      \r\n<p style=\"margin-left:.5in;\">Services: Cardiology, ENT, neurology, internal\
+      \ medicine, obstetrics, gynecology, oncology, x-rays, blood CVC testing, physicals,\
+      \ prescriptions</p>\r\n\r\n<p>Payment: Free; lower costs for prescription medications</p>\r\
+      \n\r\n<p>Notes: Must make prior appointment, long waits for appointment slots\
+      \ are common</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Lifelong\
+      \ Primary Care</p>\r\n\r\n<p>Address: 2001 Dwight Way, Berkeley, CA 94704</p>\r\
+      \n\r\n<p>Phone: 510-981-4100</p>\r\n\r\n<p>Hours: Mon (8:30am-8:00pm)</p>\r\n\
+      \r\n<p>Tue/Wed/Thu/Fri (8:30am-5:00pm)</p>\r\n\r\n<p style=\"margin-left:.5in;\"\
+      >Services: Adult primary care, women&rsquo;s health, chronic disease screening\
+      \ and management, specialist referrals, mental health, HIV/AIDS testing and\
+      \ treatment, podiatry, acupuncture, health education, social services resources</p>\r\
+      \n\r\n<p>Payment: Accepts private insurance, Medi-Cal, Medi-Care, and uninsured\
+      \ clients</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+      \ Notes: Uninsured clients should call member services (510) 704-6010 or (510)\
+      \ 981-4100</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Lifelong Downtown Oakland</p>\r\
+      \n\r\n<p>Address: 616 16th Street, Oakland, CA 94612</p>\r\n\r\n<p>Phone: 510-981-4100</p>\r\
+      \n\r\n<p>Hours: Mon-Fri (8:30am-5:00pm)</p>\r\n\r\n<p style=\"margin-left:.5in;\"\
+      >Services: Adult primary care, chronic disease screening and management, specialist\
+      \ referrals, mental health, podiatry, social services resources</p>\r\n\r\n\
+      <p>Payment: Accepts private insurance, Medi-Cal, Medi-Care, and uninsured clients</p>\r\
+      \n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+      \ Notes: Uninsured clients should call member services (510) 704-6010 or (510)\
+      \ 981-4100</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Note: Lifelong has several other\
+      \ locations including West Berkeley (2031 6th Street) and East Oakland (10700\
+      \ MacArthur Boulevard)</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>La Clinica de la Raza\
+      \ Fruitvale Village</p>\r\n\r\n<p>Address: 3451 East 12th Street, Oakland, CA\
+      \ 94601</p>\r\n\r\n<p>Phone: 510-535-3500</p>\r\n\r\n<p>Hours: Mon/Tue/Thu/Fri\
+      \ (8:30am-12:30pm, 1:30pm-5:30pm)</p>\r\n\r\n<p style=\"margin-left:.5in;\"\
+      >Wed (8:30a-11:30am, 1:30pm-5:30pm)<br />\r\nSat: (9:00am-12:30pm)</p>\r\n\r\
+      \n<p style=\"margin-left:.5in;\">Evening clinics: Mon/Tue/Wed/Thu (5:30pm-7:30pm)</p>\r\
+      \n\r\n<p style=\"margin-left:.5in;\">Services: Dental, family medicine, health\
+      \ education, pediatrics, pharmacy, preventive medicine, women&#39;s health,\
+      \ x-rays and laboratory</p>\r\n\r\n<p style=\"margin-left:.5in;\">Payment: Accepts\
+      \ Medicare, Medi-cal, Dental-cal, and many other public and private insurance\
+      \ plans; patients may qualify for a sliding scale fee discount based on income;\
+      \ special discounts are available in certain services for eligible patients</p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Women&rsquo;s and\
+      \ Reproductive Health</strong></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Many of the\
+      \ clinics listed above will also provide women&rsquo;s and reproductive health\
+      \ services; for urgent OB/GYN care Highland Hospital has a Women&rsquo;s Urgent\
+      \ Care Clinic</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Planned Parenthood: El Cerrito\
+      \ Health Center</p>\r\n\r\n<p>Address: 320 El Cerrito Plaza, El Cerrito, CA\
+      \ 94530</p>\r\n\r\n<p>Phone: 510-527-5806</p>\r\n\r\n<p>Hours: Mon/Tue/Thu/Fri\
       \ (8:30am-5:00pm)</p>\r\n\r\n<p>Wed (11:30am-8:00pm)</p>\r\n\r\n<p>Services:\
-      \ Abortion services, birth control, HIV testing and services, emergency contraception,&nbsp;</p>\r\
-      \n\r\n<p>pregnancy testing, STI testing and treatment, breast exams, cervical\
-      \ cancer screening, pap&nbsp;</p>\r\n\r\n<p>smears, colposcopy, cryotherapy,\
-      \ fibroids evaluation, mammogram referrals, UTI testing and&nbsp;</p>\r\n\r\n\
-      <p>treatment, menopause treatment, testing and treatment for vaginal infections</p>\r\
-      \n\r\n<p>Payment: Uninsured patients may qualify for a state-funded program\
-      \ or a scale fee discount&nbsp;</p>\r\n\r\n<p>based on income</p>\r\n\r\n<p>City\
-      \ of Berkeley Public Health Clinic</p>\r\n\r\n<p>Address: 830 University Avenue,\
-      \ Berkeley, CA 94710</p>\r\n\r\n<p>Phone: 510-981-5350</p>\r\n\r\n<p>Hours:\
-      \ Mon/Tue (8:00 am-5:00 pm)</p>\r\n\r\n<p>Thu (11:30 am-6:30 pm)</p>\r\n\r\n\
-      <p>Services: Family planning, gynecological testing, HIV testing and services,\
-      \ immunization, STI&nbsp;</p>\r\n\r\n<p>testing and prevention, tuberculosis\
-      \ prevention, social services resources</p>\r\n\r\n<p>Payment: Free or subsidized</p>\r\
-      \n\r\n<p>Clinica Alta Vista</p>\r\n\r\n<p>Address: 1515 Fruitvale Avenue, Oakland,\
-      \ CA 94601</p>\r\n\r\n<p>Phone: 510-535-6300</p>\r\n\r\n<p>Hours: Mon/Tue/Thu/Friday\
-      \ (8:45am-12:30pm, 1:15pm-5:30pm)</p>\r\n\r\n<p>Wed 9:00am - 11:30am &amp; 1:30pm\
-      \ - 5:30pm</p>\r\n\r\n<p>Services: Assistance with school, housing, emergency\
-      \ food and legal assistance,&nbsp;</p>\r\n\r\n<p>family planning, reproductive\
-      \ health, urgent care, individual counseling, group&nbsp;</p>\r\n\r\n<p>and\
-      \ couples counseling, health education, immunizations, chronic illness&nbsp;</p>\r\
-      \n\r\n<p>management, OB-GYN services, physical exams, tobacco cessation counseling</p>\r\
-      \n\r\n<p>Payment: Accepts Medicare, Medi-cal, Dental-cal, and many other public\
-      \ and private insurance&nbsp;</p>\r\n\r\n<p>plans; patients may qualify for\
-      \ a sliding scale fee discount based on income; special&nbsp;</p>\r\n\r\n<p>discounts\
-      \ are available in certain services for eligible patients&nbsp;</p>\r\n\r\n\
-      <p>West Oakland Health Center</p>\r\n\r\n<p>Address: 700 Adeline Street, Oakland,\
-      \ CA 94607</p>\r\n\r\n<p>Phone: 510-835-9610</p>\r\n\r\n<p>Hours: Mon-Fri (8:30am-5:00pm)</p>\r\
-      \n\r\n<p>Services: Adult medicine, OB/GYN, family planning, pediatrics, dentistry,\
-      \ optometry/</p>\r\n\r\n<p>ophthalmology, cancer and other health screening,\
-      \ pharmacy, laboratory, health&nbsp;</p>\r\n\r\n<p>education and perinatal support,\
-      \ social services, WIC (women, infants and&nbsp;</p>\r\n\r\n<p>children&rsquo;s\
+      \ Abortion services, birth control, HIV testing and services, emergency contraception,\
+      \ pregnancy testing, STI testing and treatment, breast exams, cervical cancer\
+      \ screening, pap smears, colposcopy, cryotherapy, fibroids evaluation, mammogram\
+      \ referrals, UTI testing and treatment, menopause treatment, testing and treatment\
+      \ for vaginal infections</p>\r\n\r\n<p style=\"margin-left:.5in;\">Payment:\
+      \ Uninsured patients may qualify for a state-funded program or a scale fee discount\
+      \ based on income</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>City of Berkeley Public\
+      \ Health Clinic</p>\r\n\r\n<p>Address: 830 University Avenue, Berkeley, CA 94710</p>\r\
+      \n\r\n<p>Phone: 510-981-5350</p>\r\n\r\n<p>Hours: Mon/Tue (8:00 am-5:00 pm)</p>\r\
+      \n\r\n<p>Thu (11:30 am-6:30 pm)</p>\r\n\r\n<p>Services: Family planning, gynecological\
+      \ testing, HIV testing and services, immunization, STI testing and prevention,\
+      \ tuberculosis prevention, social services resources</p>\r\n\r\n<p>Payment:\
+      \ Free or subsidized</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Clinica Alta Vista</p>\r\
+      \n\r\n<p>Address: 1515 Fruitvale Avenue, Oakland, CA 94601</p>\r\n\r\n<p>Phone:\
+      \ 510-535-6300</p>\r\n\r\n<p>Hours: Mon/Tue/Thu/Friday (8:45am-12:30pm, 1:15pm-5:30pm)</p>\r\
+      \n\r\n<p>Wed 9:00am - 11:30am &amp; 1:30pm - 5:30pm</p>\r\n\r\n<p style=\"margin-left:.5in;\"\
+      >Services: Assistance with school, housing, emergency food and legal assistance,\
+      \ family planning, reproductive health, urgent care, individual counseling,\
+      \ group and couples counseling, health education, immunizations, chronic illness\
+      \ management, OB-GYN services, physical exams, tobacco cessation counseling</p>\r\
+      \n\r\n<p style=\"margin-left:.5in;\">Payment: Accepts Medicare, Medi-cal, Dental-cal,\
+      \ and many other public and private insurance plans; patients may qualify for\
+      \ a sliding scale fee discount based on income; special discounts are available\
+      \ in certain services for eligible patients</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n\
+      <p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>West Oakland Health Center</p>\r\n\r\n<p>Address: 700 Adeline Street,\
+      \ Oakland, CA 94607</p>\r\n\r\n<p>Phone: 510-835-9610</p>\r\n\r\n<p>Hours: Mon-Fri\
+      \ (8:30am-5:00pm)</p>\r\n\r\n<p style=\"margin-left:.5in;\">Services: Adult\
+      \ medicine, OB/GYN, family planning, pediatrics, dentistry, optometry/ophthalmology,\
+      \ cancer and other health screening, pharmacy, laboratory, health education\
+      \ and perinatal support, social services, WIC (women, infants and children&rsquo;s\
       \ program), children&rsquo;s and adult mental health, substance abuse services</p>\r\
-      \n\r\n<p>Payment: Most services are covered by Medi-Cal, Medicare, Alameda Alliance,\
-      \ Blue&nbsp;</p>\r\n\r\n<p>Cross, and Healthy Families, or are otherwise subsidized;\
-      \ patients may qualify for&nbsp;</p>\r\n\r\n<p>a sliding scale fee discount\
-      \ based on income</p>\r\n\r\n<p>&nbsp;</p>\r\n", name: Suitcase Medical Resources,
-    url: 'search:community_medical'}
+      \n\r\n<p style=\"margin-left:.5in;\">Payment: Most services are covered by Medi-Cal,\
+      \ Medicare, Alameda Alliance, Blue Cross, and Healthy Families, or are otherwise\
+      \ subsidized; patients may qualify for a sliding scale fee discount based on\
+      \ income</p>\r\n\r\n<p style=\"margin-left:.5in;\">&nbsp;</p>\r\n", name: Suitcase
+      Medical Resources, url: 'search:community_medical'}
   model: wysiwyg.post
   pk: 6
-- fields: {content: "<p>EMERGENCY</p>\r\n\r\n<p>FREE</p>\r\n\r\n<p>SLIDING-SCALE</p>\r\
-      \n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Emergency</strong></p>\r\n\r\n<p>Highland\
-      \ Hospital Address: 1411 East 31st St., Oakland CA94602 Phone: General: (510)\
-      \ 437-4473 Appointment: (510) 437-8510 &rarr; No appointment is needed for the\
-      \ first visit. If you want follow-up dental care, talk to a clinic staff. &rarr;\
-      \ Need to see financial counselor for the first visit. Registration: (510)-4459\
-      \ Hours: 24/7 Services: Emergency Dentistry which includes temporary fillings,\
-      \ repair of crowns and bridges, palliative emergency treatment, pulpotomy Payment:\
-      \ Sliding Scale, free with Health-PAC/Medi-CAL</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\
-      \n<p><strong>Free</strong></p>\r\n\r\n<p>Berkeley Free Clinic Address: 2339\
-      \ Durant Ave, Berkeley, CA 94704 Phone: (510) 548-2570 or (800) 6-CLINIC Hours:\
-      \ Must submit name to the LOTTERY between 5:30-6 PM Services: Dental Exams,\
-      \ Cleanings, X-rays, Fillings, Extractions</p>\r\n\r\n<p>Suitcase Clinic Address:\
-      \ First Presbyterian Church of Berkeley</p>\r\n\r\n<p>&nbsp;2407 Dana St. a\
-      \ Haste St., Berkeley CA 94720 Phone: (510) 269-7242 Hours: Clinic opens at\
-      \ 6PM but be there early for the dental lottery; First come first serve Services:\
-      \ Dental Exams, Cleanings, X-rays, Fillings, Extractions</p>\r\n\r\n<p>Rotacare\
-      \ Free Dental Clinic Address: 3081 Teagarden St., San Leandro Phone: (510) 347-4620\
-      \ Hours: Every Wednesday, 7 AM to sign up-- first 6 people will be seen Services:\
-      \ Cleanings, X-Rays, fillings, extractions</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n\
-      <p><strong>Sliding-Scale</strong></p>\r\n\r\n<p>La Clinica Fruitvale Address:\
-      \ 3050 East St, Oakland, CA 94601-2319 Phone: (510) 535-4700 Hours: M-F, 8:30am-\
-      \ 12:30pm &amp; 1:30pm-5:30pm Services: Children&#39;s Dental Exams, Cleaning\
-      \ &amp; Polishing, Fluoride &amp; Sealant Treatment, General Dentistry</p>\r\
-      \n\r\n<p>La Clinica Dental at Children&#39;s Hospital Dental Address: 747 52nd\
-      \ St, Oakalnd, CA 94609-1809 Phone: (510) 428-3316 Hours: M-Sat., 8:00am-12:30pm\
-      \ &amp; 1:00pm-4:30pm Services: Cleaning and polishing, dental exams, Dental\
-      \ hygiene, Endodontics, fluoride and sealant treatment, general dentistry, Orthodontics,\
-      \ Pedodontics, Periodontics</p>\r\n\r\n<p>La Clinica Dental Care Mobile Address:\
-      \ n/a Phone: (925) 580-9899 Hours: M-F, 8:30am-5:30pm Sat., 8:30am-11:30am &amp;\
-      \ 12:30pm-3:30pm (By appointment only) Services: Cleaning and polishing, Dental\
-      \ Exams, Fluoride and Sealant treatment, General Dentistry</p>\r\n\r\n<p>La\
-      \ Clinica Dental Fruitvale Village Address: 3451 East 12th St, Oakland, CA 94601-3425\
-      \ Phone: (510) 535-5100 Hours: n/a Services: General Dentistry</p>\r\n\r\n<p>Chabot-Las\
-      \ Positas Community College District Address: 25555 Hesperian Blvd, Hayward\
-      \ CA 94545 Phone: (510) 723-6900 Hours: M-F, 8:30am-4:45pm but Clinic hours\
-      \ vary by semester, need to call in</p>\r\n\r\n<p>Services: Preventative dental\
-      \ care, Screenings</p>\r\n\r\n<p>University of the Pacific Address: 1203 J Union\
-      \ City, CA 94587 Phone: (510) 489-5200 Hours: Monday, 11am-12pm, 1-4:30pm; Tues-Friday,\
-      \ 8:45-11am, 1:00pm-4:30pm Services: Comprehensive dental care by dental school\
-      \ residents</p>\r\n\r\n<p>Tiburcio Vasquez Health Center Address: 22331 Mission\
-      \ Boulevard, 2nd Floor, Hayward CA 94541 Phone: (510) 471-5880 Hours: Please\
-      \ call Services: Oral healthcare and disease control, preventative care, comprehensive\
-      \ dental procedures including: Root Canal, extractions, dentures, crowns &amp;\
-      \ bridges, fillings, sealants</p>\r\n\r\n<p>Native American Health Center-Oakland\
-      \ Address: 2950 International Blvd., Oakland, CA 94601 Phone: (510) 535-4450\
-      \ Hours: Monday, Tuesday, Friday, 9am-12pm, 1-5pm Wednesday, 9am-12pm, 1-7pm\
-      \ Thursday, 10:30am-12pm, 1-5pm Services: Comprehensive dental care including:\
-      \ dentures/partials, cleanings, extractions, emergency services, X-rays, oral\
-      \ surgery.&nbsp;</p>\r\n\r\n<p>Native American Health Center-SF Address: 160\
-      \ Carp St., San Francisco, CA Phone: (415) 621-8056 Hours: n/a Services: Comprehensive\
-      \ dental care including: dentures/partials, cleanings, extractions, emergency\
-      \ services, X-rays, oral surgery. Emergency Care ONLY for NATIVES with Medi-Cal.</p>\r\
-      \n", name: Suitcase Dental Resources, url: 'search:community_dental'}
+- fields: {content: "<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;text-align: center;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 21px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">Suitcase Dental Resources</span></span></p>\r\
+      \n\r\n<h1 dir=\"ltr\" style=\"line-height:1;margin-top:20pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;text-align: center;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 19px; font-family: Cambria; color: rgb(99, 36, 35);\
+      \ background-color: transparent; font-variant: small-caps; vertical-align: baseline;\
+      \ white-space: pre-wrap;\">Emergency</span></span></h1>\r\n\r\n<h1 dir=\"ltr\"\
+      \ style=\"line-height:1;margin-top:20pt;margin-bottom:0pt;margin-right: -36pt;text-align:\
+      \ center;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 19px; font-family: Cambria; color: rgb(99, 36, 35);\
+      \ background-color: transparent; font-variant: small-caps; vertical-align: baseline;\
+      \ white-space: pre-wrap;\">Free</span></span></h1>\r\n\r\n<h1 dir=\"ltr\" style=\"\
+      line-height:1;margin-top:20pt;margin-bottom:0pt;margin-right: -36pt;text-align:\
+      \ center;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 19px; font-family: Cambria; color: rgb(99, 36, 35);\
+      \ background-color: transparent; font-variant: small-caps; vertical-align: baseline;\
+      \ white-space: pre-wrap;\">Sliding-Scale</span></span></h1>\r\n\r\n<p><br />\r\
+      \n&nbsp;</p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 21px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">Emergency</span></span></p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">Highland Hospital</span></span></p>\r\n\
+      \r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 1411 East 31st St., Oakland CA94602</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: General: (510) 437-4473</span></span></p>\r\n\r\n<p dir=\"\
+      ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">&nbsp;&nbsp; &nbsp;Appointment: (510) 437-8510</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&rarr; No appointment is\
+      \ needed for the first visit. If you want follow-up dental care, &nbsp;&nbsp;\
+      \ &nbsp;&nbsp;&nbsp; &nbsp;talk to a clinic staff. </span></span></p>\r\n\r\n\
+      <p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&rarr; Need to see financial\
+      \ counselor for the first visit. </span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"\
+      line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">&nbsp;&nbsp; &nbsp;Registration: (510)-4459</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: 24/7</span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: </span><span style=\"font-size: 16px; font-family: 'Times\
+      \ New Roman'; color: rgb(0, 0, 0); background-color: transparent; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">Emergency Dentistry which includes temporary\
+      \ fillings, repair of crowns and bridges, palliative emergency treatment, pulpotomy</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Payment: Sliding Scale, free with Health-PAC/Medi-CAL</span></span></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 21px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">Free</span><img height=\"29px;\" src=\"\
+      https://docs.google.com/drawings/d/sVTKh-trgH3Ffb-6hdso2AQ/image?w=185&amp;h=29&amp;rev=1&amp;ac=1\"\
+      \ width=\"185px;\" /></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">Berkeley Free Clinic </span><img height=\"\
+      115px;\" src=\"https://docs.google.com/drawings/d/sQxNRibaERkC_0PABG8cj0g/image?w=185&amp;h=115&amp;rev=1&amp;ac=1\"\
+      \ width=\"185px;\" /></span></p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 2339 Durant Ave, Berkeley, CA 94704</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (510) 548-2570 or (800) 6-CLINIC</span></span></p>\r\n\r\
+      \n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: Must submit name to the LOTTERY between 5:30-6 PM</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:10pt;\"\
+      ><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"><span\
+      \ style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0, 0,\
+      \ 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: Dental Exams, Cleanings, X-rays, Fillings, Extractions</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">Suitcase Clinic</span></span></p>\r\n\r\
+      \n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: First Presbyterian Church of Berkeley</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;2407 Dana St. a Haste St., Berkeley\
+      \ CA 94720</span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone:</span><span style=\"font-size: 16px; font-family: 'Times\
+      \ New Roman'; color: rgb(0, 0, 0); background-color: transparent; vertical-align:\
+      \ baseline; white-space: pre-wrap;\"> (510) 269-7242 </span></span></p>\r\n\r\
+      \n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: Clinic opens at 6PM but be there early for the dental lottery;\
+      \ First come first serve</span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: Dental Exams, Cleanings, X-rays, Fillings, Extractions</span></span></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">Rotacare Free Dental Clinic</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 3081 Teagarden St., San Leandro</span></span></p>\r\n\
+      \r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (510) 347-4620</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: Every Wednesday, 7 AM to sign up-- first 6 people will\
+      \ be seen</span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: Cleanings, X-Rays, fillings, extractions</span></span></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 21px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">Sliding-Scale</span></span></p>\r\n\r\n\
+      <p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">La Clinica Fruitvale</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 3050 East St, Oakland, CA 94601-2319</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (510) 535-4700</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: M-F, 8:30am- 12:30pm &amp; 1:30pm-5:30pm</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: Children&#39;s Dental Exams, Cleaning &amp; Polishing,\
+      \ Fluoride &amp; Sealant Treatment, General Dentistry</span></span></p>\r\n\r\
+      \n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">La Clinica Dental at Children&#39;s Hospital\
+      \ Dental</span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 747 52nd St, Oakalnd, CA 94609-1809</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (510) 428-3316</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: M-Sat., 8:00am-12:30pm &amp; 1:00pm-4:30pm</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: Cleaning and polishing, dental exams, Dental hygiene,\
+      \ Endodontics, fluoride and sealant treatment, general dentistry, Orthodontics,\
+      \ Pedodontics, Periodontics</span></span></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p\
+      \ dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">La Clinica Dental Care Mobile</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: n/a</span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"\
+      line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (925) 580-9899</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: M-F, 8:30am-5:30pm</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">&nbsp;&nbsp; &nbsp;Sat., 8:30am-11:30am &amp; 12:30pm-3:30pm (By\
+      \ appointment only)</span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: Cleaning and polishing, Dental Exams, Fluoride and Sealant\
+      \ treatment, General Dentistry</span></span></p>\r\n\r\n<p><br />\r\n&nbsp;</p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">La Clinica Dental Fruitvale Village</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 3451 East 12th St, Oakland, CA 94601-3425</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (510) 535-5100</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: n/a</span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: General Dentistry</span></span></p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;\"\
+      ><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"><span\
+      \ style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0, 0,\
+      \ 10); background-color: transparent; font-weight: bold; vertical-align: baseline;\
+      \ white-space: pre-wrap;\">Chabot-Las Positas Community College District</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 25555 Hesperian Blvd, Hayward CA 94545</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (510) 723-6900</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: &nbsp;&nbsp; &nbsp;M-F, 8:30am-4:45pm but Clinic hours\
+      \ vary by semester, need to call in</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: Preventative dental care, Screenings</span></span></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;\"\
+      ><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"><span\
+      \ style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0, 0,\
+      \ 10); background-color: transparent; font-weight: bold; vertical-align: baseline;\
+      \ white-space: pre-wrap;\">University of the Pacific </span></span></p>\r\n\r\
+      \n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 1203 J Union City, CA 94587</span></span></p>\r\n\r\n\
+      <p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (510) 489-5200</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: Monday, 11am-12pm, 1-4:30pm; Tues-Friday, 8:45-11am, 1:00pm-4:30pm</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: &nbsp;Comprehensive dental care by dental school residents</span></span></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; font-weight: bold; vertical-align:\
+      \ baseline; white-space: pre-wrap;\">Tiburcio Vasquez Health Center</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 22331 Mission Boulevard, 2nd Floor, Hayward CA 94541</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (510) 471-5880</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: Please call</span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"\
+      line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: &nbsp;Oral healthcare and disease control, preventative\
+      \ care, comprehensive dental procedures including: Root Canal, extractions,\
+      \ dentures, crowns &amp; bridges, fillings, sealants</span></span></p>\r\n\r\
+      \n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Native American Health Center-Oakland</span></span></p>\r\n\r\n\
+      <p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 2950 International Blvd., Oakland, CA 94601</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (510) 535-4450</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: Monday, Tuesday, Friday, 9am-12pm, 1-5pm</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">&nbsp;&nbsp; &nbsp;Wednesday, 9am-12pm, 1-7pm</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">&nbsp;&nbsp; &nbsp;Thursday, 10:30am-12pm, 1-5pm</span></span></p>\r\
+      \n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: Comprehensive dental care including: dentures/partials,\
+      \ cleanings, extractions, emergency services, X-rays, oral surgery. </span></span></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Native American Health Center-SF</span></span></p>\r\n\r\n<p dir=\"\
+      ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Address: 160 Carp St., San Francisco, CA</span></span></p>\r\n\
+      \r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Phone: (415) 621-8056</span></span></p>\r\n\r\n<p dir=\"ltr\"\
+      \ style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Hours: n/a</span></span></p>\r\n\r\n<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
+      \ -36pt;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
+      ><span style=\"font-size: 16px; font-family: 'Times New Roman'; color: rgb(0,\
+      \ 0, 10); background-color: transparent; vertical-align: baseline; white-space:\
+      \ pre-wrap;\">Services: Comprehensive dental care including: dentures/partials,\
+      \ cleanings, extractions, emergency services, X-rays, oral surgery. Emergency\
+      \ Care ONLY for NATIVES with Medi-Cal. </span></span></p>\r\n\r\n<p><br />\r\
+      \n<br />\r\n&nbsp;</p>\r\n", name: Suitcase Dental Resources, url: 'search:community_dental'}
   model: wysiwyg.post
   pk: 7
-- fields: {content: "<p>THERAPY</p>\r\n\r\n<p>SUBSTANCE ABUSE</p>\r\n\r\n<p>COUNSELING</p>\r\
-      \n\r\n<p>PSYCHOLOGY AND PSYCHIATRY</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Therapy</strong></p>\r\
-      \n\r\n<p>Axis Community Health- Behavioral Sciences</p>\r\n\r\n<p>Address: 6666\
-      \ Owens Drive, Pleasanton, CA 94588&nbsp;</p>\r\n\r\n<p>Phone: Receptionist:\
-      \ (925) 462 1755</p>\r\n\r\n<p>Intake: 925-462-1755</p>\r\n\r\n<p>Hours: Mon-Thu\
-      \ (9:00am-8:00pm)</p>\r\n\r\n<p>Fri (9:00am-7:00pm)&nbsp;</p>\r\n\r\n<p>Sat:\
-      \ By appointment only</p>\r\n\r\n<p>Services: Therapy, parenting classes, domestic\
-      \ violence classes, anger management&nbsp;</p>\r\n\r\n<p>services, teen drug\
-      \ and alcohol services, drug testing.</p>\r\n\r\n<p>Payment: Accepts Medi-Cal\
-      \ and private insurance; offers full fee discount programs&nbsp;</p>\r\n\r\n\
-      <p>for those without health insurance and a sliding fee scale program depending\
-      \ on&nbsp;</p>\r\n\r\n<p>family size and income</p>\r\n\r\n<p>Native American\
-      \ Health Center- Oakland Human Services</p>\r\n\r\n<p>Address: 3124 International\
-      \ Boulevard, Oakland, CA 94601</p>\r\n\r\n<p>Phone: 510-434-5300</p>\r\n\r\n\
-      <p>Hours: Mon-Fri (9:00am-5:00pm)</p>\r\n\r\n<p>Services: Individual therapy,\
-      \ family therapy, group therapy, HIV/AIDS services,&nbsp;</p>\r\n\r\n<p>substance\
-      \ abuse treatment, youth services, case management, various community&nbsp;</p>\r\
-      \n\r\n<p>groups</p>\r\n\r\n<p>Payment: Accepts Medi-Cal, Medicare and private\
-      \ insurance; patient services are&nbsp;</p>\r\n\r\n<p>provided on a sliding\
-      \ fee scale provided by federal poverty guidelines; many&nbsp;</p>\r\n\r\n<p>people\
-      \ without insurance are eligible for programs that pay for their care</p>\r\n\
-      \r\n<p>Alliant Psychological Services Center</p>\r\n\r\n<p>Address: 1440 Broadway,\
-      \ Suite 610, Oakland, CA 94612</p>\r\n\r\n<p>Phone: 510-628-9065</p>\r\n\r\n\
-      <p>Hours: Mon-Thu (9:00am-8:00pm)</p>\r\n\r\n<p>Fri (9:00am-4:00pm)</p>\r\n\r\
-      \n<p>Services: Adult, child, and adolescent psychotherapy, family therapy, couples\
-      \ therapy,</p>\r\n\r\n<p>psychological testing, couples therapy, LD testing</p>\r\
+- fields: {content: "<p align=\"center\"><strong>Suitcase Mental Health Resources</strong></p>\r\
+      \n\r\n<h1>Therapy</h1>\r\n\r\n<h1>Substance Abuse</h1>\r\n\r\n<h1>Counseling</h1>\r\
+      \n\r\n<h1>Psychology and Psychiatry</h1>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Therapy</strong></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>Axis Community Health- Behavioral Sciences</p>\r\
+      \n\r\n<p>Address: 6666 Owens Drive, Pleasanton, CA 94588</p>\r\n\r\n<p>Phone:\
+      \ Receptionist: (925) 462 1755</p>\r\n\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\
+      \ Intake: 925-462-1755</p>\r\n\r\n<p>Hours: Mon-Thu (9:00am-8:00pm)</p>\r\n\r\
+      \n<p>Fri (9:00am-7:00pm)</p>\r\n\r\n<p>Sat: By appointment only</p>\r\n\r\n\
+      <p>Services: Therapy, parenting classes, domestic violence classes, anger management</p>\r\
+      \n\r\n<p style=\"margin-left:.5in;\">services, teen drug and alcohol services,\
+      \ drug testing.</p>\r\n\r\n<p style=\"margin-left:.5in;\">Payment: Accepts Medi-Cal\
+      \ and private insurance; offers full fee discount programs for those without\
+      \ health insurance and a sliding fee scale program depending on family size\
+      \ and income</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Native American Health Center-\
+      \ Oakland Human Services</p>\r\n\r\n<p>Address: 3124 International Boulevard,\
+      \ Oakland, CA 94601</p>\r\n\r\n<p>Phone: 510-434-5300</p>\r\n\r\n<p>Hours: Mon-Fri\
+      \ (9:00am-5:00pm)</p>\r\n\r\n<p style=\"margin-left:.5in;\">Services: Individual\
+      \ therapy, family therapy, group therapy, HIV/AIDS services, substance abuse\
+      \ treatment, youth services, case management, various community groups</p>\r\
+      \n\r\n<p style=\"margin-left:.5in;\">Payment: Accepts Medi-Cal, Medicare and\
+      \ private insurance; patient services are provided on a sliding fee scale provided\
+      \ by federal poverty guidelines; many people without insurance are eligible\
+      \ for programs that pay for their care</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Alliant\
+      \ Psychological Services Center</p>\r\n\r\n<p>Address: 1440 Broadway, Suite\
+      \ 610, Oakland, CA 94612</p>\r\n\r\n<p>Phone: 510-628-9065</p>\r\n\r\n<p>Hours:\
+      \ Mon-Thu (9:00am-8:00pm)</p>\r\n\r\n<p>Fri (9:00am-4:00pm)</p>\r\n\r\n<p style=\"\
+      margin-left:.5in;\">Services: Adult, child, and adolescent psychotherapy, family\
+      \ therapy, couples therapy, psychological testing, couples therapy, LD testing</p>\r\
       \n\r\n<p>Payment: Patient services are provided on a sliding fee scale based\
-      \ on income</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Counseling</strong></p>\r\
-      \n\r\n<p>Crisis Support Services of Alameda County 24-Hour Crisis Line</p>\r\
-      \n\r\n<p>Phone: 1-800-309-2131</p>\r\n\r\n<p>West Oakland Health Center</p>\r\
-      \n\r\n<p>Address: 700 Adeline Street, Oakland, CA 94607</p>\r\n\r\n<p>Phone:\
-      \ Eligibility: 1-800-461-9099</p>\r\n\r\n<p>Office: 510-465-1800</p>\r\n\r\n\
-      <p>Hours: Mon-Fri (8:30am-5:00pm)</p>\r\n\r\n<p>Services: Individual and group\
-      \ counseling for children and adults, case management and&nbsp;</p>\r\n\r\n\
-      <p>crisis intervention for adults and children under 18 and their families</p>\r\
-      \n\r\n<p>Payment: All services are provided under contract with Alameda County;\
-      \ clients must be&nbsp;</p>\r\n\r\n<p>pre-screened for eligibility and referred\
-      \ by Alameda County&rsquo;s ACCESS program; costs&nbsp;</p>\r\n\r\n<p>are usually\
-      \ covered by the county</p>\r\n\r\n<p>Blue Oak Therapy Center</p>\r\n\r\n<p>Address:\
-      \ 3101 Telegraph Avenue, Berkeley, CA 94705</p>\r\n\r\n<p>Phone: 510-649-9818</p>\r\
-      \n\r\n<p>Hours: By appointment Mon-Fri&nbsp;</p>\r\n\r\n<p>Services: Individual,\
-      \ couple, family, adolescent, and child counseling, trauma counseling</p>\r\n\
-      \r\n<p>Payment: Patient services are provided on a sliding fee scale based on\
-      \ income</p>\r\n\r\n<p>Oak Creek Counseling Services</p>\r\n\r\n<p>Address:\
-      \ 2901 Shattuck Avenue, Berkeley, CA 94705</p>\r\n\r\n<p>Phone: 1-888-637-7404</p>\r\
-      \n\r\n<p>Hours: By appointment Mon-Fri</p>\r\n\r\n<p>Services: Individual, couple,\
-      \ family, and child counseling</p>\r\n\r\n<p>Payment: Patient services are provided\
-      \ on a sliding fee scale based on income</p>\r\n\r\n<p>Note: There are specific\
-      \ counseling options available for children, youth, LGBTQ&nbsp;</p>\r\n\r\n\
-      <p>persons and persons of particular ethnicities, please inquire if interested\
-      \ in more&nbsp;</p>\r\n\r\n<p>information.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n\
-      <p><strong>Psychology and Psychiatry</strong></p>\r\n\r\n<p>St. Anthony&rsquo;s\
-      \ Free Medical Clinic</p>\r\n\r\n<p>Address: 150 Golden Gate Avenue, 2nd Floor,\
-      \ San Francisco, CA 94102</p>\r\n\r\n<p>Phone: 415-241-8320</p>\r\n\r\n<p>Hours:\
-      \ Mo/Tue/Thu/Fri (8:00am-12:00pm, 1:00pm-5:00pm)</p>\r\n\r\n<p>Wed (8:00am-12:00pm)</p>\r\
-      \n\r\n<p>Services: Individual and group therapy, psychiatry, a wide variety\
-      \ of non-mental health&nbsp;</p>\r\n\r\n<p>medical services</p>\r\n\r\n<p>Payment:\
-      \ Free</p>\r\n\r\n<p>Berkeley Therapy Institute</p>\r\n\r\n<p>Address: 1749\
-      \ Martin Luther King Junior Way, Berkeley, CA 94709</p>\r\n\r\n<p>Phone: (510)\
-      \ 841-8484</p>\r\n\r\n<p>Hours: Mon-Fri (8:30am-5:30pm)</p>\r\n\r\n<p>Services:\
-      \ Psychological testing and assessment, consultation, medication, many&nbsp;</p>\r\
-      \n\r\n<p>psychiatric specialties, including geriatric psychiatry, schizophrenia,\
-      \ mood&nbsp;</p>\r\n\r\n<p>disorders, ADD/ADHD and psychopharmacology</p>\r\n\
-      \r\n<p>Payment: Accepts some private insurance, Medi-Cal accepted only through\
-      \ referrals,&nbsp;</p>\r\n\r\n<p>patient services are provided on a sliding\
-      \ fee scale based on income</p>\r\n\r\n<p>Lyon-Martin Health Services</p>\r\n\
-      \r\n<p>Address: 1748 Market Street, Suite 201, San Francisco, CA 94102</p>\r\
-      \n\r\n<p>Phone: 415-565-7667</p>\r\n\r\n<p>Hours: By appointment</p>\r\n\r\n\
-      <p>Mon/Wed (11:00am-7:00pm)&nbsp;</p>\r\n\r\n<p>Tue/Fri (9:00am-5:00pm)&nbsp;</p>\r\
-      \n\r\n<p>Thu (1:00pm-5:00pm)</p>\r\n\r\n<p>Services: Psychiatric evaluation\
-      \ with a consulting psychiatrist</p>\r\n\r\n<p>Note: Lyon-Martin primarily serves\
-      \ women and GLBT patients</p>\r\n\r\n<p>Payment: Accepts Medicare, Medi-Cal,\
-      \ San Francisco Health Plan, and FamilyPACT,&nbsp;</p>\r\n\r\n<p>patient services\
-      \ are provided on a sliding fee scale based on income</p>\r\n\r\n<p>&nbsp;</p>\r\
-      \n\r\n<p><strong>Substance Abuse</strong></p>\r\n\r\n<p>Options Day Treatment</p>\r\
-      \n\r\n<p>Address: 1931 Center Street, Berkeley, CA 94740</p>\r\n\r\n<p>Phone:\
-      \ (510) 666-9552</p>\r\n\r\n<p>Hours: Options is a twelve-month treatment program,\
-      \ walk-ins accepted</p>\r\n\r\n<p>Men&rsquo;s groups: Mon-Fri (8:30am-11:30am)\
-      \ (intake at 8:00am)</p>\r\n\r\n<p>Women&rsquo;s groups: Mon-Fri (1:30pm-4:30pm)\
-      \ (intake at 1:00pm)</p>\r\n\r\n<p>Services: A day treatment recovery program\
-      \ including 12-step study, self-esteem groups,&nbsp;</p>\r\n\r\n<p>relaxation\
-      \ training, yoga, anger management, life skills, relapse prevention,&nbsp;</p>\r\
-      \n\r\n<p>smoking cessation, counseling, acupuncture and other services</p>\r\
-      \n\r\n<p>Payment: Free</p>\r\n\r\n<p>Evening Options</p>\r\n\r\n<p>Address:\
-      \ 1931 Center Street, Berkeley, CA 94740</p>\r\n\r\n<p>Phone: (510) 666-9552</p>\r\
-      \n\r\n<p>Hours: Mon/Wed/Fri (5:30pm-7:00pm (intake at 5:00pm, walk-ins accepted)</p>\r\
-      \n\r\n<p>Services: Outpatient recovery program like Options Day Treatment for\
-      \ people who must&nbsp;</p>\r\n\r\n<p>work during the day</p>\r\n\r\n<p>Payment:\
-      \ Free</p>\r\n\r\n<p>Bonita House</p>\r\n\r\n<p>Address: Administrative Office\
-      \ and SIL Program Offices: 6333 Telegraph Avenue, Suite&nbsp;</p>\r\n\r\n<p>102,\
-      \ Oakland CA 94609</p>\r\n\r\n<p>Residential Treatment Program: 1410 Bonita\
-      \ Ave, Berkeley CA 94709</p>\r\n\r\n<p>HOST: 1422 Harrison Street, Oakland CA\
-      \ 94612Phone:&nbsp;</p>\r\n\r\n<p>Phone: Administrative Office: 510-923-1099</p>\r\
-      \n\r\n<p>Supported Independent Living Program: 510-923-0180</p>\r\n\r\n<p>Residential\
-      \ Treatment Program: 510-526-4765</p>\r\n\r\n<p>Hours: Call for more information\
-      \ about specific programs of interest</p>\r\n\r\n<p>Services: Specialized services\
-      \ for people living with co-occurring disorders using&nbsp;</p>\r\n\r\n<p>an\
-      \ integrated treatment model (treating both psychiatric and substance use&nbsp;</p>\r\
-      \n\r\n<p>disorders at the same time), including an independent living program,\
-      \ a residential&nbsp;</p>\r\n\r\n<p>treatment program, and a family support\
-      \ program</p>\r\n\r\n<p>The Supported Independent Living Program offers services\
-      \ through three&nbsp;</p>\r\n\r\n<p>components: transitional housing, permanent\
+      \ on income</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Counseling</strong></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>Crisis Support Services of Alameda County 24-Hour\
+      \ Crisis Line</p>\r\n\r\n<p>Phone: 1-800-309-2131</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>West Oakland Health Center</p>\r\n\r\n<p>Address: 700 Adeline Street,\
+      \ Oakland, CA 94607</p>\r\n\r\n<p>Phone: Eligibility: 1-800-461-9099</p>\r\n\
+      \r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Office:\
+      \ 510-465-1800</p>\r\n\r\n<p>Hours: Mon-Fri (8:30am-5:00pm)</p>\r\n\r\n<p style=\"\
+      margin-left:.5in;\">Services: Individual and group counseling for children and\
+      \ adults, case management and crisis intervention for adults and children under\
+      \ 18 and their families</p>\r\n\r\n<p>Payment: All services are provided under\
+      \ contract with Alameda County; clients must be pre-screened for eligibility\
+      \ and referred by Alameda County&rsquo;s ACCESS program; costs are usually covered\
+      \ by the county</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Blue Oak Therapy Center</p>\r\
+      \n\r\n<p>Address: 3101 Telegraph Avenue, Berkeley, CA 94705</p>\r\n\r\n<p>Phone:\
+      \ 510-649-9818</p>\r\n\r\n<p>Hours: By appointment Mon-Fri</p>\r\n\r\n<p>Services:\
+      \ Individual, couple, family, adolescent, and child counseling, trauma counseling</p>\r\
+      \n\r\n<p>Payment: Patient services are provided on a sliding fee scale based\
+      \ on income</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Oak Creek Counseling Services</p>\r\
+      \n\r\n<p>Address: 2901 Shattuck Avenue, Berkeley, CA 94705</p>\r\n\r\n<p>Phone:\
+      \ 1-888-637-7404</p>\r\n\r\n<p>Hours: By appointment Mon-Fri</p>\r\n\r\n<p>Services:\
+      \ Individual, couple, family, and child counseling</p>\r\n\r\n<p>Payment: Patient\
+      \ services are provided on a sliding fee scale based on income</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>Note: There are specific counseling options available for children,\
+      \ youth, LGBTQ persons and persons of particular ethnicities, please inquire\
+      \ if interested in more information.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Psychology and Psychiatry</strong></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>St. Anthony&rsquo;s Free Medical Clinic</p>\r\n\
+      \r\n<p>Address: 150 Golden Gate Avenue, 2nd Floor, San Francisco, CA 94102</p>\r\
+      \n\r\n<p>Phone: 415-241-8320</p>\r\n\r\n<p>Hours: Mo/Tue/Thu/Fri (8:00am-12:00pm,\
+      \ 1:00pm-5:00pm)</p>\r\n\r\n<p>Wed (8:00am-12:00pm)</p>\r\n\r\n<p style=\"margin-left:.5in;\"\
+      >Services: Individual and group therapy, psychiatry, a wide variety of non-mental\
+      \ health medical services</p>\r\n\r\n<p>Payment: Free</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>Berkeley Therapy Institute</p>\r\n\r\n<p>Address: 1749 Martin Luther\
+      \ King Junior Way, Berkeley, CA 94709</p>\r\n\r\n<p>Phone: (510) 841-8484</p>\r\
+      \n\r\n<p>Hours: Mon-Fri (8:30am-5:30pm)</p>\r\n\r\n<p style=\"margin-left:.5in;\"\
+      >Services: Psychological testing and assessment, consultation, medication, many\
+      \ psychiatric specialties, including geriatric psychiatry, schizophrenia, mood\
+      \ disorders, ADD/ADHD and psychopharmacology</p>\r\n\r\n<p style=\"margin-left:.5in;\"\
+      >Payment: Accepts some private insurance, Medi-Cal accepted only through referrals,\
+      \ patient services are provided on a sliding fee scale based on income</p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>Lyon-Martin Health Services</p>\r\n\r\n<p>Address:\
+      \ 1748 Market Street, Suite 201, San Francisco, CA 94102</p>\r\n\r\n<p>Phone:\
+      \ 415-565-7667</p>\r\n\r\n<p>Hours: By appointment</p>\r\n\r\n<p>Mon/Wed (11:00am-7:00pm)</p>\r\
+      \n\r\n<p>Tue/Fri (9:00am-5:00pm)</p>\r\n\r\n<p>Thu (1:00pm-5:00pm)</p>\r\n\r\
+      \n<p style=\"margin-left:.5in;\">Services: Psychiatric evaluation with a consulting\
+      \ psychiatrist</p>\r\n\r\n<p style=\"margin-left:.5in;\">Note: Lyon-Martin primarily\
+      \ serves women and GLBT patients</p>\r\n\r\n<p style=\"margin-left:.5in;\">Payment:\
+      \ Accepts Medicare, Medi-Cal, San Francisco Health Plan, and FamilyPACT, patient\
+      \ services are provided on a sliding fee scale based on income</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><strong>Substance Abuse</strong></p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>Options Day Treatment</p>\r\n\r\n<p>Address: 1931\
+      \ Center Street, Berkeley, CA 94740</p>\r\n\r\n<p>Phone: (510) 666-9552</p>\r\
+      \n\r\n<p>Hours: Options is a twelve-month treatment program, walk-ins accepted</p>\r\
+      \n\r\n<p>Men&rsquo;s groups: Mon-Fri (8:30am-11:30am) (intake at 8:00am)</p>\r\
+      \n\r\n<p>Women&rsquo;s groups: Mon-Fri (1:30pm-4:30pm) (intake at 1:00pm)</p>\r\
+      \n\r\n<p style=\"margin-left:.5in;\">Services: A day treatment recovery program\
+      \ including 12-step study, self-esteem groups, relaxation training, yoga, anger\
+      \ management, life skills, relapse prevention, smoking cessation, counseling,\
+      \ acupuncture and other services</p>\r\n\r\n<p>Payment: Free</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>Evening Options</p>\r\n\r\n<p>Address: 1931 Center Street, Berkeley,\
+      \ CA 94740</p>\r\n\r\n<p>Phone: (510) 666-9552</p>\r\n\r\n<p>Hours: Mon/Wed/Fri\
+      \ (5:30pm-7:00pm (intake at 5:00pm, walk-ins accepted)</p>\r\n\r\n<p style=\"\
+      margin-left:.5in;\">Services: Outpatient recovery program like Options Day Treatment\
+      \ for people who must work during the day</p>\r\n\r\n<p>Payment: Free</p>\r\n\
+      \r\n<p>&nbsp;</p>\r\n\r\n<p>Bonita House</p>\r\n\r\n<p style=\"margin-left:.5in;\"\
+      >Address: Administrative Office and SIL Program Offices: 6333 Telegraph Avenue,\
+      \ Suite 102, Oakland CA 94609</p>\r\n\r\n<p>Residential Treatment Program: 1410\
+      \ Bonita Ave, Berkeley CA 94709</p>\r\n\r\n<p style=\"margin-left:.5in;\">HOST:\
+      \ 1422 Harrison Street, Oakland CA 94612Phone:</p>\r\n\r\n<p>Phone: Administrative\
+      \ Office: 510-923-1099</p>\r\n\r\n<p>Supported Independent Living Program: 510-923-0180</p>\r\
+      \n\r\n<p>Residential Treatment Program: 510-526-4765</p>\r\n\r\n<p>Hours: Call\
+      \ for more information about specific programs of interest</p>\r\n\r\n<p style=\"\
+      margin-left:.5in;\">Services: Specialized services for people living with co-occurring\
+      \ disorders using an integrated treatment model (treating both psychiatric and\
+      \ substance use disorders at the same time), including an independent living\
+      \ program, a residential treatment program, and a family support program</p>\r\
+      \n\r\n<p style=\"margin-left:.5in;\">The Supported Independent Living Program\
+      \ offers services through three components: transitional housing, permanent\
       \ housing and case management</p>\r\n\r\n<p>Payment: Varies by program, call\
-      \ for information about payment</p>\r\n", name: Suitcase Mental Health Resources,
-    url: 'search:community_mental'}
+      \ for information about payment</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\
+      \n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n", name: Suitcase Mental Health
+      Resources, url: 'search:community_mental'}
   model: wysiwyg.post
   pk: 8
-- fields: {content: "<p><img alt=\"\" src=\"https://lh4.googleusercontent.com/6kUlN5pHRrhq8b7pJ5nH6IsGsyDgVEnfcjvNny_5oJPk8dY8qLKGDKVAoYiB1fucNQ=s190\"\
-      \ style=\"width: 250px; height: 323px;\" />\u200B</p>\r\n", name: Cover Letter
-      Template, url: 'search:employment_cover_letter'}
+- fields: {content: "<p><img alt=\"\" src=\"http://resumizer.com/images/cover_letter_templates/cover_letter_template_1.png\"\
+      \ style=\"width: 550px; height: 716px;\" /></p>\r\n", name: Cover Letter Template,
+    url: 'search:employment_cover_letter'}
   model: wysiwyg.post
   pk: 9
-- fields: {content: "<p><img alt=\"\" src=\"https://lh3.googleusercontent.com/TV2mRSevHKaJ4BDKaATGS5TTzjhAKYjzljJB1F4Fzcpkp5PK1CTrSJSMhWwM2fjAzg=s190\"\
-      \ style=\"width: 250px; height: 323px;\" /></p>\r\n", name: Resume Template,
+- fields: {content: "<p><img alt=\"\" src=\"http://www.eduers.com/images/resume-template1.gif\"\
+      \ style=\"width: 552px; height: 715px;\" /></p>\r\n", name: Resume Template,
     url: 'search:employment_resume'}
   model: wysiwyg.post
   pk: 10

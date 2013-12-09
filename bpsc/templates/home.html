@@ -15,7 +15,7 @@
 {% endblock %}
 {% block content %}
 
-<div class="container container-home">
+<div class="container">
   <div class="welcome">
     <div class="row">
       <h1 id="big-welcome">WELCOME</h1>
@@ -26,7 +26,6 @@
   </div>
 
   <div class="tab-descriptions">
-    
     <a href="{% url 'search:employment_list' %}">
       <div class="tab-box">
         <div class="box-name">
@@ -41,7 +40,6 @@
       </div>  
     </a>
     
-    
     <a href="{% url 'search:housing_list' %}">
       <div class="tab-box">
         <div class="box-name">
@@ -54,8 +52,8 @@
         <div class="box-description">
           <p>HOUSING AND SHELTER SEARCH OPTIONS</p>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
     
     <a href="{% url 'search:community_list' %}">
       <div class="tab-box">
@@ -98,5 +96,6 @@
         </div>
       </div>
     </a>
+  </div>
 </div>
 {% endblock %}

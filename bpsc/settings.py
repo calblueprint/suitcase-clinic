@@ -1,7 +1,7 @@
 import os
 # Django settings for bpsc project.
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -135,6 +135,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'django_admin_bootstrapped',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.auth',
@@ -148,7 +149,8 @@ INSTALLED_APPS = (
     'bpsc.users',
     'south',
     'bpsc.wysiwyg',
-    'ckeditor'
+    'ckeditor',
+    'csvimport'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
