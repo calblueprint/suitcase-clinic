@@ -47,12 +47,17 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav">
                         {% block navbar-list %}
-                        <li class=""><a href="{% url 'search:employment_list' %}">EMPLOYMENT</a></li>
-                        <li class="hiddentab"><a href="{% url 'search:housing_list' %}">HOUSING</a></li>
-                        <li class="hiddentab"><a href="{% url 'search:community_list' %}">COMMUNITY</a></li>
-                        <li class="hiddentab"><a href="{% url 'home' %}">GOVERNMENT</a></li>
-                        <li class="hiddentab"><a href="{% url 'search:legal_list' %}">LEGAL</a></li>
-                        <li class="hiddentab"><a href="{% url 'reviews:reviews_list' %}">REVIEWS</a></li>
+                        <li {% block navbar-employment %}class="hiddentab"{% endblock %}><a href="{% url 'search:employment_list' %}">EMPLOYMENT</a></li>
+                                               
+                        <li {% block navbar-housing %}class="hiddentab"{% endblock %}><a href="{% url 'search:housing_list' %}">HOUSING</a></li>
+                                               
+                        <li {% block navbar-community %}class="hiddentab"{% endblock %}><a href="{% url 'search:community_list' %}">COMMUNITY</a></li>
+                                               
+                        <li {% block navbar-government %}class="hiddentab"{% endblock %}><a href="{% url 'home' %}">GOVERNMENT</a></li>
+                                               
+                        <li {% block navbar-legal %}class="hiddentab"{% endblock %}><a href="{% url 'search:legal_list' %}">LEGAL</a></li>
+                                               
+                        <li {% block navbar-reviews %}class="hiddentab"{% endblock %}><a href="{% url 'reviews:reviews_list' %}">REVIEWS</a></li>
                         {% endblock %}
                     </ul>
                 </div><!-- /.navbar-collapse -->
