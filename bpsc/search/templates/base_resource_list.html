@@ -53,7 +53,7 @@
             <tr id="resource-{{ forloop.counter }}" filter-count={{ resource.tags.all|length }}>
                 <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
                 <td><a href="{% block resource_detail_url %}{% endblock %} ">{{ resource.name }}</a></td>
-                <td>{{ resource.description|default:"-" }}</td>
+                <td>{{ resource.description|safe|default:"-" }}</td>
                 <td><a href="{{ resource.url }}">{{ resource.url|default:"-" }}</a></td>
                 {% block table_body %}
                 {% endblock %}
