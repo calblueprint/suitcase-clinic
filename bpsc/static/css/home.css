@@ -1,0 +1,63 @@
+body {
+	color: black;
+}
+
+p {
+	font-size: 2.4em;
+}
+
+.welcome {
+	text-align: center;
+}
+
+#big-welcome {
+	font-size: 4em;
+}
+
+.redline {
+	margin: auto;
+	margin-top: 8px;
+	margin-bottom: 8px;
+	width: 70%;
+	border-top-style: solid;
+	border-top-width: 5px;
+	border-top-color: #de1f26;
+}
+
+.tab-descriptions {
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.tab-box {
+	font-size: .8em;
+	width: 220px;
+	display: inline-block;
+	text-align: center;
+}	
+
+.tab-box a {
+	text-decoration: none;
+}
+
+.box-name {
+	background-color: black;
+	color: white;
+	margin: auto;
+	padding: auto;
+	height: 70px;
+}
+
+.box-name:hover {
+	background-color: #de1f26;
+}
+
+.box-description {
+	color: black;
+}
+
+.box-name p {
+	line-height: 70px;
+	vertical-align: middle;
+}
