@@ -78,23 +78,22 @@
             
             {% block content %}
             {% endblock %}
-        </div>
 
-        <div id="footer">
-        {% block footer %}
-            <div class="social">
-                <a href="http://www.facebook.com/suitcaseclinic"> 
-                    <img class="social-media-icon" id="facebook" src="{% static 'css/images/facebook.png' %}" />
-                </a>
-                <a href="http://twitter.com/suitcaseclinic"> 
-                    <img class="social-media-icon" id="twitter" src="{% static 'css/images/twitter.png' %}" />
-                </a>
-                <a href="http://www.suitcaseclinic.org/"> 
-                    <img class="social-media-icon" id="suitcase-icon" src="{% static 'css/images/icon-suitcase.png' %}" />
-                </a>
-            </div>
-        {% endblock %}
-        </div><!--  end footer  -->
+            <div id="footer">
+                <div class="social">
+                    <a href="http://www.facebook.com/suitcaseclinic"> 
+                        <img class="social-media-icon" id="facebook" src="{% static 'css/images/facebook.png' %}" />
+                    </a>
+                    <a href="http://twitter.com/suitcaseclinic"> 
+                        <img class="social-media-icon" id="twitter" src="{% static 'css/images/twitter.png' %}" />
+                    </a>
+                    <a href="http://www.suitcaseclinic.org/"> 
+                        <img class="social-media-icon" id="suitcase-icon" src="{% static 'css/images/icon-suitcase.png' %}" />
+                    </a>
+                </div>
+            </div><!--  end footer  -->
+            
+        </div>
 
     {% block scripts %}
     {% endblock %}
