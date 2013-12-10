@@ -47,7 +47,7 @@ def generate_map(latitude, longitude):
 class MapMixin(object):
     def get_context_data(self, **kwargs):
         context = super(MapMixin, self).get_context_data(**kwargs)
-        context['form'] = generate_map(self.object.latitude, self.object.longitude)
+        self.object.mapform = generate_map(self.object.latitude, self.object.longitude)
         return context
 
 
@@ -57,7 +57,6 @@ class BaseResourceDetailView(DetailView):
     def get_object(self, queryset=None):
         pk = self.kwargs.get(self.pk_url_kwarg, None)
         resource = self.model.objects.get(pk=pk)
-        resource.mapform = generate_map(resource.latitude, resource.longitude)
         return resource
 
 
