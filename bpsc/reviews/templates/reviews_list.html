@@ -41,6 +41,14 @@
                     <a data-sort="data-rating" data-order="desc" class="sort" href="javascript:;">Lowest Review</a>
                 </li>
             </ul>
+            <p>Average Rating for</p>
+            <p class="average" id="Housing_Average">Housing: {{housing_avg_rating}} stars</p>
+            <p class="average" id="Employment_Average">Employment: {{employment_avg_rating}} stars</p>
+            <p class="average" id="Community_Average">Community Resources: {{community_avg_rating}} stars</p>
+            <p class="average" id="Legal_Average">Legal: {{legal_avg_rating}} stars</p>
+            <p class="average" id="Dental_Average">Dental: {{dental_avg_rating}} stars</p>
+            <p class="average" id="Optometry_Average">Optometry: {{optometry_avg_rating}} stars</p>
+            <p class="average" id="Medical_Average">Medical: {{medical_avg_rating}} stars</p>
         </div>
     </div>
 
@@ -65,7 +73,8 @@
                     <div class="review-content">
                         <h3 class="review_service">{{ review.service }}</h3>
                         <p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
-                        <p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
+                        <p class="stars">{{ review.render_stars|safe }}</p>
+                        <p class="rating">{{ review.rating }}</p>
                         <p class="review_comments">{{ review.comments }}</p>
                         <p class="reviewer">Reviewed by: {{ review.reviewer }}</p>
                     </div>

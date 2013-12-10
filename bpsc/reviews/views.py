@@ -7,19 +7,40 @@ from bpsc.reviews.forms import ReviewForm
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from django.db.models import Avg
 
 from django.contrib import messages
 
 def reviews(request):
     return render(request, 'reviews.html')
 
+def clean(result):
+        if result is None:
+            return 0
+        else:
+            return int(round(result))
+
 class ReviewListView(ListView):
     template_name = 'reviews_list.html'
     model = Review
 
+
+
+    def get_context_data(self, **kwargs):
+        context = super(ReviewListView, self).get_context_data(**kwargs)
+        context['housing_avg_rating'] = clean(Review.objects.filter(service='Housing').aggregate(Avg('rating'))['rating__avg'])
+        context['employment_avg_rating'] = clean(Review.objects.filter(service='Employment').aggregate(Avg('rating'))['rating__avg'])
+        context['community_avg_rating'] = clean(Review.objects.filter(service='Community Resources').aggregate(Avg('rating'))['rating__avg'])
+        context['legal_avg_rating'] = clean(Review.objects.filter(service='Legal').aggregate(Avg('rating'))['rating__avg'])
+        context['dental_avg_rating'] = clean(Review.objects.filter(service='Dental').aggregate(Avg('rating'))['rating__avg'])
+        context['optometry_avg_rating'] = clean(Review.objects.filter(service='Optometry').aggregate(Avg('rating'))['rating__avg'])
+        context['medical_avg_rating'] = clean(Review.objects.filter(service='Medical').aggregate(Avg('rating'))['rating__avg'])
     # @method_decorator(login_required)
     # def dispatch(self, *args, **kwargs):
     #     return super(ReviewListView, self).dispatch(*args, **kwargs)
+        return context
+
+     
 
 class SubmitReviewListView(TemplateView):
     template_name = 'base_submit_review.html'
