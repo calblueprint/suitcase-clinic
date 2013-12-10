@@ -148,7 +148,8 @@ INSTALLED_APPS = (
     'bpsc.users',
     'south',
     'bpsc.wysiwyg',
-    'ckeditor'
+    'ckeditor',
+    'csvimport'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
