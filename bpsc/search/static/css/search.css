@@ -79,6 +79,47 @@ html, body {
     background-color: #b5c2ed
 }
 
+.modal-footer {
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    width: auto;
+    height: 40px;
+    border-radius: 0px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 3px;
+    font-size: 100%;
+}
+
+.btn-big {
+    display: block;
+    width: auto;
+    height: 75px;
+    border-radius: 0px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-size: 220%;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.btn-big:hover,
+.btn-big:focus,
+.btn-big:active,
+.btn-big.active {
+    background-color: white;
+    color: black;
+  	border-color: #2e2f2f;
+}
+
+.btn-modal {
+    display: inline;
+}
+
 .map {
     float: right;
 }
