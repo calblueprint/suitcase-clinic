@@ -1038,13 +1038,13 @@
       Resources, url: 'search:community_mental'}
   model: wysiwyg.post
   pk: 8
-- fields: {content: "<p><img alt=\"\" src=\"http://susanireland.com/wp-content/uploads/2009/11/templacoverlettler1.gif\"\
-      \ style=\"width: 484px; height: 642px; border-width: 25px; border-style: solid;\"\
-      \ /></p>\r\n", name: Cover Letter Template, url: 'search:employment_cover_letter'}
+- fields: {content: "<p><img alt=\"\" src=\"http://resumizer.com/images/cover_letter_templates/cover_letter_template_1.png\"\
+      \ style=\"width: 550px; height: 716px;\" /></p>\r\n", name: Cover Letter Template,
+    url: 'search:employment_cover_letter'}
   model: wysiwyg.post
   pk: 9
-- fields: {content: "<p><img alt=\"\" src=\"http://2.bp.blogspot.com/-sFEe0ZHfRLY/TuKfrOfhWmI/AAAAAAAAAIE/AF1HT-CVfMc/s1600/ModernResume-googleDocsTemplate.jpg\"\
-      \ style=\"width: 848px; height: 569px; border-width: 20px; border-style: solid;\"\
-      \ /></p>\r\n", name: Resume Template, url: 'search:employment_resume'}
+- fields: {content: "<p><img alt=\"\" src=\"http://www.eduers.com/images/resume-template1.gif\"\
+      \ style=\"width: 552px; height: 715px;\" /></p>\r\n", name: Resume Template,
+    url: 'search:employment_resume'}
   model: wysiwyg.post
   pk: 10
