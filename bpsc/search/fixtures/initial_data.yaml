@@ -156,7 +156,6 @@
       \n"
     latitude: '37.12345'
     longitude: '-122.12340'
-    listing_of_the_week: true
     name: Berkeley jobs
     num_used: 0
     outdated: false
