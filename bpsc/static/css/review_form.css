@@ -25,3 +25,19 @@
 .pure-control-group .stars {
 	text-align: left;
 }
+
+#form-container {
+	width: 350px;
+	margin: auto;
+}
+
+
+#id_reviewer, #id_service, #submit-btn, #id_comments {
+	width: 100%;
+}
+
+#submit-btn {
+	margin: 20px 0px 20px 0px;
+	padding: 10px 0px 10px 0px;
+	font-family: 'Yanone Kaffeesatz';
+}
