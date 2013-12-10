@@ -115,6 +115,7 @@ body {
   padding-bottom: 45px;
   margin-bottom: 45px;
   min-height: 500px;
+  box-shadow: 5px 5px 5px black;
 }
 
 .container {
