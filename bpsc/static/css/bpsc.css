@@ -123,8 +123,11 @@ body {
 }
 
 #footer {
-  position: relative;
-  bottom: -300px;
+ 
+}
+
+#footer .container {
+  background: transparent;
 }
 
 #navbar-container {
