@@ -78,3 +78,24 @@ html, body {
     border-color: #243e93;
     background-color: #b5c2ed
 }
+
+.map {
+    float: right;
+}
+
+.resource-left {
+    width: auto;
+    float: left;
+    height: 100%;
+}
+
+.resource-detail-container {
+    width:100%;
+    height:500px;
+    display:block;
+}
+
+#printable-area {
+    width:100%;
+    height:100%;
+}
