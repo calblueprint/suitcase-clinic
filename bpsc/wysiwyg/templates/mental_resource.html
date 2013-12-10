@@ -1,0 +1,11 @@
+{% extends 'base_search.html' %}
+
+{% block title %}
+{{ block.super }} | Mental
+{% endblock %}
+
+{% block navbar-government %}{% endblock %}
+
+{% block content %}
+	{{ resource.content|safe }}
+{% endblock %}
