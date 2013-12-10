@@ -61,7 +61,7 @@
         <div class="col-md-8 review-container">
             <ul class="list-unstyled pre-scrollable" id="Grid">
                 {% for review in review_list %}
-                <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
+                <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"YmdHi" }}" >
                     <div class="review-content">
                         <h3>{{ review.service }}</h3>
                         <p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
