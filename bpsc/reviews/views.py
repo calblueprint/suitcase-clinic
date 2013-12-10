@@ -1,6 +1,6 @@
 from django.views.generic import ListView
 from django.views.generic import TemplateView
-from bpsc.reviews.models import Review
+from bpsc.reviews.models import Review, EnableUsersToSeeReview
 from django.views.generic.edit import FormView
 from django.shortcuts import redirect
 from bpsc.reviews.forms import ReviewForm
@@ -17,9 +17,10 @@ class ReviewListView(ListView):
     template_name = 'reviews_list.html'
     model = Review
 
-    # @method_decorator(login_required)
-    # def dispatch(self, *args, **kwargs):
-    #     return super(ReviewListView, self).dispatch(*args, **kwargs)
+    def get_context_data(self, **kwargs):
+        context = super(ReviewListView, self).get_context_data(**kwargs)
+        context['review_access_enabled'] = EnableUsersToSeeReview.objects.get(id=1).access
+        return context
 
 class SubmitReviewListView(TemplateView):
     template_name = 'base_submit_review.html'
@@ -31,6 +32,7 @@ class SubmitReviewListView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(SubmitReviewListView, self).get_context_data(**kwargs)
+        context['review_access_enabled'] = EnableUsersToSeeReview.objects.get(id=1).access
         if self.request.method == "GET":
             context['reviewform'] = ReviewForm()
             return context

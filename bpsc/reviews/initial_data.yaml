@@ -1,0 +1,3 @@
+- fields: {access: true}
+  model: reviews.enableuserstoseereview
+  pk: 2
