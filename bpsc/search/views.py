@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.shortcuts import get_object_or_404, redirect
 from django.views.generic import DetailView, ListView
 
-from bpsc.search.forms import ResourcePrintForm
+from bpsc.search.forms import ResourcePrintForm, MapForm
 from bpsc.lib import send_suitcase_email
 from bpsc.search.models import (
     Tag, HousingTag, CommunityTag, EmploymentTag, LegalTag, Resource,
@@ -23,6 +23,32 @@ class BaseResourceDetailView(DetailView):
         pk = self.kwargs.get(self.pk_url_kwarg, None)
         return get_object_or_404(self.model, pk=pk)
 
+    def get_context_data(self, **kwargs):
+        context = super(BaseResourceDetailView, self).get_context_data(**kwargs)
+
+        gmap = maps.Map(opts = {
+            'center': maps.LatLng(self.object.latitude, self.object.longitude),
+            'mapTypeId': maps.MapTypeId.ROADMAP,
+            'zoom': 12,
+            'mapTypeControlOptions': {
+                 'style': maps.MapTypeControlStyle.DROPDOWN_MENU
+            },
+        })
+
+        marker = maps.Marker(opts = {
+            'map': gmap,
+            'position': maps.LatLng(self.object.latitude, self.object.longitude),
+        })
+        maps.event.addListener(marker, 'mouseover', 'myobj.markerOver')
+        maps.event.addListener(marker, 'mouseout', 'myobj.markerOut')
+        info = maps.InfoWindow({
+            'content': 'Hello!',
+            'disableAutoPan': False
+        })
+        info.open(gmap, marker)
+
+        context['form'] = MapForm(initial={'map': gmap})
+        return context
 
 class HousingResourceDetailView(BaseResourceDetailView):
     model = HousingResource
@@ -84,34 +110,6 @@ class HousingResourceListView(BaseResourceListView):
     context_object_name = 'resource_list'
     template_name = 'housing_resource_list.html'
     tag = HousingTag
-
-class MapForm(forms.Form):
-    map = forms.Field(widget=GoogleMap(attrs={'width':500, 'height':500}))
-
-def index(request):
-    gmap = maps.Map(opts = {
-        'center': maps.LatLng(37.8665192, -122.2560628),
-        'mapTypeId': maps.MapTypeId.ROADMAP,
-        'zoom': 15,
-        'mapTypeControlOptions': {
-             'style': maps.MapTypeControlStyle.DROPDOWN_MENU
-        },
-    })
-
-    marker = maps.Marker(opts = {
-        'map': gmap,
-        'position': maps.LatLng(37.8665192, -122.2560628),
-    })
-    maps.event.addListener(marker, 'mouseover', 'myobj.markerOver')
-    maps.event.addListener(marker, 'mouseout', 'myobj.markerOut')
-    info = maps.InfoWindow({
-        'content': 'Hello!',
-        'disableAutoPan': False
-    })
-    info.open(gmap, marker)
-
-    context = {'form': MapForm(initial={'map': gmap})}
-    return render_to_response('index.html', context)
 
 class CommunityResourceListView(BaseResourceListView):
     model = CommunityResource
