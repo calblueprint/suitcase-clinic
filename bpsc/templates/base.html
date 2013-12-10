@@ -26,23 +26,27 @@
 </head>
 
 <body>
-    <div id="header">
-        <div id="admin-panel">
-        {% if user.is_authenticated %}
-            <span>{{ user.first_name }} {{ user.last_name }}</span> |
-            <span><a href="{% url 'admin:index' %}">Admin Dashboard</a></span> |
-            <span><a href="{% url 'logout' %}?next={% firstof request.path '/' %}">Logout</a></span>
-        {% else %}
-            <span class="hidden-login">
-                <a class="hidden-login" href="{% url 'login' %}?next={% firstof request.path '/' %}">Login</a>
-            </span>
-        {% endif %}
-        </div>
-    {% block header %}
-    {% endblock %}
-    </div><!--  end header  -->
-    
     <div class="wrapper-container">
+        <div id="header">
+            <div id="logo">
+                <img src="{% static 'css/images/SuitcaseLogo.png' %}">
+            </div>
+
+            <div id="admin-panel">
+            {% if user.is_authenticated %}
+                <span>{{ user.first_name }} {{ user.last_name }}</span> |
+                <span><a href="{% url 'admin:index' %}">Admin Dashboard</a></span> |
+                <span><a href="{% url 'logout' %}?next={% firstof request.path '/' %}">Logout</a></span>
+            {% else %}
+                <span class="hidden-login">
+                    <a class="hidden-login" href="{% url 'login' %}?next={% firstof request.path '/' %}">Login</a>
+                </span>
+            {% endif %}
+            </div>
+        {% block header %}
+        {% endblock %}
+        </div><!--  end header  -->
+
         <div id="navbar-container">
             <nav role="navigation" class="navbar navbar-static-top">
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -92,7 +96,7 @@
                     </a>
                 </div>
             </div><!--  end footer  -->
-            
+
         </div>
 
     {% block scripts %}
