@@ -7,34 +7,96 @@
 <meta name="author" content="">
 {% endblock %}
 
-  {% block content %}
-    <div class="container container-home">
-      <div class="row">
-        <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-          <div class="buttonlabel">
-            <img src="{% static 'css/images/icon-employment.png' %}" height="70px" width="70px">EMPLOYMENT</img>
-          </div>
-        </button>
-          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-          <div class="buttonlabel">
-            <img src="{% static 'css/images/icon-housing.png' %}" height="70px" width="70px">HOUSING</img>
-          </div>
-        </button>
-          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-          <div class="buttonlabel">
-            <img src="{% static 'css/images/icon-commresources.png' %}" height="70px" width="70px">COMMUNITY RESOURCES</img>
-          </div>
-        </button>
-          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-          <div class="buttonlabel">
-            <img src="{% static 'css/images/icon-govaid.png' %}" height="70px" width="70px">GOVERNMENT AID</img>
-          </div>
-        </button>
-          <button type="button" class="btn btn-default btn-lg btn-block btn-home">
-          <div class="buttonlabel">
-            <img src="{% static 'css/images/icon-legal.png' %}" height="70px" width="70px">LEGAL</img>
-          </div>
-        </button>
+{% block head %}
+<!-- Bootstrap core CSS -->
+<!-- Add custom CSS here -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+
+{% endblock %}
+{% block content %}
+
+<div class="container container-home">
+  <div class="welcome">
+    <div class="row">
+      <h1 id="big-welcome">WELCOME</h1>
+      <p>TO THE SUITCASE CLINIC PORTAL</p>
+      <div class="redline"></div>
+      <p>NAVIGATE YOUR WAY THROUGH THE TABS AT THE TOP OF THE PAGE</p>
+    </div>
+  </div>
+
+  <div class="tab-descriptions">
+    
+    <a href="{% url 'search:employment_list' %}">
+      <div class="tab-box">
+        <div class="box-name">
+          <p>EMPLOYMENT</p>
+        </div>
+        <div class="box-image">
+          <img src="{% static 'css/images/icon-employment.png' %}">
+        </div>
+        <div class="box-description">
+          <p>JOB SEARCH DATABASE, WITH LATEST LISTINGS</p>
+        </div>
+      </div>  
+    </a>
+    
+    
+    <a href="{% url 'search:housing_list' %}">
+      <div class="tab-box">
+        <div class="box-name">
+          <p>HOUSING</p>
+        </div>
+        <div class="box-image">
+          <img src="{% static 'css/images/icon-housing.png' %}">
+        </div>
+
+        <div class="box-description">
+          <p>HOUSING AND SHELTER SEARCH OPTIONS</p>
+        </div>
+      </a>
+    </div>
+    
+    <a href="{% url 'search:community_list' %}">
+      <div class="tab-box">
+        <div class="box-name">
+          <p>COMMUNITY RESOURCES</p>
+        </div>
+        <div class="box-image">
+          <img src="{% static 'css/images/icon-commresources.png' %}">
+        </div>
+        <div class="box-description">
+          <p>DENTAL, MEDICAL, MISCELLANEOUS HELP</p>
+        </div>
       </div>
-    </div><!-- /.container --> 
-  {% endblock %}
+    </a>
+    
+    <a href="#">
+      <div class="tab-box">
+        <div class="box-name">
+          <p>GOVERNMENT AID</p>
+        </div>
+        <div class="box-image">
+          <img src="{% static 'css/images/icon-govaid.png' %}">
+        </div>
+        <div class="box-description">
+          <p>INFORMATION ON GOVERNMENT POLICIES</p>
+        </div>
+      </div>
+    </a>
+    
+    <a href="{% url 'search:legal_list' %}">
+      <div class="tab-box">
+        <div class="box-name">
+          <p>LEGAL</p>
+        </div>
+        <div class="box-image">
+          <img src="{% static 'css/images/icon-legal.png' %}">
+        </div>
+        <div class="box-description">
+          <p>LEGAL AID AND INFORMATION</p>
+        </div>
+      </div>
+    </a>
+</div>
+{% endblock %}

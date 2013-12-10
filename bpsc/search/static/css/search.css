@@ -1,0 +1,80 @@
+html, body {
+	font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding: 0;
+    position: relative;
+    height: 100%;
+}
+
+.content, .container {
+    height: 100%;
+    position: relative;
+}
+
+#content-container {
+    padding-bottom: 45px;
+    margin: 0;
+    margin-bottom: 30px;
+	background-color: #fde7d0;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-bottomleft: 15px;
+    height: 100%;
+    font-size: 1.3em;
+}
+
+
+#sidebar-container {
+    float: left;
+	padding: 15px;
+    margin: 15px;
+    margin-top: 0px;
+	background-color: #ffffff;
+    height: 100%;
+}
+
+#sidebar-container ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+#sidebar-container ul li {
+    list-style: none;
+}
+
+#body-container {
+    overflow: auto;
+	padding: 15px;
+    margin: 15px;
+	background-color: #ffffff;
+    right: 0;
+    height: 100%;
+}
+
+.clearfix:after
+{
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 100%;
+    line-height: 0;
+}
+
+#resource-otw-table {
+    width: 100%;
+}
+
+#resource-table {
+    width: 100%;
+}
+
+.resource-tag {
+    padding: 3px;
+    border:1px solid;
+    border-radius:10px;
+    border-color: #243e93;
+    background-color: #b5c2ed
+}
