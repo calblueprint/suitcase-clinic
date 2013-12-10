@@ -1,34 +1,41 @@
-<h2>{{ resource.name }}</h2>
 
-<div class="resource-description">
-<p>{{ resource.description|safe }}</p>
+<div class="resource-detail-container">
+    <div class="resource-left">
+        <h2>{{ resource.name }}</h2>
+
+        <div class="resource-description">
+        <p>{{ resource.description|safe }}</p>
+        </div>
+
+        <div class="resource-address">
+            <h3>Address</h3>
+            {{ resource.street_address }}</br>
+            {{ resource.city }} {{ resource.zipcode }}
+        </div>
+
+        <div class="resource-contact">
+            <h3>Contact</h3>
+            <a href="{{ resource.url }}">{{ resource.url }}</a></br>
+            {{ resource.phone }}
+        </div>
+
+        <div class="resource-tags">
+            <h3>Tags</h3>
+            <ul>
+            {% for tag in resource.tags.all %}
+                <li>{{ tag.value }}</li>
+            {% empty %}
+            No tags given to this resource.
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
 
-<div class="resource-address">
-    <h3>Address</h3>
-    {{ resource.street_address }}</br>
-    {{ resource.city }} {{ resource.zipcode }}
+<div class="map">
+    {{ form.map }}
+    {{ form.media.js }}
 </div>
-
-<div class="resource-contact">
-    <h3>Contact</h3>
-    <a href="{{ resource.url }}">{{ resource.url }}</a></br>
-    {{ resource.phone }}
-</div>
-
-<div class="resource-tags">
-    <h3>Tags</h3>
-    <ul>
-    {% for tag in resource.tags.all %}
-        <li>{{ tag.value }}</li>
-    {% empty %}
-    No tags given to this resource.
-    {% endfor %}
-    </ul>
-</div>
-
-{{ form.map }}
-{{ form.media.js }}
 
 <script type="text/javascript">
     window.myobj = {
