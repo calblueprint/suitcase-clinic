@@ -53,6 +53,15 @@ There are no listings of the week for thisw week
 <td>{{ resource.outdated|yesno:"Yes,No,-" }}</td>
 {% endblock %}
 
+{% block sidebar %}
+{{block.super}}
+Useful Guides
+<br>
+<a href="{% url 'search:employment_resume' %}">How to Write A Resume</a>
+<br>
+<a href="{% url 'search:employment_cover_letter' %}">How To Write A Cover Letter</a>
+{% endblock %}
+
 {% block resource_detail_url %}
 {% url 'search:employment_detail' pk=resource.pk slug=resource.name|slugify %}
 {% endblock %}
