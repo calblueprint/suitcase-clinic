@@ -63,11 +63,11 @@
                 {% for review in review_list %}
                 <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"YmdHi" }}" >
                     <div class="review-content">
-                        <h3>{{ review.service }}</h3>
+                        <h3 class="review_service">{{ review.service }}</h3>
                         <p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
                         <p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
-                        <p>{{ review.comments }}</p>
-                        <p class="reviewed">Reviewed by: {{ review.reviewer }}</p>
+                        <p class="review_comments">{{ review.comments }}</p>
+                        <p class="reviewer">Reviewed by: {{ review.reviewer }}</p>
                     </div>
                 </li>
                 {% endfor %}
