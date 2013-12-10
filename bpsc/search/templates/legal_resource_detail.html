@@ -1,5 +1,11 @@
 {% extends 'base_resource_detail.html' %}
 
+{% block navbar-legal %}{% endblock %}
+
+{% block sidebar %}
+<a href="{% url 'search:legal_list' %}">Back To Listings</a>
+{% endblock %}
+
 {% block title %}
 {{ block.super }} | Legal
 {% endblock %}

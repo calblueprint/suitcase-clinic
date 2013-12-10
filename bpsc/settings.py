@@ -190,8 +190,8 @@ else:
 
 # Email settings for using sendgrid with Heroku
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'sendgrid_username' # Change this later
-EMAIL_HOST_PASSWORD = 'sendgrid_password' # Change this later
+EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME', 'bpsc_sendgrid_user')
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD', 'bpsc_sendgrid_pw') # Change this later
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 

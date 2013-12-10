@@ -22,6 +22,7 @@ html, body {
 	-webkit-border-bottom-left-radius: 15px;
 	-moz-border-radius-bottomleft: 15px;
     height: 100%;
+    font-size: 1.3em;
 }
 
 
@@ -29,8 +30,18 @@ html, body {
     float: left;
 	padding: 15px;
     margin: 15px;
+    margin-top: 0px;
 	background-color: #ffffff;
     height: 100%;
+}
+
+#sidebar-container ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+#sidebar-container ul li {
+    list-style: none;
 }
 
 #body-container {
@@ -50,4 +61,20 @@ html, body {
     visibility: hidden;
     height: 100%;
     line-height: 0;
+}
+
+#resource-otw-table {
+    width: 100%;
+}
+
+#resource-table {
+    width: 100%;
+}
+
+.resource-tag {
+    padding: 3px;
+    border:1px solid;
+    border-radius:10px;
+    border-color: #243e93;
+    background-color: #b5c2ed
 }

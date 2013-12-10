@@ -1,7 +1,20 @@
 {% extends 'base_resource_list.html' %}
 
+{% block navbar-community %}{% endblock %}
+
 {% block title %}
 {{ block.super }} | Community
+{% endblock %}
+
+{% block sidebar %}
+{{block.super}}
+Useful Information
+<br>
+<a href="{% url 'search:community_mental' %}">Mental Resource</a>
+<br>
+<a href="{% url 'search:community_dental' %}">Dental Resource</a>
+<br>
+<a href="{% url 'search:community_medical' %}">Medical Resource</a>
 {% endblock %}
 
 {% block resource_detail_url %}

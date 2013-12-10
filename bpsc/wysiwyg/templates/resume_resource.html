@@ -1,4 +1,8 @@
-{% extends 'base_resource_detail.html' %}
+{% extends 'base_search.html' %}
+
+{% block title %}
+{{ block.super }} | Resume
+{% endblock %}
 
 {% block navbar-employment %}{% endblock %}
 
@@ -6,6 +10,6 @@
 <a href="{% url 'search:employment_list' %}">Back To Listings</a>
 {% endblock %}
 
-{% block title %}
-{{ block.super }} | Employment
+{% block body %}
+	{{ resource.content|safe }}
 {% endblock %}

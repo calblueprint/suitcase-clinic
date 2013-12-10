@@ -1,0 +1,29 @@
+.body-container{
+    padding-bottom: 15px;
+}
+
+.container {
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 100%;
+}
+
+.login-form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-form table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-form input {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input-container {
+    text-align: center;
+}

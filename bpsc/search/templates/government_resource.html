@@ -1,10 +1,13 @@
-{% extends 'base_search.html' %}
+{% extends 'base.html' %}
 
 {% block title %}
 {{ block.super }} | Government
 {% endblock %}
 
+{% block navbar-government %}{% endblock %}
 
 {% block content %}
+<div class="container">
 	{{ resource.content|safe }}
+</div>
 {% endblock %}

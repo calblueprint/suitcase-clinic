@@ -1,4 +1,8 @@
-{% extends 'base_resource_detail.html' %}
+{% extends 'base_search.html' %}
+
+{% block title %}
+{{ block.super }} | Mental
+{% endblock %}
 
 {% block navbar-community %}{% endblock %}
 
@@ -6,6 +10,6 @@
 <a href="{% url 'search:community_list' %}">Back To Listings</a>
 {% endblock %}
 
-{% block title %}
-{{ block.super }} | Community
+{% block body %}
+	{{ resource.content|safe }}
 {% endblock %}
