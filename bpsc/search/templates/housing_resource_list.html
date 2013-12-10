@@ -42,7 +42,7 @@ Manually Added Listings
         <tbody>
             {% for resource in batch_resource_list %}
             <tr id="batch-resource-{{ forloop.counter }}">
-                <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
+                <td><input type="checkbox" name="batch-resources" value="{{ resource.id }}"/></td>
                 <td><a href="{% url 'search:batch_housing_detail' pk=resource.pk slug=resource.prop|slugify %}">{{ resource.prop }}</a></td>
                 <td>{{ resource.types_of_units }}</td>
                 <td>{{ resource.amenities }}</td>

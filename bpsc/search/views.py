@@ -18,30 +18,36 @@ from gmapi.forms.widgets import GoogleMap
 from django import forms
 from django.shortcuts import render_to_response
 
+def generate_map(latitude, longitude):
+    if not latitude or not longitude:
+        return None
+    gmap = maps.Map(opts = {
+        'center': maps.LatLng(latitude, longitude),
+        'mapTypeId': maps.MapTypeId.ROADMAP,
+        'zoom': 12,
+        'mapTypeControlOptions': {
+             'style': maps.MapTypeControlStyle.DROPDOWN_MENU
+        },
+    })
+
+    marker = maps.Marker(opts = {
+        'map': gmap,
+        'position': maps.LatLng(latitude, longitude),
+    })
+    maps.event.addListener(marker, 'mouseover', 'myobj.markerOver')
+    maps.event.addListener(marker, 'mouseout', 'myobj.markerOut')
+    info = maps.InfoWindow({
+        'content': 'Hello!',
+        'disableAutoPan': False
+    })
+    info.open(gmap, marker)
+    return MapForm(initial={'map': gmap})
+
+
 class MapMixin(object):
     def get_context_data(self, **kwargs):
         context = super(MapMixin, self).get_context_data(**kwargs)
-        gmap = maps.Map(opts = {
-            'center': maps.LatLng(self.object.latitude, self.object.longitude),
-            'mapTypeId': maps.MapTypeId.ROADMAP,
-            'zoom': 12,
-            'mapTypeControlOptions': {
-                 'style': maps.MapTypeControlStyle.DROPDOWN_MENU
-            },
-        })
-
-        marker = maps.Marker(opts = {
-            'map': gmap,
-            'position': maps.LatLng(self.object.latitude, self.object.longitude),
-        })
-        maps.event.addListener(marker, 'mouseover', 'myobj.markerOver')
-        maps.event.addListener(marker, 'mouseout', 'myobj.markerOut')
-        info = maps.InfoWindow({
-            'content': 'Hello!',
-            'disableAutoPan': False
-        })
-        info.open(gmap, marker)
-        context['form'] = MapForm(initial={'map': gmap})
+        context['form'] = generate_map(self.object.latitude, self.object.longitude)
         return context
 
 
@@ -50,7 +56,9 @@ class BaseResourceDetailView(DetailView):
 
     def get_object(self, queryset=None):
         pk = self.kwargs.get(self.pk_url_kwarg, None)
-        return get_object_or_404(self.model, pk=pk)
+        resource = self.model.objects.get(pk=pk)
+        resource.mapform = generate_map(resource.latitude, resource.longitude)
+        return resource
 
 
 class HousingResourceDetailView(MapMixin, BaseResourceDetailView):
@@ -87,6 +95,7 @@ class LegalResourceDetailView(MapMixin, BaseResourceDetailView):
     template_name = 'legal_resource_detail.html'
     resource_type = 'Legal'
 
+
 class BaseResourceListView(ListView):
     # Sorting will happen with Javascript on the frontend
     model = Resource
@@ -116,13 +125,15 @@ class BaseResourceListView(ListView):
         context = self.get_context_data(object_list=self.object_list)
         print_form = context['print_form']
         selected_resources = request.POST.getlist('resources')
+        selected_batch_resources = request.POST.getlist('batch-resources')
         if print_form.is_valid():
-            if not selected_resources:
+            if not selected_resources and not selected_batch_resources:
                 messages.error(request, 'No resources selected.')
                 return self.render_to_response(context)
             # Eliminate any duplicate resource ids, possibly from selecting a listing of the week
             resource_params = '&'.join(['rid=%s' % resource_id for resource_id in sorted(set(selected_resources))])
-            print_url = request.build_absolute_uri() + 'print/?' + resource_params
+            batch_resource_params = '&'.join(['brid=%s' % resource_id for resource_id in sorted(set(selected_batch_resources))])
+            print_url = request.build_absolute_uri() + 'print/?' + resource_params + '&' + batch_resource_params
             for resource in context['resource_list']:
                 resource.num_used += 1
                 resource.save()
@@ -141,6 +152,7 @@ class BaseResourceListView(ListView):
             messages.error(request, 'Error in client logging form. Please try again.')
             return self.render_to_response(context)
 
+
 class HousingResourceListView(BaseResourceListView):
     model = HousingResource
     context_object_name = 'resource_list'
@@ -152,6 +164,7 @@ class HousingResourceListView(BaseResourceListView):
         context = super(HousingResourceListView, self).get_context_data(**kwargs)
         context['batch_resource_list'] = BatchHousingResource.objects.all()
         return context
+
 
 class CommunityResourceListView(BaseResourceListView):
     model = CommunityResource
@@ -205,6 +218,8 @@ class BaseResourcePrintView(ListView):
         # Get the resources with the IDs in the url querystring
         resource_ids = self.request.GET.getlist('rid')
         queryset = self.model.objects.filter(pk__in=resource_ids)
+        for resource in queryset:
+            resource.mapform = generate_map(resource.latitude, resource.longitude)
         return queryset
 
 
@@ -214,6 +229,12 @@ class HousingResourcePrintView(BaseResourcePrintView):
     list_url = 'search:housing_list'
     tag = HousingTag
     resource_type = 'Housing'
+
+    def get_context_data(self, **kwargs):
+        context = super(BaseResourcePrintView, self).get_context_data(**kwargs)
+        batch_resource_ids = self.request.GET.getlist('brid')
+        context['batch_resource_list'] = BatchHousingResource.objects.filter(pk__in=batch_resource_ids)
+        return context
 
 
 class CommunityResourcePrintView(BaseResourcePrintView):

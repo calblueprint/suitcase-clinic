@@ -3,3 +3,9 @@
 {% block navbar-housing %}{% endblock %}
 
 {% block list_url %}{% url 'search:housing_list' %}{% endblock %}
+
+{% block batch_resources %}
+{% for resource in batch_resource_list %}
+    {% include 'batch_housing_resource_detail_content.html' %}
+{% endfor %}
+{% endblock %}

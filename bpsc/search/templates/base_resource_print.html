@@ -18,6 +18,8 @@
 {% block body %}
 <div id="printable-area">
 {% include 'base_resource_detail_list.html' %}
+{% block batch_resources %}
+{% endblock %}
 </div>
 
 <input type="button" onclick="printDiv('printable-area')" value="Print" />
