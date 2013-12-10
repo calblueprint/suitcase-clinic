@@ -11,3 +11,4 @@ PyYAML==3.10
 django-ckeditor==4.0.2
 django-gmapi==1.0.1
 django-csvimport==1.0
+django-admin-bootstrapped==1.6.3
