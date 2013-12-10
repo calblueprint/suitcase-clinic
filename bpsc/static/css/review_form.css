@@ -7,17 +7,6 @@
 	font-size: 3em;
 }
 
-.container {
-}
-
-#star-rating {
-
-}
-
-.container {
-	text-align: center;
-}
-
 .btn-success {
 	margin: 20px 10px;
 }
@@ -27,6 +16,7 @@
 }
 
 #form-container {
+	text-align: center;
 	width: 350px;
 	margin: auto;
 }
