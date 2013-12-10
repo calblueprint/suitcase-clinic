@@ -109,6 +109,17 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
+    'django.core.context_processors.request',
+    'django.core.context_processors.static',
+    'django.core.context_processors.tz',
+    'django.contrib.messages.context_processors.messages',
+)
+
 ROOT_URLCONF = 'bpsc.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
@@ -136,6 +147,8 @@ INSTALLED_APPS = (
     'bpsc.search',
     'bpsc.users',
     'south',
+    'bpsc.wysiwyg',
+    'ckeditor'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -177,8 +190,8 @@ else:
 
 # Email settings for using sendgrid with Heroku
 EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'sendgrid_username' # Change this later
-EMAIL_HOST_PASSWORD = 'sendgrid_password' # Change this later
+EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME', 'bpsc_sendgrid_user')
+EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD', 'bpsc_sendgrid_pw') # Change this later
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
@@ -197,3 +210,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'media', 'uploads')
+

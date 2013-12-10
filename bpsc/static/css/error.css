@@ -1,0 +1,27 @@
+IMG.displayed {
+    display: block;    
+	margin-left: auto;
+    margin-right: auto; 
+    margin-top: 50px;
+    padding-bottom: 45px;
+}
+
+P.bolded { 
+	text-align: center; 
+	font-size: 75px;
+    font-weight: bold;
+    font-family: "Arial";
+}
+
+P.content1 {
+	text-align: center;
+	font-size: 25px;
+    font-family: "Arial";
+}
+
+P.content2 {
+	text-align: center;
+	font-size: 25px;
+    font-family: "Arial";
+    padding-bottom: 45px;
+}

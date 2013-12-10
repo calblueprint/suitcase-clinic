@@ -4,9 +4,7 @@
 {{ block.super }} | Housing
 {% endblock %}
 
-{% block resource_detail_url %}
-{% url 'search:housing_detail' pk=resource.pk slug=resource.name|slugify %}
-{% endblock %}
+{% block navbar-housing %}{% endblock %}
 
 {% block table_head %}
 <th>Posted</th>
@@ -16,4 +14,8 @@
 {% block table_body %}
 <td>{{ resource.posted }}</td>
 <td>{{ resource.outdated|yesno:"Yes,No,-" }}</td>
+{% endblock %}
+
+{% block resource_detail_url %}
+{% url 'search:housing_detail' pk=resource.pk slug=resource.name|slugify %}
 {% endblock %}

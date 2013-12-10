@@ -1,7 +1,7 @@
 <h2>{{ resource.name }}</h2>
 
 <div class="resource-description">
-<p>{{ resource.description }}</p>
+<p>{{ resource.description|safe }}</p>
 </div>
 
 <div class="resource-address">
@@ -26,3 +26,13 @@
     {% endfor %}
     </ul>
 </div>
+
+{{ form.map }}
+{{ form.media.js }}
+
+<script type="text/javascript">
+    window.myobj = {
+        markerOver: function() { this.openInfoWindow(); },
+        markerOut: function() { this.closeInfoWindow(); }
+    };
+</script>

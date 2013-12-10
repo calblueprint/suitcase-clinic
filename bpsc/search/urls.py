@@ -7,14 +7,26 @@ from bpsc.search.views import (
     HousingResourceDetailView, CommunityResourceDetailView,
     EmploymentResourceDetailView, LegalResourceDetailView,
     HousingResourcePrintView, CommunityResourcePrintView,
-    EmploymentResourcePrintView, LegalResourcePrintView
+    EmploymentResourcePrintView, LegalResourcePrintView,
+    GovernmentResourceView
+)
+
+from bpsc.wysiwyg.views import (
+    ResumeResourceView, CoverLetterResourceView, 
+    MentalResourceView, DentalResourceView,
+    MedicalResourceView
 )
 
 urlpatterns = patterns(
     '',
     url(r'^housing/(?P<pk>\d+)/(?P<slug>[-\w\d]+)/$', HousingResourceDetailView.as_view(), name='housing_detail'),
     url(r'^community/(?P<pk>\d+)/(?P<slug>[-\w\d]+)/$', CommunityResourceDetailView.as_view(), name='community_detail'),
+    url(r'^community/mental/$', MentalResourceView.as_view(), name='community_mental'),
+    url(r'^community/dental/$', DentalResourceView.as_view(), name='community_dental'),
+    url(r'^community/medical/$', MedicalResourceView.as_view(), name='community_medical'),
     url(r'^employment/(?P<pk>\d+)/(?P<slug>[-\w\d]+)/$', EmploymentResourceDetailView.as_view(), name='employment_detail'),
+    url(r'^employment/resume/$', ResumeResourceView.as_view(), name='employment_resume'),
+    url(r'^employment/cover_letter/$', CoverLetterResourceView.as_view(), name='employment_cover_letter'),
     url(r'^legal/(?P<pk>\d+)/(?P<slug>[-\w\d]+)/$', LegalResourceDetailView.as_view(), name='legal_detail'),
     url(r'^housing/print/$', HousingResourcePrintView.as_view(), name='housing_print'),
     url(r'^community/print/$', CommunityResourcePrintView.as_view(), name='community_print'),
@@ -24,5 +36,5 @@ urlpatterns = patterns(
     url(r'^community/$', CommunityResourceListView.as_view(), name='community_list'),
     url(r'^employment/$', EmploymentResourceListView.as_view(), name='employment_list'),
     url(r'^legal/$', LegalResourceListView.as_view(), name='legal_list'),
+    url(r'^government/$', GovernmentResourceView.as_view(), name='government'),
 )
-
