@@ -37,4 +37,6 @@ urlpatterns = patterns(
     url(r'^employment/$', EmploymentResourceListView.as_view(), name='employment_list'),
     url(r'^legal/$', LegalResourceListView.as_view(), name='legal_list'),
     url(r'^government/$', GovernmentResourceView.as_view(), name='government'),
+    # url(r'', include('gmapi.urls.media')), # Use for debugging only.
+    url(r'^map$', 'bpsc.search.views.index'),
 )

@@ -11,6 +11,11 @@ from bpsc.search.models import (
 )
 from bpsc.wysiwyg.models import Post
 
+from gmapi import maps
+from gmapi.forms.widgets import GoogleMap
+from django import forms
+from django.shortcuts import render_to_response
+
 class BaseResourceDetailView(DetailView):
     model = Resource
 
@@ -74,13 +79,39 @@ class BaseResourceListView(ListView):
             resource_params = '&'.join(['rid=%s' % resource_id for resource_id in sorted(set(selected_resources))])
             return redirect(confirm_url + resource_params)
 
-
 class HousingResourceListView(BaseResourceListView):
     model = HousingResource
     context_object_name = 'resource_list'
     template_name = 'housing_resource_list.html'
     tag = HousingTag
 
+class MapForm(forms.Form):
+    map = forms.Field(widget=GoogleMap(attrs={'width':500, 'height':500}))
+
+def index(request):
+    gmap = maps.Map(opts = {
+        'center': maps.LatLng(37.8665192, -122.2560628),
+        'mapTypeId': maps.MapTypeId.ROADMAP,
+        'zoom': 15,
+        'mapTypeControlOptions': {
+             'style': maps.MapTypeControlStyle.DROPDOWN_MENU
+        },
+    })
+
+    marker = maps.Marker(opts = {
+        'map': gmap,
+        'position': maps.LatLng(37.8665192, -122.2560628),
+    })
+    maps.event.addListener(marker, 'mouseover', 'myobj.markerOver')
+    maps.event.addListener(marker, 'mouseout', 'myobj.markerOut')
+    info = maps.InfoWindow({
+        'content': 'Hello!',
+        'disableAutoPan': False
+    })
+    info.open(gmap, marker)
+
+    context = {'form': MapForm(initial={'map': gmap})}
+    return render_to_response('index.html', context)
 
 class CommunityResourceListView(BaseResourceListView):
     model = CommunityResource
