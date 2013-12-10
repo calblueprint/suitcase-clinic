@@ -99,3 +99,6 @@ class LegalResource(Resource):
     class Meta:
         ordering = ['auto_added']
         verbose_name = 'Legal Resource'
+
+# class BatchHousingResouce(models.Model)
+    
