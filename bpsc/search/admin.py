@@ -4,7 +4,7 @@ from django.contrib.sites.models import Site
 
 from bpsc.search.models import (
     HousingResource, CommunityResource, EmploymentResource, LegalResource,
-    HousingTag, CommunityTag, EmploymentTag, LegalTag
+    HousingTag, CommunityTag, EmploymentTag, LegalTag, BatchHousingResource
 )
 
 def make_listing_otw(modeladmin, request, queryset):
@@ -23,6 +23,12 @@ class ResourceAdmin(admin.ModelAdmin):
 
 class HousingResourceAdmin(ResourceAdmin):
     list_display = ResourceAdmin.list_display + ['posted', 'outdated']
+
+class BatchHousingAdmin(admin.ModelAdmin):
+    list_display = ['prop', 'types_of_units', 'amenities', 'income_requirements']
+    list_display_links = ['prop', 'amenities']
+    # list_display = ['name', 'alias']
+    # list_display_links = ['name']
 
 
 class CommunityResourceAdmin(ResourceAdmin):
@@ -69,3 +75,4 @@ admin.site.register(HousingTag, HousingTagAdmin)
 admin.site.register(CommunityTag, CommunityTagAdmin)
 admin.site.register(EmploymentTag, EmploymentTagAdmin)
 admin.site.register(LegalTag, LegalTagAdmin)
+admin.site.register(BatchHousingResource, BatchHousingAdmin)
