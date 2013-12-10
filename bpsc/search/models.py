@@ -70,7 +70,10 @@ class HousingResource(Resource):
 
 
 class CommunityResource(Resource):
+    posted = models.DateField('Date Posted')
     tags = models.ManyToManyField(CommunityTag, verbose_name='Tags', null=True, blank=True)
+    outdated = models.BooleanField('Outdated', default=False,
+            help_text='Set to "true" if it has been more than 6 months since this resource was edited')
 
     class Meta:
         ordering = ['auto_added']
@@ -96,3 +99,17 @@ class LegalResource(Resource):
     class Meta:
         ordering = ['auto_added']
         verbose_name = 'Legal Resource'
+
+class BatchHousingResource(models.Model):
+    prop = models.CharField('Property', max_length=2550)
+    types_of_units = models.CharField('Types of Units', max_length=2550)
+    amenities = models.CharField('Amenities', max_length=2550)
+    income_requirements = models.CharField('Income Requirements', max_length=2550)
+    rent_occupancy = models.CharField('Rent/Occupancy Limits', max_length=2550)
+    how_to_apply = models.CharField('How to Apply', max_length=2550)
+    # name = models.CharField(max_length=50)
+    # code = models.CharField(max_length=3)
+    # latitude = models.DecimalField(decimal_places=5, max_digits=8)
+    # longitude = models.DecimalField(decimal_places=5, max_digits=8)
+    # alias = models.CharField(max_length=50)
+    
