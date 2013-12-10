@@ -82,7 +82,6 @@
     latitude: 37.85663
     longitude: -122.26642
     phone: 5106499320
-    posted: 2013-10-31
     num_used: 0
     auto_added: False
     tags:
@@ -102,7 +101,6 @@
     name: Super Medical Service
     num_used: 0
     phone: '5105100510'
-    posted: 2013-10-31
     street_address: 1234 Medicine Ave
     tags: [2]
     url: http://www.medicine.com/
@@ -158,6 +156,7 @@
       \n"
     latitude: '37.12345'
     longitude: '-122.12340'
+    listing_of_the_week: true
     name: Berkeley jobs
     num_used: 0
     outdated: false
