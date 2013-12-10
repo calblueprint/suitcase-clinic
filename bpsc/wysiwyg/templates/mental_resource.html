@@ -6,6 +6,10 @@
 
 {% block navbar-community %}{% endblock %}
 
-{% block content %}
+{% block sidebar %}
+<a href="{% url 'search:community_list' %}">Back To Listings</a>
+{% endblock %}
+
+{% block body %}
 	{{ resource.content|safe }}
 {% endblock %}
