@@ -1,9 +1,23 @@
-{% extends 'base_search.html' %}
+{% extends 'base.html' %}
 
-{% block title %}
-{{ block.super }}
+{% load staticfiles %}
+
+{% block head %}
+<link href="{% static 'css/search.css' %}" rel="stylesheet" type="text/css">
 {% endblock %}
 
-{% block body %}
-{% include 'base_resource_detail_content.html' %}
+{% block title %}
+Resource Search
+{% endblock %}
+
+{% block content %}
+<div class="container">
+	<div class="row ">
+        <div class="col-md-12">
+	        {% block body %}
+	        {% include 'base_resource_detail_content.html' %}
+	        {% endblock %}
+        </div>
+    </div>
+</div>
 {% endblock %}
