@@ -44,33 +44,43 @@
                     <a data-sort="data-rating" data-order="desc" class="sort" href="javascript:;">Lowest Review</a>
                 </li>
             </ul>
+            <div id="average_rating">
+                <p class="average" id="Housing_Average">Average Rating for Housing: {{housing_stars|safe}}</p> 
+                <p class="average" id="Employment_Average">Average Rating for Employment: {{employment_stars|safe}}</p> 
+                <p class="average" id="Community_Average">Average Rating for Community Resources: {{community_stars|safe}}</p> 
+                <p class="average" id="Legal_Average">Average Rating for Legal: {{legal_stars|safe}}</p> 
+                <p class="average" id="Dental_Average">Average Rating for Dental: {{dental_stars|safe}}</p> 
+                <p class="average" id="Optometry_Average">Average Rating for Optometry: {{optometry_stars|safe}}</p> 
+                <p class="average" id="Medical_Average">Average Rating for Medical: {{medical_stars|safe}}</p> 
+            </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-4">
             <ul class="list-unstyled">
-                <li><button type="button" class="filter btn btn-big" data-filter="all">Show All</button></li>
-                <li><button type="button" class="filter btn btn-big" data-filter="Housing">Housing</button></li>
-                <li><button type="button" class="filter btn btn-big" data-filter="Employment">Employment</button></li>
-                <li><button type="button" class="filter btn btn-big" data-filter="Community Resources">Community Resources</button></li>
-                <li><button type="button" class="filter btn btn-big" data-filter="Legal">Legal</button></li>
-                <li><button type="button" class="filter btn btn-big" data-filter="Dental">Dental</button></li>
-                <li><button type="button" class="filter btn btn-big" data-filter="Optometry">Optometry</button></li>
-                <li><button type="button" class="filter btn btn-big" data-filter="Medical">Medical</button></li>
+                <li><button type="button" class="filter btn btn-big" id="all-filter" data-filter="all">Show All</button></li>
+                <li><button type="button" class="filter btn btn-big" id="housing-filter" data-filter="Housing">Housing</button></li>
+                <li><button type="button" class="filter btn btn-big" id="employment-filter" data-filter="Employment">Employment</button></li>
+                <li><button type="button" class="filter btn btn-big" id="community-filter" data-filter="Community Resources">Community Resources</button></li>
+                <li><button type="button" class="filter btn btn-big" id="legal-filter" data-filter="Legal">Legal</button></li>
+                <li><button type="button" class="filter btn btn-big" id="dental-filter" data-filter="Dental">Dental</button></li>
+                <li><button type="button" class="filter btn btn-big" id="optometry-filter" data-filter="Optometry">Optometry</button></li>
+                <li><button type="button" class="filter btn btn-big" id="medical-filter" data-filter="Medical">Medical</button></li>
             </ul>
         </div>
 
         <div class="col-md-8 review-container">
             <ul class="list-unstyled pre-scrollable" id="Grid">
                 {% for review in review_list %}
-                <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"Ymd" }}" >
+                <li class="mix {{ review.service }} mix_all review" data-rating="{{ review.rating }}" data-date="{{ review.date|date:"YmdHi" }}" >
                     <div class="review-content">
-                        <h3>{{ review.service }}</h3>
+                        <h3 class="review_service">{{ review.service }}</h3>
                         <p class="review_date">{{ review.date|date:"SHORT_DATE_FORMAT" }}</p>
-                        <p class="{{ review.rating }}">{{ review.render_stars|safe }}</p>
-                        <p>{{ review.comments }}</p>
-                        <p class="reviewed">Reviewed by: {{ review.reviewer }}</p>
+                        <p class="stars">{{ review.render_stars|safe }}</p>
+                        <p class="rating">{{ review.rating }}</p>
+                        <p class="review_comments">{{ review.comments }}</p>
+                        <p class="reviewer">Reviewed by: {{ review.reviewer }}</p>
                     </div>
                 </li>
                 {% endfor %}

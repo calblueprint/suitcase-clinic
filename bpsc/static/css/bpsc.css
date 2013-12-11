@@ -15,6 +15,7 @@ body {
 
 img {
   background-color: transparent;
+
 }
 
 html {
@@ -115,7 +116,6 @@ body {
   padding-bottom: 15px;
   padding-top: 15px;
   margin-bottom: 60px;
-  min-height: 500px;
   box-shadow: 5px 5px 5px black;
 }
 
@@ -289,7 +289,6 @@ ul.errorlist {
 
 #footer {
   margin-top: 10px;
-  margin-left: 45px;
 }
 
 .social-media-icon {
