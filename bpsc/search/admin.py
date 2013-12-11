@@ -24,16 +24,15 @@ class ResourceAdmin(admin.ModelAdmin):
 class HousingResourceAdmin(ResourceAdmin):
     list_display = ResourceAdmin.list_display + ['posted', 'outdated']
 
+
 class BatchHousingAdmin(admin.ModelAdmin):
     list_display = ['prop', 'types_of_units', 'amenities', 'income_requirements']
     list_display_links = ['prop', 'amenities']
-    readonly_fields = ['posted']
-    # list_display = ['name', 'alias']
-    # list_display_links = ['name']
+    readonly_fields = ['posted', 'outdated']
 
 
 class CommunityResourceAdmin(ResourceAdmin):
-    pass
+    readonly_fields = ['posted']
 
 
 class EmploymentResourceAdmin(ResourceAdmin):

@@ -33,7 +33,7 @@ class Command(BaseCommand):
 	def set_community_outdated(self):
 		today = datetime.date.today()
 		all_community = CommunityResource.objects.all()
-		for resrouce in all_community:
+		for resource in all_community:
 			age = (today - resource.posted).days
 			if age >= 180:
 				resource.outdated = True
