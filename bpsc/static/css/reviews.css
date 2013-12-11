@@ -1,3 +1,11 @@
+html, body {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    padding: 0;
+    position: relative;
+    height: 100%;
+}
+
+
 .tab {
 	width: 400px;
 	display: inline-block;
@@ -178,8 +186,13 @@ li.review {
 }
 
 .unabled-message {
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  text-transform: uppercase;
-  font-size: 35px;
-  padding-top: 10px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-transform: uppercase;
+    font-size: 35px;
+    padding-top: 10px;
+    padding-left: 455px;
+}
+
+.move-down {
+    padding-top: 5px;
 }

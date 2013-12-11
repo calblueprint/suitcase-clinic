@@ -151,13 +151,13 @@ nav {
 
 .nav {
     padding-bottom: 0;
-  
+
 }
 
 .navbar-nav {
     padding-bottom: 0;
     margin-bottom: 0;
-  
+
 }
 
 .navbar-nav > li {
@@ -224,17 +224,24 @@ nav {
 
 .hidden-login:hover a {
     visibility: visible;
+    color: white;
+}
+
+.hidden-login {
+
 }
 
 #header {
   border-radius: 0;
   border-width: 0;
   margin-top: 15px;
-  z-index: 10; 
+  z-index: 10;
 }
 
 #admin-panel {
     background-color: transparent;
+    font-size: 125%;
+    text-transform: uppercase;
 }
 
 #content {
