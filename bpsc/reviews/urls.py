@@ -7,5 +7,5 @@ urlpatterns = patterns('',
 	url(r'^reviews/$', ReviewListView.as_view(), name='reviews_list'),
 	# url(r'^new/$', NewReviewView.as_view(), name='new'),
     url(r'^$', reviews, name='reviews'),
-	url(r'^submit/$', SubmitReviewListView.as_view()),
+	url(r'^submit/$', SubmitReviewListView.as_view(), name='submit_review'),
 )

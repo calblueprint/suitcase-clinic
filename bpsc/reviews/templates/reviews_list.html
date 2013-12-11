@@ -17,6 +17,9 @@
 
 {% block content %}
 
+<!-- Show reviews if access is enabled for users -->
+{% if review_access_enabled %}
+
 {% block navbar-reviews %}
 {% endblock %}
 
@@ -84,5 +87,16 @@
             </ul>        
         </div>
     </div>
-</div> <!-- end container -->   
+</div> <!-- end container -->  
+{% else %} 
+<div id="content-container">
+    <div id="sidebar-container">
+        <a href="{% url 'reviews:submit_review' %}">Submit A Review</a>
+    </div>
+    <div id="body-container">
+        Sorry! Reviews are curently not available to public.
+    </div>
+</div>
+{% endif %}
+
 {% endblock %}

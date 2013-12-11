@@ -1,15 +1,11 @@
 subject:
     "Suitcase Clinic Resources - {{ resource_type }} Resources for {{ client_name }}"
 body:
-    "Hello,
-
-
-    {{ client_name }} has requested for {{ resource_type|lower }} resources to be printed.
-
-    A copy of the requested resources can be found at {{ resource_url }}.
-
-    Client Contact Information:
-
-        Phone: {{ client_phone }}
-        Email: {{ client_email }}
-    "
+    "Hello,\n\n
+    A client has requested for {{ resource_type|lower }} resources to be printed.\n\n
+    A copy of the requested resources can be found at {{ resource_url }}.\n\n
+    Client Contact Information:\n
+    \tName: {{ client_name }}\n
+    \tPhone: {{ client_phone }}\n
+    \tEmail: {{ client_email }}\n
+    \n"

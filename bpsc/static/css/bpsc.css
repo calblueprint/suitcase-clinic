@@ -74,11 +74,13 @@ body {
   width: 200px;
   float: right;
   margin-bottom: 10px;
+  z-index: 200;
 }
 
 #logo img {
   width: 100%;
   height: auto;
+  z-index: 200;
 }
 
 .tab {
@@ -135,6 +137,7 @@ body {
   margin-bottom: 0px;
 	background-color: transparent !important;
 	position: relative;
+  z-index: 0;
 }
 #navbar-container {
 }
@@ -227,6 +230,7 @@ nav {
   border-radius: 0;
   border-width: 0;
   margin-top: 15px;
+  z-index: 10; 
 }
 
 #admin-panel {
@@ -242,12 +246,45 @@ nav {
   padding-top: 15px
 }
 
-ul .messages {
+ul {
     list-style: none;
 }
 
-ul .messages li {
-    list-style: none;
+ul.messages {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 150%;
+    text-transform: uppercase;
+}
+
+li.error, ul.errorlist > li {
+    color: #a94442;
+    background-color: #ffcdcd;
+    border-color: #ebccd1;
+    padding: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+ul.errorlist >li {
+    background-color: #ffffff;
+}
+
+li.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding: 15px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+}
+
+ul.errorlist {
+
 }
 
 #footer {

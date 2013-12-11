@@ -1,6 +1,6 @@
 from django.views.generic import ListView
 from django.views.generic import TemplateView
-from bpsc.reviews.models import Review
+from bpsc.reviews.models import Review, EnableUsersToSeeReview
 from django.views.generic.edit import FormView
 from django.shortcuts import redirect
 from bpsc.reviews.forms import ReviewForm
@@ -32,8 +32,6 @@ class ReviewListView(ListView):
     template_name = 'reviews_list.html'
     model = Review
 
-
-
     def get_context_data(self, **kwargs):
         context = super(ReviewListView, self).get_context_data(**kwargs)
         housing_avg_rating = clean(Review.objects.filter(service='Housing').aggregate(Avg('rating'))['rating__avg'])
@@ -55,8 +53,6 @@ class ReviewListView(ListView):
     #     return super(ReviewListView, self).dispatch(*args, **kwargs)
         return context
 
-     
-
 class SubmitReviewListView(TemplateView):
     template_name = 'base_submit_review.html'
     # form_class = ReviewForm
@@ -67,6 +63,7 @@ class SubmitReviewListView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(SubmitReviewListView, self).get_context_data(**kwargs)
+        context['review_access_enabled'] = EnableUsersToSeeReview.objects.get(id=1).access
         if self.request.method == "GET":
             context['reviewform'] = ReviewForm()
             return context
