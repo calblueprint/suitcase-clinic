@@ -27,6 +27,7 @@ class HousingResourceAdmin(ResourceAdmin):
 class BatchHousingAdmin(admin.ModelAdmin):
     list_display = ['prop', 'types_of_units', 'amenities', 'income_requirements']
     list_display_links = ['prop', 'amenities']
+    readonly_fields = ['posted']
     # list_display = ['name', 'alias']
     # list_display_links = ['name']
 

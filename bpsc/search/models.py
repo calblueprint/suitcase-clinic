@@ -107,6 +107,7 @@ class BatchHousingResource(models.Model):
     income_requirements = models.CharField('Income Requirements', max_length=2550)
     rent_occupancy = models.CharField('Rent/Occupancy Limits', max_length=2550)
     how_to_apply = models.CharField('How to Apply', max_length=2550)
+    posted = models.DateField(auto_now=True)
     # name = models.CharField(max_length=50)
     # code = models.CharField(max_length=3)
     # latitude = models.DecimalField(decimal_places=5, max_digits=8)
