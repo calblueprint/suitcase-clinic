@@ -14,6 +14,7 @@
 {% endblock %}
 
 {% block sidebar %}
+<div id="sidebar-container">
 <ul>
 {% for tag_type, value_list in tags.iteritems %}
     <li><strong>{{ tag_type }}</strong></li>
@@ -24,6 +25,9 @@
     </ul>
 {% endfor %}
 </ul>
+{% block sidebar-links %}
+{% endblock %}
+</div>
 {% endblock %}
 
 {% block body %}

@@ -1,22 +1,20 @@
 
-<div class="resource-detail-container">
+<div class="container">
     <div class="resource-left">
-        <h2>{{ resource.name }}</h2>
-
-        <div class="resource-description">
-        <p>{{ resource.description|safe }}</p>
-        </div>
-
+        <h1 class="resource-name">{{ resource.name }}</h1>
+        <p class="resource-description">{{ resource.description|safe }}</p>
         <div class="resource-address">
             <h3>Address</h3>
-            {{ resource.street_address }}</br>
-            {{ resource.city }} {{ resource.zipcode }}
+            <p>
+                {{ resource.street_address }}</br>
+                {{ resource.city }} {{ resource.zipcode }}
+            </p>
         </div>
 
         <div class="resource-contact">
             <h3>Contact</h3>
-            <a href="{{ resource.url }}">{{ resource.url }}</a></br>
-            {{ resource.phone }}
+            <p><a href="{{ resource.url }}">{{ resource.url }}</a></br></p>
+            <p>{{ resource.phone }}</p>
         </div>
 
         <div class="resource-tags">
@@ -35,7 +33,6 @@
         {{ form.map }}
         {{ form.media.js }}
     </div>
-
 </div>
 
 <script type="text/javascript">
