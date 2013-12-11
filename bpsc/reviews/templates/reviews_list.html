@@ -9,7 +9,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="{% static 'jquery.mixitup.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
-    
+
     <link rel="stylesheet" type="text/css" href="{% static 'css/reviews.css' %}">
 
     <title>Read Reviews</title>
@@ -45,13 +45,13 @@
                 </li>
             </ul>
             <div id="average_rating">
-                <p class="average" id="Housing_Average">Average Rating for Housing: {{housing_stars|safe}}</p> 
-                <p class="average" id="Employment_Average">Average Rating for Employment: {{employment_stars|safe}}</p> 
-                <p class="average" id="Community_Average">Average Rating for Community Resources: {{community_stars|safe}}</p> 
-                <p class="average" id="Legal_Average">Average Rating for Legal: {{legal_stars|safe}}</p> 
-                <p class="average" id="Dental_Average">Average Rating for Dental: {{dental_stars|safe}}</p> 
-                <p class="average" id="Optometry_Average">Average Rating for Optometry: {{optometry_stars|safe}}</p> 
-                <p class="average" id="Medical_Average">Average Rating for Medical: {{medical_stars|safe}}</p> 
+                <p class="average" id="Housing_Average">Average Rating for Housing: {{housing_stars|safe}}</p>
+                <p class="average" id="Employment_Average">Average Rating for Employment: {{employment_stars|safe}}</p>
+                <p class="average" id="Community_Average">Average Rating for Community Resources: {{community_stars|safe}}</p>
+                <p class="average" id="Legal_Average">Average Rating for Legal: {{legal_stars|safe}}</p>
+                <p class="average" id="Dental_Average">Average Rating for Dental: {{dental_stars|safe}}</p>
+                <p class="average" id="Optometry_Average">Average Rating for Optometry: {{optometry_stars|safe}}</p>
+                <p class="average" id="Medical_Average">Average Rating for Medical: {{medical_stars|safe}}</p>
             </div>
         </div>
     </div>
@@ -84,17 +84,19 @@
                     </div>
                 </li>
                 {% endfor %}
-            </ul>        
+            </ul>
         </div>
     </div>
-</div> <!-- end container -->  
-{% else %} 
-<div id="content-container">
-    <div id="sidebar-container">
-        <a href="{% url 'reviews:submit_review' %}">Submit A Review</a>
+</div> <!-- end container -->
+{% else %}
+<div class="container">
+    <div class="col-md-4">
+         <a class="btn btn-success" href="/reviews/submit">Add a review!</a>
     </div>
-    <div id="body-container">
-        Sorry! Reviews are curently not available to public.
+    <div class="move-down">
+         <div class="unabled-message">
+             Sorry! Reviews are currently not available to public.
+         </div>
     </div>
 </div>
 {% endif %}
