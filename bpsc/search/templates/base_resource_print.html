@@ -19,14 +19,16 @@ Print
         	{% block body %}
         	<div id="printable-area">
 	        {% for resource in resource_list %}
-				<div class="row">{% include 'base_resource_detail_content.html' %}
-							</div>
-
+				<div class="row">
+					{% include 'base_resource_detail_content.html' %}
+				</div>
 			{% endfor %}
 
 			{% block batch_resources %}
 			{% endblock %}
-	        <input type="button" onclick="printDiv('printable-area')" value="Print" />
+	        <button class="btn btn-big" onclick="printDiv('printable-area')" value="Print" >
+	      		<span class='glyphicon glyphicon-print'></span> Print Listings 
+	        </button>
 	        </div>
 	        {% endblock %}
         </div>
