@@ -34,6 +34,7 @@ class ReviewListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ReviewListView, self).get_context_data(**kwargs)
+        context['review_access_enabled'] = EnableUsersToSeeReview.objects.get(id=1).access
         housing_avg_rating = clean(Review.objects.filter(service='Housing').aggregate(Avg('rating'))['rating__avg'])
         context['housing_stars'] = render_stars(housing_avg_rating)
         employment_avg_rating = clean(Review.objects.filter(service='Employment').aggregate(Avg('rating'))['rating__avg'])
@@ -56,10 +57,10 @@ class ReviewListView(ListView):
 class SubmitReviewListView(TemplateView):
     template_name = 'base_submit_review.html'
     # form_class = ReviewForm
-   
+
     def form_valid(self, form):
         form.submit_review()
-        return super(FormView, self).form_valid(form)   
+        return super(FormView, self).form_valid(form)
 
     def get_context_data(self, **kwargs):
         context = super(SubmitReviewListView, self).get_context_data(**kwargs)
