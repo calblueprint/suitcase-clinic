@@ -27,20 +27,22 @@
     <div class="wrapper-container">
         <div id="header">
             <div id="logo">
-                <a href="{% url 'home' %}"> 
-                    <img src="{% static 'css/images/SuitcaseLogo.png' %}"> 
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'css/images/SuitcaseLogo.png' %}">
                 </a>
             </div>
             <div id="admin-panel">
+            {% block login-panel %}
             {% if user.is_authenticated %}
                 <span>{{ user.first_name }} {{ user.last_name }}</span> |
                 <span><a href="{% url 'admin:index' %}">Admin Dashboard</a></span> |
                 <span><a href="{% url 'logout' %}?next={% firstof request.path '/' %}">Logout</a></span>
             {% else %}
                 <span class="hidden-login">
-                    <a class="hidden-login" href="{% url 'login' %}?next={% firstof request.path '/' %}">Login</a>
+                    <a class="hidden-login" href="{% url 'login' %}?next={% firstof request.path '/' %}">Admin Login</a>
                 </span>
             {% endif %}
+            {% endblock %}
             </div>
         {% block header %}
         {% endblock %}
@@ -84,13 +86,13 @@
             <div id="footer">
                 <div class="container">
                     <div class="social">
-                        <a href="http://www.facebook.com/suitcaseclinic"> 
+                        <a href="http://www.facebook.com/suitcaseclinic">
                             <img class="social-media-icon" id="facebook" src="{% static 'css/images/facebook.png' %}" />
                         </a>
-                        <a href="http://twitter.com/suitcaseclinic"> 
+                        <a href="http://twitter.com/suitcaseclinic">
                             <img class="social-media-icon" id="twitter" src="{% static 'css/images/twitter.png' %}" />
                         </a>
-                        <a href="http://www.suitcaseclinic.org/"> 
+                        <a href="http://www.suitcaseclinic.org/">
                             <img class="social-media-icon" id="suitcase-icon" src="{% static 'css/images/icon-suitcase.png' %}" />
                         </a>
                     </div>
