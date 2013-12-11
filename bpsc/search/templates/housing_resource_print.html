@@ -6,6 +6,8 @@
 
 {% block batch_resources %}
 {% for resource in batch_resource_list %}
-    {% include 'batch_housing_resource_detail_content.html' %}
+	<div class="row">
+    	{% include 'batch_housing_resource_detail_content.html' %}
+    </div>
 {% endfor %}
 {% endblock %}
