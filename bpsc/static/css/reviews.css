@@ -34,7 +34,6 @@ li.review {
 	width: 100%;
 	vertical-align: top;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-	text-transform: uppercase;
 }
 
 .btn-success {
@@ -110,6 +109,27 @@ li.review {
 	color: #de1f26;
 }
 
+/*font sizes for the reviews themselves*/
+.review_date {
+}
+
+.review_service {
+	text-transform: uppercase;
+	font-size: 2em;
+}
+
+.reviewer {
+	font-size: 1.25em;
+}
+
+.review_comments {
+	font-size: 1.5em;
+}
+
+.average {
+	display: none;
+	margin-bottom: 0px;
+}
 
 #content-container {
     padding-bottom: 45px;

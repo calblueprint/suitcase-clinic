@@ -7,21 +7,27 @@
 	font-size: 3em;
 }
 
-.container {
-}
-
-#star-rating {
-
-}
-
-.container {
-	text-align: center;
-}
-
 .btn-success {
 	margin: 20px 10px;
 }
 
 .pure-control-group .stars {
 	text-align: left;
+}
+
+#form-container {
+	text-align: center;
+	width: 350px;
+	margin: auto;
+}
+
+
+#id_reviewer, #id_service, #submit-btn, #id_comments {
+	width: 100%;
+}
+
+#submit-btn {
+	margin: 20px 0px 20px 0px;
+	padding: 10px 0px 10px 0px;
+	font-family: 'Yanone Kaffeesatz';
 }
