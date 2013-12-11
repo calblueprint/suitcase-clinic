@@ -219,24 +219,15 @@ nav {
    /*background-color: white !important;*/
 }
 
-.hidden-login a {
-    visibility: hidden;
-}
-
-.hidden-login:hover a {
-    visibility: visible;
-    color: white;
-}
-
-.hidden-login {
-
-}
-
 #header {
   border-radius: 0;
   border-width: 0;
   margin-top: 15px;
   z-index: 10;
+}
+
+.hidden-login {
+    color: black;
 }
 
 #admin-panel {
