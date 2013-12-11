@@ -21,27 +21,29 @@
 {% endblock %}
 
 {% block manual_resource_title %}
-Manually Added Listings
+<h3>Manually Added Listings</h3>
 {% endblock %}
 
 {% block batch_resource_table %}
-    <h3>Monthly Listings</h3>
-    <table class="table table-striped table-bordered" id="batch-resource-table">
-        <thead>
-            <tr>
-                <th></th>
-                <th class="header">Property</th>
-                <th class="header">Posted</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for resource in batch_resource_list %}
-            <tr id="batch-resource-{{ forloop.counter }}">
-                <td><input type="checkbox" name="batch-resources" value="{{ resource.id }}"/></td>
-                <td><a href="{% url 'search:batch_housing_detail' pk=resource.pk slug=resource.prop|slugify %}">{{ resource.prop }}</a></td>
-                <td>{{ resource.posted }}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <h2>Monthly Listings</h2>
+    <div class="batch-resource-area">
+        <table class="table table-striped table-bordered table-condensed table-hover" id="batch-resource-table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th class="header">Property</th>
+                    <th class="header">Posted</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for resource in batch_resource_list %}
+                <tr id="batch-resource-{{ forloop.counter }}">
+                    <td><input type="checkbox" name="batch-resources" value="{{ resource.id }}"/></td>
+                    <td><a href="{% url 'search:batch_housing_detail' pk=resource.pk slug=resource.prop|slugify %}">{{ resource.prop }}</a></td>
+                    <td>{{ resource.posted }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}

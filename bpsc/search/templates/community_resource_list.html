@@ -8,13 +8,12 @@
 
 {% block sidebar %}
 {{block.super}}
-Useful Information
-<br>
-<a href="{% url 'search:community_mental' %}">Mental Resource</a>
-<br>
-<a href="{% url 'search:community_dental' %}">Dental Resource</a>
-<br>
-<a href="{% url 'search:community_medical' %}">Medical Resource</a>
+<h3>Useful Information</h3>
+<ul>
+	<li><a href="{% url 'search:community_mental' %}">Mental Resource</a></li>
+	<li><a href="{% url 'search:community_dental' %}">Dental Resource</a></li>
+	<li><a href="{% url 'search:community_medical' %}">Medical Resource</a></li>
+</ul>
 {% endblock %}
 
 {% block resource_detail_url %}

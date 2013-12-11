@@ -7,37 +7,39 @@
 {% block navbar-employment %}{% endblock %}
 
 {% block listing_of_the_week %}
-<h3>Listings Of the Week</h3>
+<h2>Listings Of the Week</h2>
 
 {% if listings_of_the_week %}
-<table class="tablesorter" id="resource-otw-table">
-    <thead>
-        <tr>
-            <th></th>
-            <th class="header">Name</th>
-            <th class="header">Url</th>
-            <th class="header">Posted</th>
-            <th class="header">Tags</th>
-        </tr>
-    </thead>
-    <tbody>
-    {% for resource in listings_of_the_week %}
-        <tr id="resource-otw-{{ forloop.counter }}" filter-count={{ resource.tags.all|length }}>
-            <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
-            <td><a href="{% url 'search:employment_detail' pk=resource.pk slug=resource.name|slugify %}">{{ resource.name }}</a></td>
-            <td><a href="{{ resource.url }}">{{ resource.url|default:"-" }}</a></td>
-            <td>{{ resource.posted }}</td>
-            <td>
-                {% for tag in resource.tags.all %}
-                    <span class="resource-tag tag-otw-{{ tag.value|slugify }}">{{ tag.value }}</span>
-                {% empty %}
-                -
-                {% endfor %}
-            </td>
-        </tr>
-    {% endfor %}
-    </tbody>
+<div class="batch-resource-area">
+    <table class="tablesorter" id="resource-otw-table">
+        <thead>
+            <tr>
+                <th></th>
+                <th class="header">Name</th>
+                <th class="header">Url</th>
+                <th class="header">Posted</th>
+                <th class="header">Tags</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for resource in listings_of_the_week %}
+            <tr id="resource-otw-{{ forloop.counter }}" filter-count={{ resource.tags.all|length }}>
+                <td><input type="checkbox" name="resources" value="{{ resource.id }}"/></td>
+                <td><a href="{% url 'search:employment_detail' pk=resource.pk slug=resource.name|slugify %}">{{ resource.name }}</a></td>
+                <td><a href="{{ resource.url }}">{{ resource.url|default:"-" }}</a></td>
+                <td>{{ resource.posted }}</td>
+                <td>
+                    {% for tag in resource.tags.all %}
+                        <span class="resource-tag tag-otw-{{ tag.value|slugify }}">{{ tag.value }}</span>
+                    {% empty %}
+                    -
+                    {% endfor %}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
 </table>
+
 {% else %}
 There are no listings of the week for this week
 {% endif %}
@@ -55,11 +57,11 @@ There are no listings of the week for this week
 
 {% block sidebar %}
 {{block.super}}
-Useful Guides
-<br>
-<a href="{% url 'search:employment_resume' %}">How to Write A Resume</a>
-<br>
-<a href="{% url 'search:employment_cover_letter' %}">How To Write A Cover Letter</a>
+<h3>Useful Guides:</h3>
+<ul>
+    <li><a href="{% url 'search:employment_resume' %}">How to Write A Resume</a></li>
+    <li><a href="{% url 'search:employment_cover_letter' %}">How To Write A Cover Letter</a></li>
+</ul>
 {% endblock %}
 
 {% block resource_detail_url %}

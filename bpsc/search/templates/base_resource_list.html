@@ -14,9 +14,12 @@
 {% endblock %}
 
 {% block sidebar %}
-<ul class="list-unstyled">
+<h2>Filter by:</h2>
+<ul class="list-unstyled resource-sort">
 {% for tag_type, value_list in tags.iteritems %}
-    <li><strong>{{ tag_type }}</strong></li>
+    <li>
+        <h3>{{ tag_type }}</h3>
+    </li>
     <ul>
     {% for value in value_list %}
         <li><input type="checkbox" id="filter-{{ value|slugify }}" checked/> {{ value }}</li>
@@ -33,10 +36,6 @@
 
 <form method="post">
     {% csrf_token %}
-
-    <button class="btn-big" data-toggle="modal" data-target="#printModal">
-        <span class='glyphicon glyphicon-print'></span> Print Selected Resources 
-    </button>
 
     <!-- Modal -->
     <div class="modal fade" id="printModal" tabindex="-1" role="dialog" aria-labelledby="printModalLabel" aria-hidden="true">
@@ -62,14 +61,15 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
+    <h1>Listings</h1>
     {% block listing_of_the_week %}
     {% endblock %}
     
     {% block batch_resource_table %}
     {% endblock %}
 
-    <h3>All Listings</h3>
-    <table class="table table-striped table-bordered" id="resource-table">
+    <h2>Other Listings</h2>
+    <table class="table table-striped table-bordered table-hover table-condensed" id="resource-table">
         <thead>
             <tr>
                 <th></th>
