@@ -44,7 +44,7 @@ class BaseResourceDetailView(DetailView):
         maps.event.addListener(marker, 'mouseout', 'myobj.markerOut')
         info = maps.InfoWindow({
             'content': 'Hello!',
-            'disableAutoPan': False
+            'disableAutoPan': True
         })
         info.open(gmap, marker)
 

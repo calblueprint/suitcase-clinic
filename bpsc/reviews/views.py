@@ -34,6 +34,7 @@ class ReviewListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ReviewListView, self).get_context_data(**kwargs)
+        context['review_access_enabled'] = EnableUsersToSeeReview.objects.get(id=1).access
         housing_avg_rating = clean(Review.objects.filter(service='Housing').aggregate(Avg('rating'))['rating__avg'])
         context['housing_stars'] = render_stars(housing_avg_rating)
         employment_avg_rating = clean(Review.objects.filter(service='Employment').aggregate(Avg('rating'))['rating__avg'])
