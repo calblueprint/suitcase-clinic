@@ -7,6 +7,7 @@
     margin-left: 50px;
     margin-right: 50px;
     height: 100%;
+    padding-top: 30px;
 }
 
 .login-form {
@@ -26,4 +27,5 @@
 
 .input-container {
     text-align: center;
+    padding-bottom: 30px;
 }
