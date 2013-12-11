@@ -20,6 +20,10 @@
   margin-right: auto;
 }
 
+.login-form table td {
+    padding: 5px;
+}
+
 .login-form input {
   margin-left: auto;
   margin-right: auto;
@@ -28,4 +32,11 @@
 .input-container {
     text-align: center;
     padding-bottom: 30px;
+}
+
+.submit-btn {
+    margin: 20px 0px 20px 0px;
+    padding: 10px 0px 10px 0px;
+    font-family: 'Yanone Kaffeesatz';
+    width: 230px;
 }
