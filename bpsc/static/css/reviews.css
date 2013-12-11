@@ -111,6 +111,7 @@ li.review {
 
 /*font sizes for the reviews themselves*/
 .review_date {
+	  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .review_service {
@@ -119,11 +120,11 @@ li.review {
 }
 
 .reviewer {
-	font-size: 1.25em;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .review_comments {
-	font-size: 1.5em;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .average {
