@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand, CommandError
-from bpsc.search.models import HousingResource, EmploymentResource, CommunityResource
+from bpsc.search.models import BatchHousingResource, EmploymentResource, CommunityResource
 
 import datetime
 
@@ -9,7 +9,7 @@ class Command(BaseCommand):
 
 	def remove_expired_housing(self):
 		today = datetime.date.today()
-		all_housing = HousingResource.objects.all()
+		all_housing = BatchHousingResource.objects.all()
 		for resource in all_housing:
 			age = (today - resource.posted).days
 			if age > 42 and age < 90:
