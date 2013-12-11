@@ -10,33 +10,6 @@ html, body {
     position: relative;
 }
 
-#sidebar-container {
-    float: left;
-	padding: 15px;
-    margin: 15px;
-    margin-top: 0px;
-	background-color: #ffffff;
-    height: 100%;
-}
-
-#sidebar-container ul {
-    list-style: none;
-    padding-left: 10px;
-}
-
-#sidebar-container ul li {
-    list-style: none;
-}
-
-#body-container {
-    overflow: auto;
-	padding: 15px;
-    margin: 15px;
-	background-color: #ffffff;
-    right: 0;
-    height: 100%;
-}
-
 .clearfix:after
 {
     content: ".";

@@ -11,12 +11,17 @@ Resource Search
 {% endblock %}
 
 {% block content %}
-<div id="content-container">
-        {% block sidebar %}
-        {% endblock %}
-    <div id="body-container">
-        {% block body %}
-        {% endblock %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-3">
+		    {% block sidebar %}
+		    {% endblock %}
+        </div>
+
+        <div class="col-md-9">
+	        {% block body %}
+	        {% endblock %}
+        </div>
     </div>
 </div>
 {% endblock %}
