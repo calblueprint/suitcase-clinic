@@ -59,7 +59,7 @@ class Resource(models.Model):
 
 
 class HousingResource(Resource):
-    posted = models.DateField('Date Posted')
+    posted = models.DateField('Date Posted', auto_now_add=True)
     outdated = models.BooleanField('Outdated', default=False,
             help_text='Set to "true" if it has been more than 6 weeks since this resource was posted')
     tags = models.ManyToManyField(HousingTag, verbose_name='Tags', null=True, blank=True)
@@ -70,7 +70,7 @@ class HousingResource(Resource):
 
 
 class CommunityResource(Resource):
-    posted = models.DateField('Date Posted')
+    posted = models.DateField('Date Posted', auto_now_add=True)
     tags = models.ManyToManyField(CommunityTag, verbose_name='Tags', null=True, blank=True)
 
     class Meta:
@@ -79,7 +79,7 @@ class CommunityResource(Resource):
 
 
 class EmploymentResource(Resource):
-    posted = models.DateField('Date Posted')
+    posted = models.DateField('Date Posted', auto_now_add=True)
     outdated = models.BooleanField('Outdated', default=False,
             help_text='Set to "true" if it has been more than 6 weeks since this resource was posted')
     listing_of_the_week = models.BooleanField('Listing of the Week', default=False,
@@ -105,5 +105,5 @@ class BatchHousingResource(models.Model):
     income_requirements = models.CharField('Income Requirements', max_length=2550)
     rent_occupancy = models.CharField('Rent/Occupancy Limits', max_length=2550)
     how_to_apply = models.CharField('How to Apply', max_length=2550)
-    posted = models.DateField('Posted', auto_now=True)
+    posted = models.DateField('Posted', auto_now_add=True)
     outdated = models.BooleanField('Outdated', default=False)
