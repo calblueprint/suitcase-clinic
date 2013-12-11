@@ -1,21 +1,20 @@
-<div class="resource-detail-container">
-    <div class="resource-left">
-        <h2>{{ resource.name }}</h2>
+<div class="row resource-detail-container">
+    <h1 class="resource-name">{{ resource.name }}</h1>
+    <div class="col-md-6">
 
-        <div class="resource-description">
-        <p>{{ resource.description|safe }}</p>
-        </div>
-
+        <p class="resource-description">{{ resource.description|safe }}</p>
         <div class="resource-address">
             <h3>Address</h3>
-            {{ resource.street_address }}</br>
-            {{ resource.city }} {{ resource.zipcode }}
+            <p>
+                {{ resource.street_address }}</br>
+                {{ resource.city }} {{ resource.zipcode }}
+            </p>
         </div>
 
         <div class="resource-contact">
             <h3>Contact</h3>
-            <a href="{{ resource.url }}">{{ resource.url }}</a></br>
-            {{ resource.phone }}
+            <p><a href="{{ resource.url }}">{{ resource.url }}</a></br></p>
+            <p>{{ resource.phone }}</p>
         </div>
 
         <div class="resource-tags">
@@ -30,11 +29,13 @@
         </div>
     </div>
 
-    <div class="map">
-        {{ resource.mapform.map }}
-        {{ resource.mapform.media.js }}
+    <div class="col-md-6">  
+        <h2>Map</h2>      
+        <div class="map">
+            {{ resource.mapform.map }}
+            {{ resource.mapform.media.js }}
+        </div>
     </div>
-
 </div>
 
 <script type="text/javascript">

@@ -1,15 +1,23 @@
-{% extends 'base_search.html' %}
+{% extends 'base.html' %}
 
-{% block navbar-housing %}{% endblock %}
+{% load staticfiles %}
+
+{% block head %}
+<link href="{% static 'css/search.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
 {% block title %}
-{{ block.super }} | Housing
+Resource Search
 {% endblock %}
 
-{% block sidebar %}
-<a href="{% url 'search:housing_list' %}">Back To Listings</a>
-{% endblock %}
-
-{% block body %}
-{% include 'batch_housing_resource_detail_content.html' %}
+{% block content %}
+<div class="container">
+	<div class="row ">
+		<div class="col-md-12">
+        {% block body %}
+			{% include 'batch_housing_resource_detail_content.html' %}
+        {% endblock %}
+        </div>
+    </div>
+</div>
 {% endblock %}

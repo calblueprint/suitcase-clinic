@@ -15,7 +15,7 @@
 {% endblock %}
 {% block content %}
 
-<div class="container">
+<div class="container welcome-container">
   <div class="welcome">
     <div class="row">
       <h1 id="big-welcome">WELCOME</h1>
@@ -69,7 +69,7 @@
       </div>
     </a>
     
-    <a href="#">
+    <a href="{% url 'search:government' %}">
       <div class="tab-box">
         <div class="box-name">
           <p>GOVERNMENT AID</p>

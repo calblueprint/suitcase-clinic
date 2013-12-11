@@ -11,14 +11,21 @@ Resource Search
 {% endblock %}
 
 {% block content %}
-<div id="content-container">
-    <div id="sidebar-container">
-        {% block sidebar %}
-        {% endblock %}
-    </div>
-    <div id="body-container">
-        {% block body %}
-        {% endblock %}
+<div class="container">
+    <div class="row ">
+        <div class="col-md-3">
+            <div id="sidebar-container">
+                {% block sidebar %}
+                {% endblock %}
+                <button class="btn-big" data-toggle="modal" data-target="#printModal">
+                    <span class='glyphicon glyphicon-print'></span> Print Selected Resources 
+                </button>
+            </div>
+        </div>    
+        <div class="col-md-9">
+            {% block body %}
+            {% endblock %}
+        </div>
     </div>
 </div>
 {% endblock %}

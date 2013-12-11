@@ -28,12 +28,12 @@ p {
 .tab-descriptions {
 	margin-top: 40px;
 	margin-bottom: 20px;
-	margin-left: 10px;
+	margin-left: 90px;
 }
 
 .tab-box {
 	font-size: .8em;
-	width: 220px;
+	width: 18%;
 	display: inline-block;
 	text-align: center;
 }	
@@ -61,4 +61,12 @@ p {
 .box-name p {
 	line-height: 70px;
 	vertical-align: middle;
+}
+
+.welcome-container {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+.tab-decriptions {
+    font-family: 'Yanone Kaffeesatz', sans-serif;   
 }
