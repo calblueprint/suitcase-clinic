@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block sidebar %}
-<ul>
+<ul class="list-unstyled">
 {% for tag_type, value_list in tags.iteritems %}
     <li><strong>{{ tag_type }}</strong></li>
     <ul>
@@ -24,6 +24,9 @@
     </ul>
 {% endfor %}
 </ul>
+{% block sidebar-links %}
+{% endblock %}
+
 {% endblock %}
 
 {% block body %}
@@ -31,8 +34,8 @@
 <form method="post">
     {% csrf_token %}
 
-    <button class="btn" data-toggle="modal" data-target="#printModal">
-        Print Selected Resources
+    <button class="btn-big" data-toggle="modal" data-target="#printModal">
+        <span class='glyphicon glyphicon-print'></span> Print Selected Resources 
     </button>
 
     <!-- Modal -->
@@ -62,14 +65,7 @@
     {% block listing_of_the_week %}
     {% endblock %}
 
-
-    <div class="automatic-resources">
-    {% block batch_resource_table %}
-    {% endblock %}
-    </div>
-
-    <div class="manual-resources">
-    <h3>{% block manual_resource_title %}All Listings{% endblock %}</h3>
+    <h3>All Listings</h3>
     <table class="tablesorter" id="resource-table">
         <thead>
             <tr>
@@ -100,7 +96,6 @@
             {% endfor %}
         </tbody>
     </table>
-    </div>
 </form>
 {% endblock %}
 

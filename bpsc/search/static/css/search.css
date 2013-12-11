@@ -1,5 +1,5 @@
 html, body {
-	font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
     padding: 0;
     position: relative;
     height: 100%;
@@ -14,13 +14,13 @@ html, body {
     padding-bottom: 45px;
     margin: 0;
     margin-bottom: 30px;
-	background-color: #fde7d0;
-	-webkit-border-top-right-radius: 15px;
-	-moz-border-radius-topright: 15px;
-	-webkit-border-bottom-right-radius: 15px;
-	-moz-border-radius-bottomright: 15px;
-	-webkit-border-bottom-left-radius: 15px;
-	-moz-border-radius-bottomleft: 15px;
+    background-color: #fde7d0;
+    -webkit-border-top-right-radius: 15px;
+    -moz-border-radius-topright: 15px;
+    -webkit-border-bottom-right-radius: 15px;
+    -moz-border-radius-bottomright: 15px;
+    -webkit-border-bottom-left-radius: 15px;
+    -moz-border-radius-bottomleft: 15px;
     height: 100%;
     font-size: 1.3em;
 }
@@ -28,10 +28,10 @@ html, body {
 
 #sidebar-container {
     float: left;
-	padding: 15px;
+    padding: 15px;
     margin: 15px;
     margin-top: 0px;
-	background-color: #ffffff;
+    background-color: #ffffff;
     height: 100%;
 }
 
@@ -46,9 +46,9 @@ html, body {
 
 #body-container {
     overflow: auto;
-	padding: 15px;
+    padding: 15px;
     margin: 15px;
-	background-color: #ffffff;
+    background-color: #ffffff;
     right: 0;
     height: 100%;
 }
@@ -117,7 +117,7 @@ html, body {
 .btn-big.active {
     background-color: white;
     color: black;
-  	border-color: #2e2f2f;
+    border-color: #2e2f2f;
 }
 
 .btn-modal {
