@@ -34,7 +34,6 @@ li.review {
 	width: 100%;
 	vertical-align: top;
 	font-family: 'Yanone Kaffeesatz', sans-serif;
-	text-transform: uppercase;
 }
 
 .btn-success {
@@ -108,4 +107,68 @@ li.review {
 
 .glyphicon-star {
 	color: #de1f26;
+}
+
+/*font sizes for the reviews themselves*/
+.review_date {
+}
+
+.review_service {
+	text-transform: uppercase;
+	font-size: 2em;
+}
+
+.reviewer {
+	font-size: 1.25em;
+}
+
+.review_comments {
+	font-size: 1.5em;
+}
+
+.average {
+	display: none;
+	margin-bottom: 0px;
+}
+
+#content-container {
+    padding-bottom: 45px;
+    margin: 0;
+    margin-bottom: 30px;
+	background-color: #fde7d0;
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	-webkit-border-bottom-right-radius: 15px;
+	-moz-border-radius-bottomright: 15px;
+	-webkit-border-bottom-left-radius: 15px;
+	-moz-border-radius-bottomleft: 15px;
+    height: 100%;
+    font-size: 1.3em;
+}
+
+#sidebar-container {
+    float: left;
+	padding: 15px;
+    margin: 15px;
+    margin-top: 0px;
+	background-color: #ffffff;
+    height: 100%;
+}
+
+#sidebar-container ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+#sidebar-container ul li {
+    list-style: none;
+}
+
+#body-container {
+    overflow: auto;
+	padding: 15px;
+    margin: 15px;
+	background-color: #ffffff;
+    right: 0;
+    height: 100%;
 }

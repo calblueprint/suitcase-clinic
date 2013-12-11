@@ -13,7 +13,7 @@ from django.forms import widgets
 # 		pass
 
 # List of services
-service = ['Housing', 'Employment', 'Legal', 'Dental', 'Optometry', 'Medical']
+service = ['Housing', 'Employment', 'Community Resources', 'Legal', 'Dental', 'Optometry', 'Medical']
 
 class ReviewForm(forms.ModelForm):
 	def __init__(self, *args, **kwargs):
