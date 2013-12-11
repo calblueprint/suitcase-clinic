@@ -131,6 +131,10 @@ li.review {
 	margin-bottom: 0px;
 }
 
+.rating {
+	display: none;
+}
+
 #content-container {
     padding-bottom: 45px;
     margin: 0;
