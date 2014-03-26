@@ -182,6 +182,8 @@ EMAIL_HOST_USER = os.environ.get('SENDGRID_USERNAME', 'bpsc_sendgrid_user')
 EMAIL_HOST_PASSWORD = os.environ.get('SENDGRID_PASSWORD', 'bpsc_sendgrid_pw') # Change this later
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+EMAIL_TEMPLATE_PATH = os.path.join(SETTINGS_PATH, 'templates', 'email_templates')
+SUITCASE_EMAIL = 'bpsc@bpsc.com'
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
