@@ -1,11 +1,12 @@
 from django.db import models
-# Create your models here.
+
 
 class EnableUsersToSeeReview(models.Model):
 	access = models.BooleanField()
 
 	def __unicode__(self):
 		return "Access rights to reviews for public users: " + str(self.access)
+
 
 class Review(models.Model):
 	date = models.DateTimeField(auto_now_add=True)
@@ -25,5 +26,3 @@ class Review(models.Model):
 		for i in range(self.rating, 5):
 			result += "<span class='glyphicon glyphicon-star-empty'></span>"
 		return result
-
-

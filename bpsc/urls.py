@@ -1,7 +1,6 @@
-from django.conf.urls import *
+from django.conf.urls import include, patterns, url
 from django.contrib import admin
-from django.conf.urls.defaults import handler404, handler500
-from bpsc.views import search, survey, home, contact
+
 from bpsc.users.views import LoginView, LogoutView
 from bpsc.views import HomePageView
 
@@ -19,5 +18,5 @@ urlpatterns = patterns('',
     url(r'^$', HomePageView.as_view(), name='home'),
 )
 
-handler500 = 'bpsc.views.server_error_500'
 handler404 = 'bpsc.views.server_error_404'
+handler500 = 'bpsc.views.server_error_500'
