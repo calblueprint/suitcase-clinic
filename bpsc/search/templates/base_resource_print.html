@@ -5,6 +5,7 @@
 
 {% block head %}
 <link href="{% static 'css/search.css' %}" rel="stylesheet" type="text/css">
+<link href="{% static 'css/print.css' %}" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="{{ STATIC_URL }}js/base_resource_print.js"></script>
 {% endblock %}
 
@@ -22,14 +23,16 @@ Print
 				<div class="row">
 					{% include 'base_resource_detail_content.html' %}
 				</div>
+                {% if not forloop.last %}
+                {% endif %}
 			{% endfor %}
 
 			{% block batch_resources %}
 			{% endblock %}
-	        <button class="btn btn-big" onclick="printDiv('printable-area')" value="Print" >
-	      		<span class='glyphicon glyphicon-print'></span> Print Listings 
-	        </button>
 	        </div>
+	        <button class="btn btn-big" onclick="printDiv('printable-area')" value="Print" >
+	      		<span class='glyphicon glyphicon-print'></span> Print Listings
+	        </button>
 	        {% endblock %}
         </div>
     </div>
