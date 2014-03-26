@@ -1,8 +1,12 @@
 import os
 # Django settings for bpsc project.
 
-DEBUG = True
-TEMPLATE_DEBUG = DEBUG
+IS_STAGING = 'IS_STAGING' in os.environ
+IS_PRODUCTION = 'IS_PRODUCTION' in os.environ
+IS_HEROKU = IS_STAGING or IS_PRODUCTION
+
+DEBUG = not IS_PRODUCTION
+TEMPLATE_DEBUG = not IS_PRODUCTION
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -10,26 +14,28 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Parse database configuration from $DATABASE_URL
-if "IS_STAGING" in os.environ or "IS_PRODUCTION" in os.environ:
+if IS_HEROKU:
     import dj_database_url
     DATABASES = {'default':dj_database_url.config(default='postgres://localhost')}
 else:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-            'NAME': 'suitcase_db',                      # Or path to database file if using sqlite3.
-            # The following settings are not used with sqlite3:
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'suitcase_db',
             'USER': 'bpsc',
             'PASSWORD': 'bpsc',
-            'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-            'PORT': '',                      # Set to empty string for default.
-        }
+            'HOST': '127.0.0.1',
+            'PORT': '',
+         }
     }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/1.5/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = []
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -56,37 +62,18 @@ USE_TZ = False
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
-MEDIA_ROOT = ''
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
 # Examples: "http://example.com/media/", "http://media.example.com/"
-MEDIA_URL = ''
-
-# Absolute path to the directory static files should be collected to.
-# Don't put anything in this directory yourself; store your static files
-# in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
-
-# URL prefix for static files.
-# Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
-
-# Additional locations of static files
-#STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    #'/home/maobster/projects/suitcaseClinic/bpsc/static',
-#)
+MEDIA_URL = '/media/'
 
 # List of finder classes that know how to find static files in
 # various locations.
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Make this unique, and don't share it with anybody.
@@ -96,7 +83,6 @@ SECRET_KEY = 'qbn)idzut^!z$%oa5oegy64%a*7ogv_)%6=+91!zc@d#%zxat('
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -144,13 +130,13 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'south',
+    'ckeditor',
+    'csvimport',
     'bpsc.reviews',
     'bpsc.search',
     'bpsc.users',
-    'south',
     'bpsc.wysiwyg',
-    'ckeditor',
-    'csvimport'
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
@@ -185,7 +171,7 @@ LOGGING = {
 }
 
 # Setup email backends - during development, write email out to console
-if "IS_STAGING" in os.environ or "IS_PRODUCTION" in os.environ:
+if IS_HEROKU:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -200,18 +186,14 @@ EMAIL_USE_TLS = True
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
 
 # Static asset configuration
-import os
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
 CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'media', 'uploads')
+CKEDITOR_IMAGE_BACKEND = 'pillow'
 
