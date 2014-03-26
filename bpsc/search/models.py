@@ -1,5 +1,7 @@
 from django.db import models
+
 from ckeditor.fields import RichTextField
+
 
 class Tag(models.Model):
     tag_type = models.CharField('Tag Category', max_length=255,
