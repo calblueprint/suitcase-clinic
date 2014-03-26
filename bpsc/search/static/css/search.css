@@ -115,6 +115,9 @@
 
 .map {
     margin-bottom: 30px;
+    page-break-before: auto; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-after: always; /* 'always,' 'avoid,' 'left,' 'inherit,' or 'right' */
+    page-break-inside: avoid; /* or 'auto' */
 }
 
 .resource-left {
