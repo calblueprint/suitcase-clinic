@@ -136,7 +136,7 @@ INSTALLED_APPS = (
     'bpsc.reviews',
     'bpsc.search',
     'bpsc.users',
-    'bpsc.wysiwyg',
+    'bpsc.static_pages',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

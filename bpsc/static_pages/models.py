@@ -1,6 +1,7 @@
 from django.db import models
 
 from ckeditor.fields import RichTextField
+from django.core.urlresolvers import reverse_lazy
 
 
 class Post(models.Model):
@@ -9,4 +10,7 @@ class Post(models.Model):
     url = models.CharField(max_length=50, unique=True)
 
     def __unicode__(self):
-    	return "%(name)s at url: %(url)s " % {"name": self.name, "url": self.url}
+    	return "%(name)s at url: %(url)s " % {"name": self.name, "url": reverse_lazy(self.url)}
+
+    class Meta:
+        db_table = 'wysiwyg_post'

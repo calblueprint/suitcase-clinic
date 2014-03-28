@@ -1,6 +1,6 @@
 from django.views.generic import DetailView
 
-from bpsc.wysiwyg.models import Post
+from bpsc.static_pages.models import Post
 
 
 class ResumeResourceView(DetailView):
