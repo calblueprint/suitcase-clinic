@@ -1,5 +1,12 @@
 {% extends "admin/base.html" %}
 
 {% block branding %}
-<h1 id="site-name">Suitcase Clinic Administration</h1>
+<a href="{% url 'admin:index' %}"><h1 id="site-name">Suitcase Clinic Administration</h1></a>
+{% endblock %}
+
+{% block userlinks %}
+{{ block.super }}
+<!-- Don't know where in the code Django adds these <li> tags automagically, but it does, so add it manually here -->
+<li class="divider-vertical"></li>
+<li><a href="{% url 'home' %}">Return to Suitcase Clinic Portal</a></li>
 {% endblock %}
