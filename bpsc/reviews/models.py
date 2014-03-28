@@ -2,10 +2,14 @@ from django.db import models
 
 
 class EnableUsersToSeeReview(models.Model):
-	access = models.BooleanField()
+    access = models.BooleanField('Reviews are Visible to Public')
 
-	def __unicode__(self):
-		return "Access rights to reviews for public users: " + str(self.access)
+    def __unicode__(self):
+        return "Reviews are visible to public: " + str(self.access)
+
+    class Meta:
+        verbose_name = 'Toggle Visibility of Reviews to Public'
+        verbose_name_plural = verbose_name
 
 
 class Review(models.Model):
