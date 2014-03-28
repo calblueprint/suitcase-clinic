@@ -1,24 +1,18 @@
-from django.views.generic import ListView
-from django.views.generic import TemplateView
-from bpsc.reviews.models import Review, EnableUsersToSeeReview
-from django.views.generic.edit import FormView
-from django.shortcuts import redirect
-from bpsc.reviews.forms import ReviewForm
-from django.shortcuts import render
-from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
-from django.db.models import Avg
-
 from django.contrib import messages
+from django.db.models import Avg
+from django.shortcuts import redirect
+from django.views.generic import FormView, ListView, TemplateView
 
-def reviews(request):
-    return render(request, 'reviews.html')
+from bpsc.reviews.forms import ReviewForm
+from bpsc.reviews.models import Review, EnableUsersToSeeReview
+
 
 def clean(result):
         if result is None:
             return 0
         else:
             return int(round(result))
+
 
 def render_stars(rating):
     result = ""
@@ -27,6 +21,7 @@ def render_stars(rating):
     for i in range(rating, 5):
         result += "<span class='glyphicon glyphicon-star-empty'></span>"
     return result
+
 
 class ReviewListView(ListView):
     template_name = 'reviews_list.html'
@@ -49,14 +44,11 @@ class ReviewListView(ListView):
         context['optometry_stars'] = render_stars(optometry_avg_rating)
         medical_avg_rating = clean(Review.objects.filter(service='Medical').aggregate(Avg('rating'))['rating__avg'])
         context['medical_stars'] = render_stars(medical_avg_rating)
-    # @method_decorator(login_required)
-    # def dispatch(self, *args, **kwargs):
-    #     return super(ReviewListView, self).dispatch(*args, **kwargs)
         return context
+
 
 class SubmitReviewListView(TemplateView):
     template_name = 'base_submit_review.html'
-    # form_class = ReviewForm
 
     def form_valid(self, form):
         form.submit_review()
@@ -79,7 +71,7 @@ class SubmitReviewListView(TemplateView):
         if reviewform.is_valid():
             reviewform.save()
             messages.success(request, 'Review was successfully submitted!')
-            return redirect('/reviews/reviews')
+            return redirect('/reviews')
         else:
             return self.render_to_response(context)
 

@@ -11,7 +11,7 @@ from bpsc.search.views import (
     GovernmentResourceView, BatchHousingResourceDetailView
 )
 
-from bpsc.wysiwyg.views import (
+from bpsc.static_pages.views import (
     ResumeResourceView, CoverLetterResourceView,
     MentalResourceView, DentalResourceView,
     MedicalResourceView

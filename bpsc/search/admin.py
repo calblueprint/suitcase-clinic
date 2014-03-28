@@ -7,13 +7,16 @@ from bpsc.search.models import (
     HousingTag, CommunityTag, EmploymentTag, LegalTag, BatchHousingResource
 )
 
+
 def make_listing_otw(modeladmin, request, queryset):
     queryset.update(listing_of_the_week=True)
 make_listing_otw.short_description = 'Mark selected as "Listings Of The Week"'
 
+
 def remove_listing_otw(modeladmin, request, queryset):
     queryset.update(listing_of_the_week=False)
 remove_listing_otw.short_description = 'Remove selected from "Listings Of The Week'
+
 
 class ResourceAdmin(admin.ModelAdmin):
     list_display = ['name', 'street_address', 'city', 'num_used', 'auto_added']

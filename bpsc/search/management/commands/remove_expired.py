@@ -1,7 +1,8 @@
-from django.core.management.base import BaseCommand, CommandError
-from bpsc.search.models import BatchHousingResource, EmploymentResource, CommunityResource
-
 import datetime
+
+from django.core.management.base import BaseCommand
+
+from bpsc.search.models import BatchHousingResource, CommunityResource
 
 
 class Command(BaseCommand):
@@ -18,18 +19,6 @@ class Command(BaseCommand):
 			elif age >= 90:
 				resource.delete()
 
-
-	# def remove_expired_employment(self):
-	# 	today = datetime.date.today()
-	# 	all_employment = EmploymentResource.objects.all()
-	# 	for resource in all_employment:
-	# 		age = (today - resource.posted).days
-	# 		if age > 36 and age < 90:
-	# 			resource.outdated = True
-	# 			resource.save()
-	# 		elif age >= 90:
-	# 			resource.delete()
-
 	def set_community_outdated(self):
 		today = datetime.date.today()
 		all_community = CommunityResource.objects.all()
@@ -41,5 +30,4 @@ class Command(BaseCommand):
 
 	def handle(self, *args, **options):
 		self.set_community_outdated()
-		# self.remove_expired_employment()
 		self.remove_expired_housing()

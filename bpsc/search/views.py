@@ -1,7 +1,5 @@
-# Create your views here.
 from django.contrib import messages
-from django.http import QueryDict
-from django.shortcuts import get_object_or_404, redirect
+from django.shortcuts import redirect
 from django.views.generic import DetailView, ListView
 
 from bpsc.search.forms import ResourcePrintForm, MapForm
@@ -11,12 +9,9 @@ from bpsc.search.models import (
     HousingResource, CommunityResource, EmploymentResource, LegalResource,
     BatchHousingResource
 )
-from bpsc.wysiwyg.models import Post
+from bpsc.static_pages.models import Post
 
 from gmapi import maps
-from gmapi.forms.widgets import GoogleMap
-from django import forms
-from django.shortcuts import render_to_response
 
 def generate_map(latitude, longitude):
     if not latitude or not longitude:

@@ -375,7 +375,7 @@
       \ activated, with the 250 minutes described in the service plan. Cell phones\
       \ can be procured through ReachOut mobile.</span></span></p>\r\n\r\n<div>&nbsp;</div>\r\
       \n", name: Government Aid Guides, url: 'search:government'}
-  model: wysiwyg.post
+  model: static_pages.post
   pk: 5
 - fields: {content: "<p align=\"center\"><strong>Suitcase Medical Resources</strong></p>\r\
       \n\r\n<h1>Emergency</h1>\r\n\r\n<h1>General Health</h1>\r\n\r\n<h1>Women&rsquo;s\
@@ -484,7 +484,7 @@
       \ subsidized; patients may qualify for a sliding scale fee discount based on\
       \ income</p>\r\n\r\n<p style=\"margin-left:.5in;\">&nbsp;</p>\r\n", name: Suitcase
       Medical Resources, url: 'search:community_medical'}
-  model: wysiwyg.post
+  model: static_pages.post
   pk: 6
 - fields: {content: "<p dir=\"ltr\" style=\"line-height:0.4166666666666667;margin-top:0pt;margin-bottom:0pt;margin-right:\
       \ -36pt;text-align: center;\"><span id=\"docs-internal-guid-2f6f48ba-db66-3575-73d4-b2d2306a57c7\"\
@@ -910,7 +910,7 @@
       \ cleanings, extractions, emergency services, X-rays, oral surgery. Emergency\
       \ Care ONLY for NATIVES with Medi-Cal. </span></span></p>\r\n\r\n<p><br />\r\
       \n<br />\r\n&nbsp;</p>\r\n", name: Suitcase Dental Resources, url: 'search:community_dental'}
-  model: wysiwyg.post
+  model: static_pages.post
   pk: 7
 - fields: {content: "<h1 align=\"center\"><strong>Suitcase Mental Health Resources</strong></h1>\r\
       \n\r\n<h2>Therapy</h2>\r\n\r\n<h2>Substance Abuse</h2>\r\n\r\n<h2>Counseling</h2>\r\
@@ -1018,7 +1018,7 @@
       \ services through three components: transitional housing, permanent housing\
       \ and case management</p>\r\n\r\n<p>Payment: Varies by program, call for information\
       \ about payment</p>\r\n", name: Suitcase Mental Health Resources, url: 'search:community_mental'}
-  model: wysiwyg.post
+  model: static_pages.post
   pk: 8
 - fields: {content: "<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\
       \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\
@@ -1026,7 +1026,7 @@
       \ &nbsp; &nbsp; &nbsp;&nbsp;<img alt=\"\" src=\"http://resumizer.com/images/cover_letter_templates/cover_letter_template_1.png\"\
       \ style=\"width: 550px; height: 716px;\" /></p>\r\n", name: Cover Letter Template,
     url: 'search:employment_cover_letter'}
-  model: wysiwyg.post
+  model: static_pages.post
   pk: 9
 - fields: {content: "<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\
       \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\
@@ -1034,5 +1034,5 @@
       \ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<img alt=\"\" src=\"http://www.eduers.com/images/resume-template1.gif\"\
       \ style=\"width: 552px; height: 715px;\" /></p>\r\n", name: Resume Template,
     url: 'search:employment_resume'}
-  model: wysiwyg.post
+  model: static_pages.post
   pk: 10

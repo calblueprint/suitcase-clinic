@@ -1,5 +1,7 @@
-from bpsc.wysiwyg.models import Post
 from django.views.generic import DetailView
+
+from bpsc.static_pages.models import Post
+
 
 class ResumeResourceView(DetailView):
     model = Post
@@ -9,6 +11,7 @@ class ResumeResourceView(DetailView):
     def get_object(self, **kwargs):
         return Post.objects.get(url='search:employment_resume')
 
+
 class CoverLetterResourceView(DetailView):
     model = Post
     context_object_name = 'resource'
@@ -16,6 +19,7 @@ class CoverLetterResourceView(DetailView):
 
     def get_object(self, **kwargs):
         return Post.objects.get(url='search:employment_cover_letter')
+
 
 class MentalResourceView(DetailView):
     model = Post
@@ -25,6 +29,7 @@ class MentalResourceView(DetailView):
     def get_object(self, **kwargs):
         return Post.objects.get(url='search:community_mental')
 
+
 class DentalResourceView(DetailView):
     model = Post
     context_object_name = 'resource'
@@ -33,6 +38,7 @@ class DentalResourceView(DetailView):
     def get_object(self, **kwargs):
         return Post.objects.get(url='search:community_dental')
 
+
 class MedicalResourceView(DetailView):
     model = Post
     context_object_name = 'resource'
@@ -40,6 +46,3 @@ class MedicalResourceView(DetailView):
 
     def get_object(self, **kwargs):
         return Post.objects.get(url='search:community_medical')
-
-
-

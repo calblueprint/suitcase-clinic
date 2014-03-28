@@ -1,5 +1,7 @@
 from django.db import models
+
 from ckeditor.fields import RichTextField
+
 
 class Tag(models.Model):
     tag_type = models.CharField('Tag Category', max_length=255,
@@ -18,22 +20,22 @@ class Tag(models.Model):
 
 class HousingTag(Tag):
     class Meta(Tag.Meta):
-        verbose_name = 'Housing Tag'
+        verbose_name = 'Housing Resource Tag'
 
 
 class CommunityTag(Tag):
     class Meta(Tag.Meta):
-        verbose_name = 'Community Tag'
+        verbose_name = 'Community Resource Tag'
 
 
 class EmploymentTag(Tag):
     class Meta(Tag.Meta):
-        verbose_name = 'Employment Tag'
+        verbose_name = 'Employment Resource Tag'
 
 
 class LegalTag(Tag):
     class Meta(Tag.Meta):
-        verbose_name = 'Legal Tag'
+        verbose_name = 'Legal Resource Tag'
 
 
 class Resource(models.Model):
@@ -107,3 +109,7 @@ class BatchHousingResource(models.Model):
     how_to_apply = models.CharField('How to Apply', max_length=2550)
     posted = models.DateField('Posted', auto_now_add=True)
     outdated = models.BooleanField('Outdated', default=False)
+
+    class Meta:
+        verbose_name = 'Housing Resource (CSV)'
+        verbose_name_plural = 'Housing Resources (CSV)'
