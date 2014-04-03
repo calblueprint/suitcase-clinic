@@ -177,3 +177,9 @@ li.review {
     right: 0;
     height: 100%;
 }
+
+.unabled-message{
+	font-size:20px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
